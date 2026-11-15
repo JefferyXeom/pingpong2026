@@ -1,0 +1,30 @@
+{
+  "source_roots": [
+    "D:\\yolov5-master\\VOCData",
+    "D:\\yolov5-master\\history_VOCOdata"
+  ],
+  "total_files": 78572,
+  "total_bytes": 37251793325,
+  "images": 24766,
+  "xml_summary": {
+    "xml_files": 14878,
+    "empty_xml_files": 0,
+    "class:ball": 18476
+  },
+  "image_statuses": {
+    "verified_pair": 20872,
+    "missing_annotation": 3894
+  },
+  "images_matching_active_dataset": 2997,
+  "active_annotation_conflicts": 0,
+  "unique_verified_additional_images": 10786,
+  "unique_additional_image_bytes": 14547226447,
+  "new_duplicate_annotation_conflict_groups": 0,
+  "previously_orphaned_xml_with_image_candidates": 0,
+  "free_bytes": 68555341824,
+  "estimated_free_after_new_images_bytes": 54008115377,
+  "negative_sample_note": "Empty annotations are candidates only; missing annotation is not a verified negative.",
+  "active_dataset_changed": false,
+  "source_files_changed": false,
+  "annotation_comparison": "Unordered one-to-one boxes; exact class; absolute normalized coordinate tolerance 1e-7."
+}

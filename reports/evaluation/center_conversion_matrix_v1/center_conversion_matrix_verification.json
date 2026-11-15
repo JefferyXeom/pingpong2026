@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "checked_cases": [
+    "h768_w960_pytorch_fp32_b1",
+    "h768_w960_pytorch_fp32_b2",
+    "h768_w960_onnx_cpu_fp32_b2",
+    "h768_w960_tensorrt_fp32_b2",
+    "h768_w960_tensorrt_fp16_b1",
+    "h768_w960_tensorrt_fp16_b2",
+    "h1024_w1280_pytorch_fp32_b1",
+    "h1024_w1280_pytorch_fp32_b2",
+    "h1024_w1280_onnx_cpu_fp32_b2",
+    "h1024_w1280_tensorrt_fp32_b2",
+    "h1024_w1280_tensorrt_fp16_b1",
+    "h1024_w1280_tensorrt_fp16_b2"
+  ],
+  "images_per_case": 2102,
+  "final_gpu_iterations_per_mode": 1000,
+  "original_resolution_examples": 8,
+  "weights_sha256": "fb770bff46a07b46234fd32b816842ad9e6d65880cbbd038e988d6cbe579db3f"
+}

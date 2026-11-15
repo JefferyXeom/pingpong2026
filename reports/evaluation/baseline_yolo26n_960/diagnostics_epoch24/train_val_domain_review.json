@@ -1,0 +1,63 @@
+{
+  "recording_stats": {
+    "june01_recording1": {
+      "split": "train",
+      "images": 1520,
+      "box_min_side_pixel_percentiles_10_50_90": [
+        18.0,
+        23.0,
+        28.0
+      ],
+      "box_center_xy_mean": [
+        0.5323405695994743,
+        0.39683415493585034
+      ],
+      "mean_image_luma_32_sample_mean": 37.15019073486329
+    },
+    "june01_recording2": {
+      "split": "train",
+      "images": 2997,
+      "box_min_side_pixel_percentiles_10_50_90": [
+        9.0,
+        11.0,
+        13.0
+      ],
+      "box_center_xy_mean": [
+        0.5437343890323325,
+        0.5408812215855191
+      ],
+      "mean_image_luma_32_sample_mean": 55.82801208496094
+    },
+    "may27_recording1": {
+      "split": "train",
+      "images": 2101,
+      "box_min_side_pixel_percentiles_10_50_90": [
+        6.0,
+        8.0,
+        10.0
+      ],
+      "box_center_xy_mean": [
+        0.43573514107308053,
+        0.37080082641910234
+      ],
+      "mean_image_luma_32_sample_mean": 16.040193176269533
+    },
+    "may27_recording3": {
+      "split": "val",
+      "images": 1272,
+      "box_min_side_pixel_percentiles_10_50_90": [
+        14.0,
+        17.0,
+        20.0
+      ],
+      "box_center_xy_mean": [
+        0.4581837780070751,
+        0.3789100886886006
+      ],
+      "mean_image_luma_32_sample_mean": 16.931385803222657
+    }
+  },
+  "luma_note": "Mean grayscale on 32 uniform samples per recording, 0-255. Descriptive only; not a causal test.",
+  "preview": "reports/evaluation/baseline_yolo26n_960/diagnostics_epoch24/train_val_domain_preview.jpg",
+  "test_set_used": false
+}

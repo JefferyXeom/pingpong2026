@@ -1,0 +1,161 @@
+{
+  "scope": "Same fixed diagnostic subsets as head evaluation. Center radius in original 1280x1024 pixels; center matches are a supplemental measure, not mAP or proof of annotation errors.",
+  "evaluations": [
+    {
+      "checkpoint": "best",
+      "subset": "train_subset",
+      "thresholds": {
+        "0.05": {
+          "ground_truth_boxes": 454,
+          "predictions": 833,
+          "iou50_recall": 0.960352422907489,
+          "center5_recall": 0.9691629955947136,
+          "center10_recall": 0.9845814977973568,
+          "center10_precision": 0.5366146458583433,
+          "center10_matched_median_error_px": 0.8877919715455715,
+          "center10_matched_median_pred_gt_width_ratio": 1.00469970703125,
+          "center10_matched_median_pred_gt_height_ratio": 0.9861891004774306
+        },
+        "0.25": {
+          "ground_truth_boxes": 454,
+          "predictions": 540,
+          "iou50_recall": 0.9383259911894273,
+          "center5_recall": 0.9383259911894273,
+          "center10_recall": 0.9537444933920705,
+          "center10_precision": 0.8018518518518518,
+          "center10_matched_median_error_px": 0.9303454742796383,
+          "center10_matched_median_pred_gt_width_ratio": 1.0000087193080358,
+          "center10_matched_median_pred_gt_height_ratio": 0.9845111553485577
+        },
+        "0.5": {
+          "ground_truth_boxes": 454,
+          "predictions": 342,
+          "iou50_recall": 0.7004405286343612,
+          "center5_recall": 0.698237885462555,
+          "center10_recall": 0.7158590308370044,
+          "center10_precision": 0.9502923976608187,
+          "center10_matched_median_error_px": 0.9437201147842353,
+          "center10_matched_median_pred_gt_width_ratio": 0.9987555609808965,
+          "center10_matched_median_pred_gt_height_ratio": 0.979150390625
+        }
+      }
+    },
+    {
+      "checkpoint": "best",
+      "subset": "val_subset",
+      "thresholds": {
+        "0.05": {
+          "ground_truth_boxes": 256,
+          "predictions": 369,
+          "iou50_recall": 0.1640625,
+          "center5_recall": 0.98828125,
+          "center10_recall": 0.98828125,
+          "center10_precision": 0.6856368563685636,
+          "center10_matched_median_error_px": 1.1681383457705972,
+          "center10_matched_median_pred_gt_width_ratio": 0.5589989556206597,
+          "center10_matched_median_pred_gt_height_ratio": 0.5169641831341911
+        },
+        "0.25": {
+          "ground_truth_boxes": 256,
+          "predictions": 272,
+          "iou50_recall": 0.03125,
+          "center5_recall": 0.9609375,
+          "center10_recall": 0.9609375,
+          "center10_precision": 0.9044117647058824,
+          "center10_matched_median_error_px": 1.2429728906343693,
+          "center10_matched_median_pred_gt_width_ratio": 0.5574493044898625,
+          "center10_matched_median_pred_gt_height_ratio": 0.5139631472135845
+        },
+        "0.5": {
+          "ground_truth_boxes": 256,
+          "predictions": 210,
+          "iou50_recall": 0.0234375,
+          "center5_recall": 0.80859375,
+          "center10_recall": 0.80859375,
+          "center10_precision": 0.9857142857142858,
+          "center10_matched_median_error_px": 1.2274709442133094,
+          "center10_matched_median_pred_gt_width_ratio": 0.5636319247159091,
+          "center10_matched_median_pred_gt_height_ratio": 0.5169641831341911
+        }
+      }
+    },
+    {
+      "checkpoint": "last",
+      "subset": "train_subset",
+      "thresholds": {
+        "0.05": {
+          "ground_truth_boxes": 454,
+          "predictions": 570,
+          "iou50_recall": 0.9845814977973568,
+          "center5_recall": 0.9823788546255506,
+          "center10_recall": 0.9955947136563876,
+          "center10_precision": 0.7929824561403509,
+          "center10_matched_median_error_px": 0.7075766710270415,
+          "center10_matched_median_pred_gt_width_ratio": 0.9881861069623161,
+          "center10_matched_median_pred_gt_height_ratio": 0.9897715250651042
+        },
+        "0.25": {
+          "ground_truth_boxes": 454,
+          "predictions": 510,
+          "iou50_recall": 0.9801762114537445,
+          "center5_recall": 0.9779735682819384,
+          "center10_recall": 0.9911894273127754,
+          "center10_precision": 0.8823529411764706,
+          "center10_matched_median_error_px": 0.7114031203940396,
+          "center10_matched_median_pred_gt_width_ratio": 0.9881861069623161,
+          "center10_matched_median_pred_gt_height_ratio": 0.9886088053385417
+        },
+        "0.5": {
+          "ground_truth_boxes": 454,
+          "predictions": 459,
+          "iou50_recall": 0.9295154185022027,
+          "center5_recall": 0.9273127753303965,
+          "center10_recall": 0.9405286343612335,
+          "center10_precision": 0.9302832244008714,
+          "center10_matched_median_error_px": 0.6991381099221745,
+          "center10_matched_median_pred_gt_width_ratio": 0.9864332411024244,
+          "center10_matched_median_pred_gt_height_ratio": 0.990142822265625
+        }
+      }
+    },
+    {
+      "checkpoint": "last",
+      "subset": "val_subset",
+      "thresholds": {
+        "0.05": {
+          "ground_truth_boxes": 256,
+          "predictions": 276,
+          "iou50_recall": 0.01953125,
+          "center5_recall": 1.0,
+          "center10_recall": 1.0,
+          "center10_precision": 0.927536231884058,
+          "center10_matched_median_error_px": 1.2173730850373672,
+          "center10_matched_median_pred_gt_width_ratio": 0.5481263594193893,
+          "center10_matched_median_pred_gt_height_ratio": 0.5277057223849826
+        },
+        "0.25": {
+          "ground_truth_boxes": 256,
+          "predictions": 264,
+          "iou50_recall": 0.01953125,
+          "center5_recall": 1.0,
+          "center10_recall": 1.0,
+          "center10_precision": 0.9696969696969697,
+          "center10_matched_median_error_px": 1.2173730850373672,
+          "center10_matched_median_pred_gt_width_ratio": 0.5481263594193893,
+          "center10_matched_median_pred_gt_height_ratio": 0.5277057223849826
+        },
+        "0.5": {
+          "ground_truth_boxes": 256,
+          "predictions": 255,
+          "iou50_recall": 0.01953125,
+          "center5_recall": 0.984375,
+          "center10_recall": 0.984375,
+          "center10_precision": 0.9882352941176471,
+          "center10_matched_median_error_px": 1.2173730850373672,
+          "center10_matched_median_pred_gt_width_ratio": 0.5481263594193893,
+          "center10_matched_median_pred_gt_height_ratio": 0.5271179099488102
+        }
+      }
+    }
+  ]
+}

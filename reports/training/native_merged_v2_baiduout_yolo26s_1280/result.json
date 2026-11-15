@@ -1,0 +1,39 @@
+{
+  "run": {
+    "id": "native_merged_v2_baiduout_yolo26s_1280",
+    "architecture": "YOLO26s",
+    "pretrained": "models/yolo26s.pt",
+    "dataset": "pingpong_merged_v2"
+  },
+  "source_configuration": "configuration.json",
+  "epochs_completed": 42,
+  "selected_epoch": 22,
+  "selected_validation": {
+    "gt": 1272,
+    "predictions": 1278,
+    "center5_matches": 1267,
+    "center10_matches": 1268,
+    "center5_precision": 0.9913928012519562,
+    "center5_recall": 0.9960691823899371,
+    "center5_f1": 0.9937254901960784,
+    "matched_error_px_p50_p95_p99": [
+      1.201984941959381,
+      2.6825181841850276,
+      3.313880684375762
+    ],
+    "actual_shapes_height_width": [
+      [
+        1024,
+        1280
+      ]
+    ],
+    "conf": 0.25,
+    "precision": "FP32",
+    "missing_gt_center5": 5
+  },
+  "best": "runs/detect/native_merged_v2_baiduout_yolo26s_1280/weights/best.pt",
+  "best_sha256": "433c47f818aaf07b4e1d34df64a7bad3ee744d1fb21b1f1d00b08915af9a89f0",
+  "last": "runs/detect/native_merged_v2_baiduout_yolo26s_1280/weights/last.pt",
+  "selection": "center5 F1, conf=.25, complete v1 val; test not used",
+  "completed_utc": "2026-11-13T22:02:37.881490+00:00"
+}

@@ -1,0 +1,64 @@
+{
+  "suite_id": "native_resolution_suite_v1",
+  "original_files_modified": false,
+  "images_copied": 0,
+  "original_size_width_height": [
+    1280,
+    1024
+  ],
+  "additional_families": {
+    "numeric": 700,
+    "#_img_#": 379,
+    "indexed_img": 6710,
+    "white_background": 2997
+  },
+  "datasets": {
+    "native_v1": {
+      "train": {
+        "images": 6618,
+        "objects": 8139,
+        "list": "configs/datasets/native_resolution_suite_v1/native_v1_train.txt",
+        "sha256": "e867236ff42001a096aa9c8798199d9b799ad5c8a06781773a0fb44bcbec9582"
+      },
+      "val": {
+        "images": 1272,
+        "objects": 1272,
+        "list": "configs/datasets/native_resolution_suite_v1/native_v1_val.txt",
+        "sha256": "e22da33d8b9c3d322e20e689f5c8b47629615baf44aba3b78b712aff826326b5"
+      },
+      "test": {
+        "images": 830,
+        "objects": 859,
+        "list": "configs/datasets/native_resolution_suite_v1/native_v1_test.txt",
+        "sha256": "e9141cc0d25aec41bb322cf6456e5d78e985f60501ddaaa3492edfa9bab33a6b"
+      },
+      "yaml": "configs/datasets/native_resolution_suite_v1/native_v1.yaml"
+    },
+    "native_v1_additional": {
+      "train": {
+        "images": 17404,
+        "objects": 22181,
+        "list": "configs/datasets/native_resolution_suite_v1/native_v1_additional_train.txt",
+        "sha256": "d0242f85006e1d4264eb2ed119bbbd1799faf9cb0578324aa80f8996f1b9eb89"
+      },
+      "val": {
+        "images": 1272,
+        "objects": 1272,
+        "list": "configs/datasets/native_resolution_suite_v1/native_v1_additional_val.txt",
+        "sha256": "e22da33d8b9c3d322e20e689f5c8b47629615baf44aba3b78b712aff826326b5"
+      },
+      "test": {
+        "images": 830,
+        "objects": 859,
+        "list": "configs/datasets/native_resolution_suite_v1/native_v1_additional_test.txt",
+        "sha256": "e9141cc0d25aec41bb322cf6456e5d78e985f60501ddaaa3492edfa9bab33a6b"
+      },
+      "yaml": "configs/datasets/native_resolution_suite_v1/native_v1_additional.yaml"
+    }
+  },
+  "limits": [
+    "Unknown historical recording families are not proven independent of v1 recordings.",
+    "Exact SHA256 disjointness and known-parent training isolation verified.",
+    "Additional includes 2997 white-background variants; not 10786 independent original captures."
+  ]
+}

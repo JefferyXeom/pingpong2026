@@ -1,0 +1,16 @@
+{
+  "verified": true,
+  "images": 10786,
+  "objects": 14042,
+  "filename_family_counts": {
+    "numeric": 700,
+    "#_img_#": 379,
+    "indexed_img": 6710,
+    "white_background": 2997
+  },
+  "background_variants": 2997,
+  "exact_content_overlap_with_active_dataset": 0,
+  "label_and_inventory_checks": "All records passed",
+  "copy_integrity": "Every image and original annotation SHA256 checked during preparation; no redundant full rehash.",
+  "free_gib": 50.22551727294922
+}

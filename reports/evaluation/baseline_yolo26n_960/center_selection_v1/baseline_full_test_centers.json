@@ -1,0 +1,80 @@
+{
+  "split": "test",
+  "images": 830,
+  "thresholds": [
+    0.05,
+    0.25,
+    0.5
+  ],
+  "preprocessing": {
+    "imgsz": 960,
+    "batch": 16,
+    "rect": true,
+    "nms": false
+  },
+  "matching": "One-to-one greedy nearest centers within 5 or 10 original-image pixels; separate greedy IoU>=0.5 box matching.",
+  "limits": "All frames have annotated balls. This does not measure false positives on verified no-ball video, temporal tracking or stereo depth accuracy.",
+  "evaluations": [
+    {
+      "weights": "runs/detect/baseline_yolo26n_960/weights/last.pt",
+      "seconds": 30.186104774475098,
+      "scores": {
+        "0.05": {
+          "ground_truth_boxes": 859,
+          "predictions": 1000,
+          "center5_precision": 0.842,
+          "center5_recall": 0.980209545983702,
+          "center5_f1": 0.9058633674018289,
+          "center10_precision": 0.842,
+          "center10_recall": 0.980209545983702,
+          "iou50_recall": 0.03958090803259604,
+          "center10_matched_error_px_median_p95": [
+            1.1999200803827421,
+            2.4597137359645878
+          ],
+          "center10_matched_pred_gt_width_ratio_median": 0.5626160939534506,
+          "center10_matched_pred_gt_height_ratio_median": 0.5068086422748448,
+          "missed_frames_center5": 17,
+          "extra_prediction_frames_center5": 149
+        },
+        "0.25": {
+          "ground_truth_boxes": 859,
+          "predictions": 877,
+          "center5_precision": 0.9395667046750285,
+          "center5_recall": 0.959254947613504,
+          "center5_f1": 0.9493087557603687,
+          "center10_precision": 0.9395667046750285,
+          "center10_recall": 0.959254947613504,
+          "iou50_recall": 0.03958090803259604,
+          "center10_matched_error_px_median_p95": [
+            1.2100905725281303,
+            2.460939373436924
+          ],
+          "center10_matched_pred_gt_width_ratio_median": 0.5643107096354149,
+          "center10_matched_pred_gt_height_ratio_median": 0.5069233870305936,
+          "missed_frames_center5": 35,
+          "extra_prediction_frames_center5": 51
+        },
+        "0.5": {
+          "ground_truth_boxes": 859,
+          "predictions": 838,
+          "center5_precision": 0.9594272076372315,
+          "center5_recall": 0.9359720605355064,
+          "center5_f1": 0.947554507955215,
+          "center10_precision": 0.9594272076372315,
+          "center10_recall": 0.9359720605355064,
+          "iou50_recall": 0.03841676367869616,
+          "center10_matched_error_px_median_p95": [
+            1.2100905725281303,
+            2.473657111832307
+          ],
+          "center10_matched_pred_gt_width_ratio_median": 0.5649099708499781,
+          "center10_matched_pred_gt_height_ratio_median": 0.5070088861896527,
+          "missed_frames_center5": 55,
+          "extra_prediction_frames_center5": 34
+        }
+      },
+      "frame_review_path": "D:\\workspace\\pingpong_yolo26\\reports\\evaluation\\baseline_yolo26n_960\\center_selection_v1\\baseline_full_test_centers_last_frames.json"
+    }
+  ]
+}

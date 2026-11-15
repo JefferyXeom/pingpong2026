@@ -1,0 +1,117 @@
+{
+  "scope": "Fixed diagnostic subsets: 128 images per training recording, 256 uniform validation samples. No test evaluation; subset metrics are not full-set estimates.",
+  "subsets": {
+    "train_subset": 384,
+    "val_subset": 256
+  },
+  "snapshots": {
+    "best": {
+      "path": "D:\\workspace\\pingpong_yolo26\\reports\\evaluation\\baseline_yolo26n_960\\diagnostics_epoch24\\baseline_diagnostics\\best.pt",
+      "completed_epoch": 3,
+      "stored_metrics": {
+        "metrics/precision(B)": 0.1709,
+        "metrics/recall(B)": 0.73035,
+        "metrics/mAP50(B)": 0.15126,
+        "metrics/mAP50-95(B)": 0.04012,
+        "val/box_loss": 2.77939,
+        "val/cls_loss": 2.98841,
+        "val/l1_loss": 0.00287,
+        "fitness": 0.04012
+      },
+      "stopper": {
+        "best_fitness": 0.04012,
+        "best_epoch": 3
+      }
+    },
+    "last": {
+      "path": "D:\\workspace\\pingpong_yolo26\\reports\\evaluation\\baseline_yolo26n_960\\diagnostics_epoch24\\baseline_diagnostics\\last.pt",
+      "completed_epoch": 24,
+      "stored_metrics": {
+        "metrics/precision(B)": 0.02795,
+        "metrics/recall(B)": 0.02752,
+        "metrics/mAP50(B)": 0.00103,
+        "metrics/mAP50-95(B)": 0.00013,
+        "val/box_loss": 3.67398,
+        "val/cls_loss": 4.15717,
+        "val/l1_loss": 0.00363,
+        "fitness": 0.00013
+      },
+      "stopper": {
+        "best_fitness": 0.04012,
+        "best_epoch": 3
+      }
+    }
+  },
+  "evaluations": [
+    {
+      "checkpoint": "best",
+      "checkpoint_epoch": 3,
+      "subset": "train_subset",
+      "head": "nms_free",
+      "metrics": {
+        "metrics/precision(B)": 0.8492124573040962,
+        "metrics/recall(B)": 0.8807520529071095,
+        "metrics/mAP50(B)": 0.895863547412797,
+        "metrics/mAP50-95(B)": 0.43266595551157944,
+        "fitness": 0.43266595551157944
+      },
+      "seconds": 14.787320137023926
+    },
+    {
+      "checkpoint": "best",
+      "checkpoint_epoch": 3,
+      "subset": "val_subset",
+      "head": "nms_free",
+      "metrics": {
+        "metrics/precision(B)": 0.16864175022789427,
+        "metrics/recall(B)": 0.72265625,
+        "metrics/mAP50(B)": 0.14205219640108227,
+        "metrics/mAP50-95(B)": 0.039354320579187474,
+        "fitness": 0.039354320579187474
+      },
+      "seconds": 8.561999082565308
+    },
+    {
+      "checkpoint": "last",
+      "checkpoint_epoch": 24,
+      "subset": "train_subset",
+      "head": "nms_free",
+      "metrics": {
+        "metrics/precision(B)": 0.9354631402911888,
+        "metrics/recall(B)": 0.9647577092511013,
+        "metrics/mAP50(B)": 0.9724086765801443,
+        "metrics/mAP50-95(B)": 0.5466637497228806,
+        "fitness": 0.5466637497228806
+      },
+      "seconds": 12.260811567306519
+    },
+    {
+      "checkpoint": "last",
+      "checkpoint_epoch": 24,
+      "subset": "val_subset",
+      "head": "nms_free",
+      "metrics": {
+        "metrics/precision(B)": 0.019906558450003463,
+        "metrics/recall(B)": 0.01953125,
+        "metrics/mAP50(B)": 0.0005294117647058824,
+        "metrics/mAP50-95(B)": 6.470588235294118e-05,
+        "fitness": 6.470588235294118e-05
+      },
+      "seconds": 8.591717004776001
+    },
+    {
+      "checkpoint": "last",
+      "checkpoint_epoch": 24,
+      "subset": "val_subset",
+      "head": "external_nms",
+      "metrics": {
+        "metrics/precision(B)": 0.03001666062769551,
+        "metrics/recall(B)": 0.0234375,
+        "metrics/mAP50(B)": 0.0022144736842105266,
+        "metrics/mAP50-95(B)": 0.0002481899495114598,
+        "fitness": 0.0002481899495114598
+      },
+      "seconds": 9.16281008720398
+    }
+  ]
+}

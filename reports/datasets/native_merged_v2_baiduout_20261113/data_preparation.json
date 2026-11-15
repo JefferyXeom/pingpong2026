@@ -1,0 +1,71 @@
+{
+  "suite_id": "native_merged_v2_baiduout_20261113",
+  "dataset_version": "pingpong_merged_v2",
+  "increment_version": "pingpong_baidu_out_v1",
+  "source_audit": {
+    "source_root": "E:\\BaiduNetdiskDownload\\pingpongdata----out",
+    "files": 36172,
+    "extensions": {
+      ".png": 18086,
+      ".xml": 18086
+    },
+    "bytes": 26752934276,
+    "images": 18086,
+    "source_files_modified": false,
+    "decisions": {
+      "new_train_candidate": 10997,
+      "already_present_bytes": 7089
+    },
+    "existing_overlap_by_dataset_split": {
+      "pingpong_additional_v1/train": 7089
+    },
+    "existing_duplicate_label_disagreements": 0,
+    "new_images": 10997,
+    "new_objects": 13912,
+    "new_image_bytes": 16323221677,
+    "new_with_filename_parent": 0,
+    "free_disk_gib": 49.31315231323242,
+    "limits": [
+      "Byte hashes and decoded RGB hashes checked against all prior dataset images.",
+      "Filename ancestry is a conservative candidate relationship, not proof of independent capture.",
+      "No verified new negative images; unknown historical recording independence is not established."
+    ]
+  },
+  "increment": {
+    "version": "pingpong_baidu_out_v1",
+    "images": 10997,
+    "objects": 13912,
+    "image_bytes": 16323221677,
+    "source_files_modified": false,
+    "negative_images": 0,
+    "split": "train-only",
+    "duplicates_not_copied": 7089,
+    "audit": "reports/datasets/pingpong_baidu_out_v1/audit_summary.json"
+  },
+  "datasets": {
+    "pingpong_merged_v2": {
+      "train": {
+        "images": 28401,
+        "objects": 36093,
+        "list": "configs/datasets/native_merged_v2_baiduout_20261113/pingpong_merged_v2_train.txt",
+        "sha256": "4171c3440157262f48e8414746a94141bb1622d98cad4818974e10e598bd49a8"
+      },
+      "val": {
+        "images": 1272,
+        "objects": 1272,
+        "list": "configs/datasets/native_merged_v2_baiduout_20261113/pingpong_merged_v2_val.txt",
+        "sha256": "e22da33d8b9c3d322e20e689f5c8b47629615baf44aba3b78b712aff826326b5"
+      },
+      "test": {
+        "images": 830,
+        "objects": 859,
+        "list": "configs/datasets/native_merged_v2_baiduout_20261113/pingpong_merged_v2_test.txt",
+        "sha256": "e9141cc0d25aec41bb322cf6456e5d78e985f60501ddaaa3492edfa9bab33a6b"
+      },
+      "yaml": "configs/datasets/native_merged_v2_baiduout_20261113/pingpong_merged_v2.yaml"
+    }
+  },
+  "holdouts_unchanged": true,
+  "source_files_modified": false,
+  "disk_free_gib": 34.02109909057617
+}

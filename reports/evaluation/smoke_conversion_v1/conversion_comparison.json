@@ -1,0 +1,324 @@
+{
+  "smoke_yolo26n_960": {
+    "report": "D:\\workspace\\pingpong_yolo26\\artifacts\\smoke_yolo26n_960\\conversion_report.json",
+    "confidence_threshold": 0.05,
+    "comparisons": {
+      "onnx_cpu": {
+        "matched_reference_fraction": 0.9696969696969697,
+        "images": [
+          {
+            "pytorch_detections": 2,
+            "backend_detections": 2,
+            "matched_iou_at_least_095_and_score_gap_under_0005": 2,
+            "unmatched_pytorch": 0,
+            "unmatched_backend": 0,
+            "max_matched_score_difference": 0.00018721818923950195,
+            "max_matched_coordinate_difference_pixels": 0.0567626953125
+          },
+          {
+            "pytorch_detections": 8,
+            "backend_detections": 8,
+            "matched_iou_at_least_095_and_score_gap_under_0005": 8,
+            "unmatched_pytorch": 0,
+            "unmatched_backend": 0,
+            "max_matched_score_difference": 0.0034379959106445312,
+            "max_matched_coordinate_difference_pixels": 9.82415771484375
+          },
+          {
+            "pytorch_detections": 4,
+            "backend_detections": 4,
+            "matched_iou_at_least_095_and_score_gap_under_0005": 4,
+            "unmatched_pytorch": 0,
+            "unmatched_backend": 0,
+            "max_matched_score_difference": 0.0008615925908088684,
+            "max_matched_coordinate_difference_pixels": 0.0950927734375
+          },
+          {
+            "pytorch_detections": 4,
+            "backend_detections": 4,
+            "matched_iou_at_least_095_and_score_gap_under_0005": 4,
+            "unmatched_pytorch": 0,
+            "unmatched_backend": 0,
+            "max_matched_score_difference": 0.002044267952442169,
+            "max_matched_coordinate_difference_pixels": 4.609527587890625
+          },
+          {
+            "pytorch_detections": 4,
+            "backend_detections": 4,
+            "matched_iou_at_least_095_and_score_gap_under_0005": 4,
+            "unmatched_pytorch": 0,
+            "unmatched_backend": 0,
+            "max_matched_score_difference": 0.0002968907356262207,
+            "max_matched_coordinate_difference_pixels": 0.85308837890625
+          },
+          {
+            "pytorch_detections": 4,
+            "backend_detections": 4,
+            "matched_iou_at_least_095_and_score_gap_under_0005": 4,
+            "unmatched_pytorch": 0,
+            "unmatched_backend": 0,
+            "max_matched_score_difference": 0.001185595989227295,
+            "max_matched_coordinate_difference_pixels": 0.66168212890625
+          },
+          {
+            "pytorch_detections": 3,
+            "backend_detections": 3,
+            "matched_iou_at_least_095_and_score_gap_under_0005": 3,
+            "unmatched_pytorch": 0,
+            "unmatched_backend": 0,
+            "max_matched_score_difference": 0.00010478496551513672,
+            "max_matched_coordinate_difference_pixels": 0.26947021484375
+          },
+          {
+            "pytorch_detections": 4,
+            "backend_detections": 4,
+            "matched_iou_at_least_095_and_score_gap_under_0005": 3,
+            "unmatched_pytorch": 1,
+            "unmatched_backend": 1,
+            "max_matched_score_difference": 0.0002896636724472046,
+            "max_matched_coordinate_difference_pixels": 0.29498291015625
+          }
+        ]
+      },
+      "tensorrt_fp16": {
+        "matched_reference_fraction": 0.7575757575757576,
+        "images": [
+          {
+            "pytorch_detections": 2,
+            "backend_detections": 2,
+            "matched_iou_at_least_095_and_score_gap_under_0005": 2,
+            "unmatched_pytorch": 0,
+            "unmatched_backend": 0,
+            "max_matched_score_difference": 0.003842473030090332,
+            "max_matched_coordinate_difference_pixels": 0.5312042236328125
+          },
+          {
+            "pytorch_detections": 8,
+            "backend_detections": 8,
+            "matched_iou_at_least_095_and_score_gap_under_0005": 5,
+            "unmatched_pytorch": 3,
+            "unmatched_backend": 3,
+            "max_matched_score_difference": 0.0021773576736450195,
+            "max_matched_coordinate_difference_pixels": 6.0624237060546875
+          },
+          {
+            "pytorch_detections": 4,
+            "backend_detections": 4,
+            "matched_iou_at_least_095_and_score_gap_under_0005": 4,
+            "unmatched_pytorch": 0,
+            "unmatched_backend": 0,
+            "max_matched_score_difference": 0.0008631125092506409,
+            "max_matched_coordinate_difference_pixels": 0.620880126953125
+          },
+          {
+            "pytorch_detections": 4,
+            "backend_detections": 3,
+            "matched_iou_at_least_095_and_score_gap_under_0005": 1,
+            "unmatched_pytorch": 3,
+            "unmatched_backend": 2,
+            "max_matched_score_difference": 0.003641486167907715,
+            "max_matched_coordinate_difference_pixels": 1.083221435546875
+          },
+          {
+            "pytorch_detections": 4,
+            "backend_detections": 3,
+            "matched_iou_at_least_095_and_score_gap_under_0005": 3,
+            "unmatched_pytorch": 1,
+            "unmatched_backend": 0,
+            "max_matched_score_difference": 0.0012437105178833008,
+            "max_matched_coordinate_difference_pixels": 2.380859375
+          },
+          {
+            "pytorch_detections": 4,
+            "backend_detections": 4,
+            "matched_iou_at_least_095_and_score_gap_under_0005": 4,
+            "unmatched_pytorch": 0,
+            "unmatched_backend": 0,
+            "max_matched_score_difference": 0.004347562789916992,
+            "max_matched_coordinate_difference_pixels": 2.67578125
+          },
+          {
+            "pytorch_detections": 3,
+            "backend_detections": 3,
+            "matched_iou_at_least_095_and_score_gap_under_0005": 3,
+            "unmatched_pytorch": 0,
+            "unmatched_backend": 0,
+            "max_matched_score_difference": 0.0007281303405761719,
+            "max_matched_coordinate_difference_pixels": 2.754192352294922
+          },
+          {
+            "pytorch_detections": 4,
+            "backend_detections": 4,
+            "matched_iou_at_least_095_and_score_gap_under_0005": 3,
+            "unmatched_pytorch": 1,
+            "unmatched_backend": 1,
+            "max_matched_score_difference": 0.0012857168912887573,
+            "max_matched_coordinate_difference_pixels": 2.35760498046875
+          }
+        ]
+      }
+    },
+    "scope": "Spatial agreement of saved smoke detections, not ground-truth accuracy. Count differences near confidence cutoff and unmatched boxes require baseline validation."
+  },
+  "smoke_yolo26n_960_e2e": {
+    "report": "D:\\workspace\\pingpong_yolo26\\artifacts\\smoke_yolo26n_960_e2e\\conversion_report.json",
+    "confidence_threshold": 0.05,
+    "comparisons": {
+      "onnx_cpu": {
+        "matched_reference_fraction": 0.9586776859504132,
+        "images": [
+          {
+            "pytorch_detections": 176,
+            "backend_detections": 178,
+            "matched_iou_at_least_095_and_score_gap_under_0005": 170,
+            "unmatched_pytorch": 6,
+            "unmatched_backend": 8,
+            "max_matched_score_difference": 0.004810333251953125,
+            "max_matched_coordinate_difference_pixels": 1.37640380859375
+          },
+          {
+            "pytorch_detections": 159,
+            "backend_detections": 158,
+            "matched_iou_at_least_095_and_score_gap_under_0005": 150,
+            "unmatched_pytorch": 9,
+            "unmatched_backend": 8,
+            "max_matched_score_difference": 0.004289776086807251,
+            "max_matched_coordinate_difference_pixels": 1.74908447265625
+          },
+          {
+            "pytorch_detections": 149,
+            "backend_detections": 149,
+            "matched_iou_at_least_095_and_score_gap_under_0005": 142,
+            "unmatched_pytorch": 7,
+            "unmatched_backend": 7,
+            "max_matched_score_difference": 0.0049741268157958984,
+            "max_matched_coordinate_difference_pixels": 1.2731781005859375
+          },
+          {
+            "pytorch_detections": 172,
+            "backend_detections": 172,
+            "matched_iou_at_least_095_and_score_gap_under_0005": 165,
+            "unmatched_pytorch": 7,
+            "unmatched_backend": 7,
+            "max_matched_score_difference": 0.0041459426283836365,
+            "max_matched_coordinate_difference_pixels": 2.71441650390625
+          },
+          {
+            "pytorch_detections": 122,
+            "backend_detections": 122,
+            "matched_iou_at_least_095_and_score_gap_under_0005": 119,
+            "unmatched_pytorch": 3,
+            "unmatched_backend": 3,
+            "max_matched_score_difference": 0.004517585039138794,
+            "max_matched_coordinate_difference_pixels": 2.5727386474609375
+          },
+          {
+            "pytorch_detections": 147,
+            "backend_detections": 148,
+            "matched_iou_at_least_095_and_score_gap_under_0005": 139,
+            "unmatched_pytorch": 8,
+            "unmatched_backend": 9,
+            "max_matched_score_difference": 0.004862338304519653,
+            "max_matched_coordinate_difference_pixels": 1.83978271484375
+          },
+          {
+            "pytorch_detections": 127,
+            "backend_detections": 127,
+            "matched_iou_at_least_095_and_score_gap_under_0005": 124,
+            "unmatched_pytorch": 3,
+            "unmatched_backend": 3,
+            "max_matched_score_difference": 0.004990041255950928,
+            "max_matched_coordinate_difference_pixels": 2.528594970703125
+          },
+          {
+            "pytorch_detections": 158,
+            "backend_detections": 158,
+            "matched_iou_at_least_095_and_score_gap_under_0005": 151,
+            "unmatched_pytorch": 7,
+            "unmatched_backend": 7,
+            "max_matched_score_difference": 0.0048768967390060425,
+            "max_matched_coordinate_difference_pixels": 2.158203125
+          }
+        ]
+      },
+      "tensorrt_fp16": {
+        "matched_reference_fraction": 0.7388429752066116,
+        "images": [
+          {
+            "pytorch_detections": 176,
+            "backend_detections": 176,
+            "matched_iou_at_least_095_and_score_gap_under_0005": 127,
+            "unmatched_pytorch": 49,
+            "unmatched_backend": 49,
+            "max_matched_score_difference": 0.004878997802734375,
+            "max_matched_coordinate_difference_pixels": 8.01837158203125
+          },
+          {
+            "pytorch_detections": 159,
+            "backend_detections": 153,
+            "matched_iou_at_least_095_and_score_gap_under_0005": 114,
+            "unmatched_pytorch": 45,
+            "unmatched_backend": 39,
+            "max_matched_score_difference": 0.004524484276771545,
+            "max_matched_coordinate_difference_pixels": 6.5382080078125
+          },
+          {
+            "pytorch_detections": 149,
+            "backend_detections": 147,
+            "matched_iou_at_least_095_and_score_gap_under_0005": 105,
+            "unmatched_pytorch": 44,
+            "unmatched_backend": 42,
+            "max_matched_score_difference": 0.004955470561981201,
+            "max_matched_coordinate_difference_pixels": 5.0084228515625
+          },
+          {
+            "pytorch_detections": 172,
+            "backend_detections": 171,
+            "matched_iou_at_least_095_and_score_gap_under_0005": 135,
+            "unmatched_pytorch": 37,
+            "unmatched_backend": 36,
+            "max_matched_score_difference": 0.004977107048034668,
+            "max_matched_coordinate_difference_pixels": 6.927734375
+          },
+          {
+            "pytorch_detections": 122,
+            "backend_detections": 121,
+            "matched_iou_at_least_095_and_score_gap_under_0005": 94,
+            "unmatched_pytorch": 28,
+            "unmatched_backend": 27,
+            "max_matched_score_difference": 0.004986308515071869,
+            "max_matched_coordinate_difference_pixels": 7.82403564453125
+          },
+          {
+            "pytorch_detections": 147,
+            "backend_detections": 147,
+            "matched_iou_at_least_095_and_score_gap_under_0005": 103,
+            "unmatched_pytorch": 44,
+            "unmatched_backend": 44,
+            "max_matched_score_difference": 0.00498652458190918,
+            "max_matched_coordinate_difference_pixels": 7.668304443359375
+          },
+          {
+            "pytorch_detections": 127,
+            "backend_detections": 129,
+            "matched_iou_at_least_095_and_score_gap_under_0005": 100,
+            "unmatched_pytorch": 27,
+            "unmatched_backend": 29,
+            "max_matched_score_difference": 0.004978299140930176,
+            "max_matched_coordinate_difference_pixels": 5.2958984375
+          },
+          {
+            "pytorch_detections": 158,
+            "backend_detections": 156,
+            "matched_iou_at_least_095_and_score_gap_under_0005": 116,
+            "unmatched_pytorch": 42,
+            "unmatched_backend": 40,
+            "max_matched_score_difference": 0.004936248064041138,
+            "max_matched_coordinate_difference_pixels": 5.7384033203125
+          }
+        ]
+      }
+    },
+    "scope": "Spatial agreement of saved smoke detections, not ground-truth accuracy. Count differences near confidence cutoff and unmatched boxes require baseline validation."
+  }
+}

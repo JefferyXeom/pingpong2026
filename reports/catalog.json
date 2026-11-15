@@ -1,0 +1,978 @@
+{
+  "files": [
+    {
+      "path": "reports/environment/windows_rtx3090/environment_freeze.txt",
+      "batch": "environment/windows_rtx3090",
+      "purpose": "pip依赖版本冻结；平台、GPU及CUDA信息另见实验总览。",
+      "scope": "Windows / RTX3090，供所有现有实验参考；不是Ubuntu/2060 Super环境。",
+      "bytes": 972
+    },
+    {
+      "path": "reports/environment/windows_rtx3090/yolo26s_pretrained_download.json",
+      "batch": "environment/windows_rtx3090",
+      "purpose": "YOLO26s官方预训练权重下载地址、字节数及SHA256。",
+      "scope": "Windows / RTX3090，供所有现有实验参考；不是Ubuntu/2060 Super环境。",
+      "bytes": 232
+    },
+    {
+      "path": "reports/datasets/pingpong_v1/archive_inventory.json",
+      "batch": "datasets/pingpong_v1",
+      "purpose": "历史ZIP清单与缺失配对复查，未重复解压图片。",
+      "scope": "桌面yolov5data；8,720张、10,270球框，实际用于smoke和baseline。",
+      "bytes": 333
+    },
+    {
+      "path": "reports/datasets/pingpong_v1/dataset_detail.json",
+      "batch": "datasets/pingpong_v1",
+      "purpose": "源数据详细目录、标签类别与原有Python环境探测。",
+      "scope": "桌面yolov5data；8,720张、10,270球框，实际用于smoke和baseline。",
+      "bytes": 22754
+    },
+    {
+      "path": "reports/datasets/pingpong_v1/dataset_inventory.json",
+      "batch": "datasets/pingpong_v1",
+      "purpose": "源目录文件数量、扩展名、容量和初始盘点。",
+      "scope": "桌面yolov5data；8,720张、10,270球框，实际用于smoke和baseline。",
+      "bytes": 70530
+    },
+    {
+      "path": "reports/datasets/pingpong_v1/dataset_preparation.json",
+      "batch": "datasets/pingpong_v1",
+      "purpose": "独立副本准备记录、筛选决策和逐项来源。",
+      "scope": "桌面yolov5data；8,720张、10,270球框，实际用于smoke和baseline。",
+      "bytes": 770267
+    },
+    {
+      "path": "reports/datasets/pingpong_v1/dataset_preview.jpg",
+      "batch": "datasets/pingpong_v1",
+      "purpose": "首轮数据集抽样画面预览。",
+      "scope": "桌面yolov5data；8,720张、10,270球框，实际用于smoke和baseline。",
+      "bytes": 636640
+    },
+    {
+      "path": "reports/datasets/pingpong_v1/dataset_verification.json",
+      "batch": "datasets/pingpong_v1",
+      "purpose": "整理后图片、标签、清单和集合隔离校验。",
+      "scope": "桌面yolov5data；8,720张、10,270球框，实际用于smoke和baseline。",
+      "bytes": 328
+    },
+    {
+      "path": "reports/datasets/pingpong_v1/pairing_review.json",
+      "batch": "datasets/pingpong_v1",
+      "purpose": "原图与标注配对、缺失标注/图片复查。",
+      "scope": "桌面yolov5data；8,720张、10,270球框，实际用于smoke和baseline。",
+      "bytes": 238897
+    },
+    {
+      "path": "reports/datasets/pingpong_additional_v1/additional_data_audit.json",
+      "batch": "datasets/pingpong_additional_v1",
+      "purpose": "新增目录逐文件配对、哈希去重、标注一致性详单，体积较大。",
+      "scope": "D:/yolov5-master/VOCData及history_VOCOdata；10,786张、14,042球框；未参与旧960基线，新原图合并实验通过独立列表使用。",
+      "bytes": 27433432
+    },
+    {
+      "path": "reports/datasets/pingpong_additional_v1/additional_data_preview.jpg",
+      "batch": "datasets/pingpong_additional_v1",
+      "purpose": "新增数据抽样画面；不代表参与训练。",
+      "scope": "D:/yolov5-master/VOCData及history_VOCOdata；10,786张、14,042球框；未参与旧960基线，新原图合并实验通过独立列表使用。",
+      "bytes": 495190
+    },
+    {
+      "path": "reports/datasets/pingpong_additional_v1/additional_data_provenance.json",
+      "batch": "datasets/pingpong_additional_v1",
+      "purpose": "新增原图、重复图片、ZIP及换背景版本的来源关系。",
+      "scope": "D:/yolov5-master/VOCData及history_VOCOdata；10,786张、14,042球框；未参与旧960基线，新原图合并实验通过独立列表使用。",
+      "bytes": 3814
+    },
+    {
+      "path": "reports/datasets/pingpong_additional_v1/additional_data_review.json",
+      "batch": "datasets/pingpong_additional_v1",
+      "purpose": "新增数据分组、异常状态与抽样复查摘要。",
+      "scope": "D:/yolov5-master/VOCData及history_VOCOdata；10,786张、14,042球框；未参与旧960基线，新原图合并实验通过独立列表使用。",
+      "bytes": 3082
+    },
+    {
+      "path": "reports/datasets/pingpong_additional_v1/additional_data_summary.json",
+      "batch": "datasets/pingpong_additional_v1",
+      "purpose": "新增源数据扫描与可补充图片数量汇总。",
+      "scope": "D:/yolov5-master/VOCData及history_VOCOdata；10,786张、14,042球框；未参与旧960基线，新原图合并实验通过独立列表使用。",
+      "bytes": 1050
+    },
+    {
+      "path": "reports/datasets/pingpong_additional_v1/additional_dataset_verification.json",
+      "batch": "datasets/pingpong_additional_v1",
+      "purpose": "新增独立备份的文件、哈希、标签校验。",
+      "scope": "D:/yolov5-master/VOCData及history_VOCOdata；10,786张、14,042球框；未参与旧960基线，新原图合并实验通过独立列表使用。",
+      "bytes": 493
+    },
+    {
+      "path": "reports/training/smoke_yolo26n_960/smoke_yolo26n_960_result.json",
+      "batch": "training/smoke_yolo26n_960",
+      "purpose": "smoke一轮训练完成报告及框指标；不能作为最终检测效果。",
+      "scope": "YOLO26n，192张train、64张val，batch8；只验证训练链路。",
+      "bytes": 575
+    },
+    {
+      "path": "reports/training/baseline_yolo26n_960/baseline_interruption_review.json",
+      "batch": "training/baseline_yolo26n_960",
+      "purpose": "恢复前停在24轮的状态快照；后来用户确认手动中断，已恢复完成。",
+      "scope": "YOLO26n，6,618张train、1,272张val；从24轮恢复，28轮早停。result中的最终验证对应best.pt第3轮，不能当作last.pt第28轮指标。",
+      "bytes": 1724
+    },
+    {
+      "path": "reports/training/baseline_yolo26n_960/baseline_launch_history.jsonl",
+      "batch": "training/baseline_yolo26n_960",
+      "purpose": "初次启动与断点恢复的追加历史。",
+      "scope": "YOLO26n，6,618张train、1,272张val；从24轮恢复，28轮早停。result中的最终验证对应best.pt第3轮，不能当作last.pt第28轮指标。",
+      "bytes": 534
+    },
+    {
+      "path": "reports/training/baseline_yolo26n_960/baseline_learning_curves.png",
+      "batch": "training/baseline_yolo26n_960",
+      "purpose": "正式基线损失与框指标曲线。",
+      "scope": "YOLO26n，6,618张train、1,272张val；从24轮恢复，28轮早停。result中的最终验证对应best.pt第3轮，不能当作last.pt第28轮指标。",
+      "bytes": 150371
+    },
+    {
+      "path": "reports/training/baseline_yolo26n_960/baseline_process.json",
+      "batch": "training/baseline_yolo26n_960",
+      "purpose": "最后一次启动的PID、命令及日志位置；历史记录不代表进程仍运行。",
+      "scope": "YOLO26n，6,618张train、1,272张val；从24轮恢复，28轮早停。result中的最终验证对应best.pt第3轮，不能当作last.pt第28轮指标。",
+      "bytes": 676
+    },
+    {
+      "path": "reports/training/baseline_yolo26n_960/baseline_training_analysis.json",
+      "batch": "training/baseline_yolo26n_960",
+      "purpose": "28轮训练过程、数据量、耗时、最佳/末轮指标分析。",
+      "scope": "YOLO26n，6,618张train、1,272张val；从24轮恢复，28轮早停。result中的最终验证对应best.pt第3轮，不能当作last.pt第28轮指标。",
+      "bytes": 3770
+    },
+    {
+      "path": "reports/training/baseline_yolo26n_960/baseline_yolo26n_960_progress.json",
+      "batch": "training/baseline_yolo26n_960",
+      "purpose": "训练最终状态及最后一次回调；final_best_validation对应best。",
+      "scope": "YOLO26n，6,618张train、1,272张val；从24轮恢复，28轮早停。result中的最终验证对应best.pt第3轮，不能当作last.pt第28轮指标。",
+      "bytes": 513
+    },
+    {
+      "path": "reports/training/baseline_yolo26n_960/baseline_yolo26n_960_result.json",
+      "batch": "training/baseline_yolo26n_960",
+      "purpose": "训练正常结束报告；返回的是best.pt第3轮的最终框验证。",
+      "scope": "YOLO26n，6,618张train、1,272张val；从24轮恢复，28轮早停。result中的最终验证对应best.pt第3轮，不能当作last.pt第28轮指标。",
+      "bytes": 587
+    },
+    {
+      "path": "reports/evaluation/baseline_yolo26n_960/diagnostics_epoch24/baseline_center_diagnostics.json",
+      "batch": "evaluation/baseline_yolo26n_960/diagnostics_epoch24",
+      "purpose": "同一第3/24轮诊断子集的球心和框尺度分析。",
+      "scope": "使用保存的best第3轮、last第24轮快照；训练子集384张、验证子集256张；不使用test。这里的last.pt不是最终第28轮。",
+      "bytes": 6714
+    },
+    {
+      "path": "reports/evaluation/baseline_yolo26n_960/diagnostics_epoch24/baseline_diagnostics/best.pt",
+      "batch": "evaluation/baseline_yolo26n_960/diagnostics_epoch24",
+      "purpose": "诊断用第3轮best快照，保留当时checkpoint状态；不是当前球心候选。",
+      "scope": "使用保存的best第3轮、last第24轮快照；训练子集384张、验证子集256张；不使用test。这里的last.pt不是最终第28轮。",
+      "bytes": 15773411
+    },
+    {
+      "path": "reports/evaluation/baseline_yolo26n_960/diagnostics_epoch24/baseline_diagnostics/last.pt",
+      "batch": "evaluation/baseline_yolo26n_960/diagnostics_epoch24",
+      "purpose": "诊断用第24轮last快照；不是训练结束的第28轮last。",
+      "scope": "使用保存的best第3轮、last第24轮快照；训练子集384张、验证子集256张；不使用test。这里的last.pt不是最终第28轮。",
+      "bytes": 15777059
+    },
+    {
+      "path": "reports/evaluation/baseline_yolo26n_960/diagnostics_epoch24/baseline_diagnostics/train_subset.txt",
+      "batch": "evaluation/baseline_yolo26n_960/diagnostics_epoch24",
+      "purpose": "诊断训练子集384张图片路径（每个训练批次128张）。",
+      "scope": "使用保存的best第3轮、last第24轮快照；训练子集384张、验证子集256张；不使用test。这里的last.pt不是最终第28轮。",
+      "bytes": 42919
+    },
+    {
+      "path": "reports/evaluation/baseline_yolo26n_960/diagnostics_epoch24/baseline_diagnostics/train_subset.yaml",
+      "batch": "evaluation/baseline_yolo26n_960/diagnostics_epoch24",
+      "purpose": "上述训练诊断子集的Ultralytics数据配置。",
+      "scope": "使用保存的best第3轮、last第24轮快照；训练子集384张、验证子集256张；不使用test。这里的last.pt不是最终第28轮。",
+      "bytes": 344
+    },
+    {
+      "path": "reports/evaluation/baseline_yolo26n_960/diagnostics_epoch24/baseline_diagnostics/val_subset.txt",
+      "batch": "evaluation/baseline_yolo26n_960/diagnostics_epoch24",
+      "purpose": "诊断验证子集256张图片路径。",
+      "scope": "使用保存的best第3轮、last第24轮快照；训练子集384张、验证子集256张；不使用test。这里的last.pt不是最终第28轮。",
+      "bytes": 28190
+    },
+    {
+      "path": "reports/evaluation/baseline_yolo26n_960/diagnostics_epoch24/baseline_diagnostics/val_subset.yaml",
+      "batch": "evaluation/baseline_yolo26n_960/diagnostics_epoch24",
+      "purpose": "上述验证诊断子集的Ultralytics数据配置。",
+      "scope": "使用保存的best第3轮、last第24轮快照；训练子集384张、验证子集256张；不使用test。这里的last.pt不是最终第28轮。",
+      "bytes": 340
+    },
+    {
+      "path": "reports/evaluation/baseline_yolo26n_960/diagnostics_epoch24/baseline_diagnostics.json",
+      "batch": "evaluation/baseline_yolo26n_960/diagnostics_epoch24",
+      "purpose": "第3/24轮快照在384张train与256张val上的框指标及检测头对比。",
+      "scope": "使用保存的best第3轮、last第24轮快照；训练子集384张、验证子集256张；不使用test。这里的last.pt不是最终第28轮。",
+      "bytes": 3733
+    },
+    {
+      "path": "reports/evaluation/baseline_yolo26n_960/diagnostics_epoch24/baseline_prediction_crops.jpg",
+      "batch": "evaluation/baseline_yolo26n_960/diagnostics_epoch24",
+      "purpose": "第24轮诊断阶段的原始标签/预测局部对照。",
+      "scope": "使用保存的best第3轮、last第24轮快照；训练子集384张、验证子集256张；不使用test。这里的last.pt不是最终第28轮。",
+      "bytes": 347387
+    },
+    {
+      "path": "reports/evaluation/baseline_yolo26n_960/diagnostics_epoch24/train_val_domain_preview.jpg",
+      "batch": "evaluation/baseline_yolo26n_960/diagnostics_epoch24",
+      "purpose": "训练与验证录制批次抽样对照。",
+      "scope": "使用保存的best第3轮、last第24轮快照；训练子集384张、验证子集256张；不使用test。这里的last.pt不是最终第28轮。",
+      "bytes": 417438
+    },
+    {
+      "path": "reports/evaluation/baseline_yolo26n_960/diagnostics_epoch24/train_val_domain_review.json",
+      "batch": "evaluation/baseline_yolo26n_960/diagnostics_epoch24",
+      "purpose": "各录制批次的框尺度、球心位置和32张抽样亮度；未使用test。",
+      "scope": "使用保存的best第3轮、last第24轮快照；训练子集384张、验证子集256张；不使用test。这里的last.pt不是最终第28轮。",
+      "bytes": 1666
+    },
+    {
+      "path": "reports/evaluation/baseline_yolo26n_960/center_selection_v1/baseline_full_test_centers.json",
+      "batch": "evaluation/baseline_yolo26n_960/center_selection_v1",
+      "purpose": "选模后仅第28轮last在完整test上的球心结果。",
+      "scope": "完整val1,272张对比best第3轮和last第28轮；选定last后，完整test830张只评估last。",
+      "bytes": 3125
+    },
+    {
+      "path": "reports/evaluation/baseline_yolo26n_960/center_selection_v1/baseline_full_test_centers_last_frames.json",
+      "batch": "evaluation/baseline_yolo26n_960/center_selection_v1",
+      "purpose": "完整test、第28轮last逐帧计数与误差。",
+      "scope": "完整val1,272张对比best第3轮和last第28轮；选定last后，完整test830张只评估last。",
+      "bytes": 405483
+    },
+    {
+      "path": "reports/evaluation/baseline_yolo26n_960/center_selection_v1/baseline_full_val_centers.json",
+      "batch": "evaluation/baseline_yolo26n_960/center_selection_v1",
+      "purpose": "完整val上第3/28轮球心对比及按固定阈值选模结果。",
+      "scope": "完整val1,272张对比best第3轮和last第28轮；选定last后，完整test830张只评估last。",
+      "bytes": 6001
+    },
+    {
+      "path": "reports/evaluation/baseline_yolo26n_960/center_selection_v1/baseline_full_val_centers_best_frames.json",
+      "batch": "evaluation/baseline_yolo26n_960/center_selection_v1",
+      "purpose": "完整val、第3轮best的逐帧计数与匹配误差。",
+      "scope": "完整val1,272张对比best第3轮和last第28轮；选定last后，完整test830张只评估last。",
+      "bytes": 613017
+    },
+    {
+      "path": "reports/evaluation/baseline_yolo26n_960/center_selection_v1/baseline_full_val_centers_last_frames.json",
+      "batch": "evaluation/baseline_yolo26n_960/center_selection_v1",
+      "purpose": "完整val、第28轮last的逐帧计数与匹配误差。",
+      "scope": "完整val1,272张对比best第3轮和last第28轮；选定last后，完整test830张只评估last。",
+      "bytes": 616843
+    },
+    {
+      "path": "reports/evaluation/baseline_yolo26n_960/center_selection_v1/trained_model_selection.json",
+      "batch": "evaluation/baseline_yolo26n_960/center_selection_v1",
+      "purpose": "候选模型来源、SHA256、选择依据和初始完整球心评估。",
+      "scope": "完整val1,272张对比best第3轮和last第28轮；选定last后，完整test830张只评估last。",
+      "bytes": 7281
+    },
+    {
+      "path": "reports/evaluation/smoke_conversion_v1/conversion_comparison.json",
+      "batch": "evaluation/smoke_conversion_v1",
+      "purpose": "两个smoke转换批次的预测空间一致性；不是正式模型P/R。",
+      "scope": "使用smoke第1轮best.pt；方形960×960，抽样8张，比较传统NMS与免NMS导出；原始转换报告在artifacts的两个smoke目录。",
+      "bytes": 13753
+    },
+    {
+      "path": "reports/evaluation/center_conversion_matrix_v1/center_conversion_matrix_comparison.png",
+      "batch": "evaluation/center_conversion_matrix_v1",
+      "purpose": "batch2球心F1、P95和RTX3090 Graph吞吐可视化。",
+      "scope": "使用pingpong_yolo26n_center_v1，即baseline第28轮last.pt；全量val1,272张＋test830张；960×768与原图1280×1024，PyTorch/ONNX/TensorRT FP32/FP16。",
+      "bytes": 135492
+    },
+    {
+      "path": "reports/evaluation/center_conversion_matrix_v1/center_conversion_matrix_progress.json",
+      "batch": "evaluation/center_conversion_matrix_v1",
+      "purpose": "此转换矩阵最终完成状态；12项及最终复测均完成。",
+      "scope": "使用pingpong_yolo26n_center_v1，即baseline第28轮last.pt；全量val1,272张＋test830张；960×768与原图1280×1024，PyTorch/ONNX/TensorRT FP32/FP16。",
+      "bytes": 145
+    },
+    {
+      "path": "reports/evaluation/center_conversion_matrix_v1/center_conversion_matrix_summary.csv",
+      "batch": "evaluation/center_conversion_matrix_v1",
+      "purpose": "12项指标的可筛选表格，包含val/test球心及框AP。",
+      "scope": "使用pingpong_yolo26n_center_v1，即baseline第28轮last.pt；全量val1,272张＋test830张；960×768与原图1280×1024，PyTorch/ONNX/TensorRT FP32/FP16。",
+      "bytes": 6077
+    },
+    {
+      "path": "reports/evaluation/center_conversion_matrix_v1/center_conversion_matrix_summary.json",
+      "batch": "evaluation/center_conversion_matrix_v1",
+      "purpose": "转换矩阵的后端误差、同batch提速和原图变化摘要。",
+      "scope": "使用pingpong_yolo26n_center_v1，即baseline第28轮last.pt；全量val1,272张＋test830张；960×768与原图1280×1024，PyTorch/ONNX/TensorRT FP32/FP16。",
+      "bytes": 10787
+    },
+    {
+      "path": "reports/evaluation/center_conversion_matrix_v1/center_conversion_matrix_v1.json",
+      "batch": "evaluation/center_conversion_matrix_v1",
+      "purpose": "正式模型12项完整精度、转换差异、初测/复测速率主报告。",
+      "scope": "使用pingpong_yolo26n_center_v1，即baseline第28轮last.pt；全量val1,272张＋test830张；960×768与原图1280×1024，PyTorch/ONNX/TensorRT FP32/FP16。",
+      "bytes": 102728
+    },
+    {
+      "path": "reports/evaluation/center_conversion_matrix_v1/center_conversion_matrix_verification.json",
+      "batch": "evaluation/center_conversion_matrix_v1",
+      "purpose": "权重哈希、12项缓存、测速次数与原分辨率示例校验。",
+      "scope": "使用pingpong_yolo26n_center_v1，即baseline第28轮last.pt；全量val1,272张＋test830张；960×768与原图1280×1024，PyTorch/ONNX/TensorRT FP32/FP16。",
+      "bytes": 674
+    },
+    {
+      "path": "reports/evaluation/center_conversion_matrix_v1/center_conversion_regressions.json",
+      "batch": "evaluation/center_conversion_matrix_v1",
+      "purpose": "FP16新增漏检逐图复查，含候选置信度和球心距离。",
+      "scope": "使用pingpong_yolo26n_center_v1，即baseline第28轮last.pt；全量val1,272张＋test830张；960×768与原图1280×1024，PyTorch/ONNX/TensorRT FP32/FP16。",
+      "bytes": 1538
+    },
+    {
+      "path": "reports/evaluation/center_conversion_matrix_v1/conversion_original_examples/01_val_native_fp16.jpg",
+      "batch": "evaluation/center_conversion_matrix_v1",
+      "purpose": "原图1280×1024标注示例，TensorRT FP16 batch2；源图片见同目录index.json。",
+      "scope": "使用pingpong_yolo26n_center_v1，即baseline第28轮last.pt；全量val1,272张＋test830张；960×768与原图1280×1024，PyTorch/ONNX/TensorRT FP32/FP16。",
+      "bytes": 264890
+    },
+    {
+      "path": "reports/evaluation/center_conversion_matrix_v1/conversion_original_examples/02_val_native_fp16.jpg",
+      "batch": "evaluation/center_conversion_matrix_v1",
+      "purpose": "原图1280×1024标注示例，TensorRT FP16 batch2；源图片见同目录index.json。",
+      "scope": "使用pingpong_yolo26n_center_v1，即baseline第28轮last.pt；全量val1,272张＋test830张；960×768与原图1280×1024，PyTorch/ONNX/TensorRT FP32/FP16。",
+      "bytes": 264700
+    },
+    {
+      "path": "reports/evaluation/center_conversion_matrix_v1/conversion_original_examples/03_val_native_fp16.jpg",
+      "batch": "evaluation/center_conversion_matrix_v1",
+      "purpose": "原图1280×1024标注示例，TensorRT FP16 batch2；源图片见同目录index.json。",
+      "scope": "使用pingpong_yolo26n_center_v1，即baseline第28轮last.pt；全量val1,272张＋test830张；960×768与原图1280×1024，PyTorch/ONNX/TensorRT FP32/FP16。",
+      "bytes": 265338
+    },
+    {
+      "path": "reports/evaluation/center_conversion_matrix_v1/conversion_original_examples/04_val_native_fp16.jpg",
+      "batch": "evaluation/center_conversion_matrix_v1",
+      "purpose": "原图1280×1024标注示例，TensorRT FP16 batch2；源图片见同目录index.json。",
+      "scope": "使用pingpong_yolo26n_center_v1，即baseline第28轮last.pt；全量val1,272张＋test830张；960×768与原图1280×1024，PyTorch/ONNX/TensorRT FP32/FP16。",
+      "bytes": 264932
+    },
+    {
+      "path": "reports/evaluation/center_conversion_matrix_v1/conversion_original_examples/05_test_native_fp16.jpg",
+      "batch": "evaluation/center_conversion_matrix_v1",
+      "purpose": "原图1280×1024标注示例，TensorRT FP16 batch2；源图片见同目录index.json。",
+      "scope": "使用pingpong_yolo26n_center_v1，即baseline第28轮last.pt；全量val1,272张＋test830张；960×768与原图1280×1024，PyTorch/ONNX/TensorRT FP32/FP16。",
+      "bytes": 264406
+    },
+    {
+      "path": "reports/evaluation/center_conversion_matrix_v1/conversion_original_examples/06_test_native_fp16.jpg",
+      "batch": "evaluation/center_conversion_matrix_v1",
+      "purpose": "原图1280×1024标注示例，TensorRT FP16 batch2；源图片见同目录index.json。",
+      "scope": "使用pingpong_yolo26n_center_v1，即baseline第28轮last.pt；全量val1,272张＋test830张；960×768与原图1280×1024，PyTorch/ONNX/TensorRT FP32/FP16。",
+      "bytes": 265063
+    },
+    {
+      "path": "reports/evaluation/center_conversion_matrix_v1/conversion_original_examples/07_test_native_fp16.jpg",
+      "batch": "evaluation/center_conversion_matrix_v1",
+      "purpose": "原图1280×1024标注示例，TensorRT FP16 batch2；源图片见同目录index.json。",
+      "scope": "使用pingpong_yolo26n_center_v1，即baseline第28轮last.pt；全量val1,272张＋test830张；960×768与原图1280×1024，PyTorch/ONNX/TensorRT FP32/FP16。",
+      "bytes": 254453
+    },
+    {
+      "path": "reports/evaluation/center_conversion_matrix_v1/conversion_original_examples/08_test_native_fp16.jpg",
+      "batch": "evaluation/center_conversion_matrix_v1",
+      "purpose": "原图1280×1024标注示例，TensorRT FP16 batch2；源图片见同目录index.json。",
+      "scope": "使用pingpong_yolo26n_center_v1，即baseline第28轮last.pt；全量val1,272张＋test830张；960×768与原图1280×1024，PyTorch/ONNX/TensorRT FP32/FP16。",
+      "bytes": 268666
+    },
+    {
+      "path": "reports/evaluation/center_conversion_matrix_v1/conversion_original_examples/index.json",
+      "batch": "evaluation/center_conversion_matrix_v1",
+      "purpose": "8张均匀抽样原分辨率标注图的源图片、哈希和推理配置。",
+      "scope": "使用pingpong_yolo26n_center_v1，即baseline第28轮last.pt；全量val1,272张＋test830张；960×768与原图1280×1024，PyTorch/ONNX/TensorRT FP32/FP16。",
+      "bytes": 3536
+    },
+    {
+      "path": "reports/evaluation/center_conversion_matrix_v1/conversion_original_image_crops.jpg",
+      "batch": "evaluation/center_conversion_matrix_v1",
+      "purpose": "固定均匀抽取8张的局部放大对照；不是评估输入裁剪。",
+      "scope": "使用pingpong_yolo26n_center_v1，即baseline第28轮last.pt；全量val1,272张＋test830张；960×768与原图1280×1024，PyTorch/ONNX/TensorRT FP32/FP16。",
+      "bytes": 238226
+    },
+    {
+      "path": "reports/datasets/pingpong_baidu_out_v1/audit_decisions.jsonl",
+      "batch": "datasets/pingpong_baidu_out_v1",
+      "purpose": "Baidu逐图已用/新增/排除决策、旧集合匹配与文件名父图候选。",
+      "scope": "E:/BaiduNetdiskDownload/pingpongdata----out；字节/解码像素去重及逐图标注核验。",
+      "bytes": 17497937
+    },
+    {
+      "path": "reports/datasets/pingpong_baidu_out_v1/audit_summary.json",
+      "batch": "datasets/pingpong_baidu_out_v1",
+      "purpose": "Baidu目录与旧数据重复数量、有效唯一新增数量和来源限制。",
+      "scope": "E:/BaiduNetdiskDownload/pingpongdata----out；字节/解码像素去重及逐图标注核验。",
+      "bytes": 932
+    },
+    {
+      "path": "reports/datasets/pingpong_baidu_out_v1/existing_pixel_hashes.jsonl",
+      "batch": "datasets/pingpong_baidu_out_v1",
+      "purpose": "此前v1和additional全部图片的解码RGB像素哈希，识别重新编码副本。",
+      "scope": "E:/BaiduNetdiskDownload/pingpongdata----out；字节/解码像素去重及逐图标注核验。",
+      "bytes": 5240899
+    },
+    {
+      "path": "reports/datasets/pingpong_baidu_out_v1/label_geometry_summary.json",
+      "batch": "datasets/pingpong_baidu_out_v1",
+      "purpose": "全源Baidu标注几何统计与抽样可视化验证；几何合法不代表人工框选准确。",
+      "scope": "E:/BaiduNetdiskDownload/pingpongdata----out；字节/解码像素去重及逐图标注核验。",
+      "bytes": 2526
+    },
+    {
+      "path": "reports/datasets/pingpong_baidu_out_v1/label_quality_contact_01.jpg",
+      "batch": "datasets/pingpong_baidu_out_v1",
+      "purpose": "Baidu标注质量抽样拼图：全图标注框及第一目标局部放大，序号对应交互页；不是模型预测。",
+      "scope": "E:/BaiduNetdiskDownload/pingpongdata----out；字节/解码像素去重及逐图标注核验。",
+      "bytes": 566615
+    },
+    {
+      "path": "reports/datasets/pingpong_baidu_out_v1/label_quality_contact_02.jpg",
+      "batch": "datasets/pingpong_baidu_out_v1",
+      "purpose": "Baidu标注质量抽样拼图：全图标注框及第一目标局部放大，序号对应交互页；不是模型预测。",
+      "scope": "E:/BaiduNetdiskDownload/pingpongdata----out；字节/解码像素去重及逐图标注核验。",
+      "bytes": 564767
+    },
+    {
+      "path": "reports/datasets/pingpong_baidu_out_v1/label_quality_contact_03.jpg",
+      "batch": "datasets/pingpong_baidu_out_v1",
+      "purpose": "Baidu标注质量抽样拼图：全图标注框及第一目标局部放大，序号对应交互页；不是模型预测。",
+      "scope": "E:/BaiduNetdiskDownload/pingpongdata----out；字节/解码像素去重及逐图标注核验。",
+      "bytes": 582750
+    },
+    {
+      "path": "reports/datasets/pingpong_baidu_out_v1/label_quality_contact_04.jpg",
+      "batch": "datasets/pingpong_baidu_out_v1",
+      "purpose": "Baidu标注质量抽样拼图：全图标注框及第一目标局部放大，序号对应交互页；不是模型预测。",
+      "scope": "E:/BaiduNetdiskDownload/pingpongdata----out；字节/解码像素去重及逐图标注核验。",
+      "bytes": 559794
+    },
+    {
+      "path": "reports/datasets/pingpong_baidu_out_v1/label_quality_contact_05.jpg",
+      "batch": "datasets/pingpong_baidu_out_v1",
+      "purpose": "Baidu标注质量抽样拼图：全图标注框及第一目标局部放大，序号对应交互页；不是模型预测。",
+      "scope": "E:/BaiduNetdiskDownload/pingpongdata----out；字节/解码像素去重及逐图标注核验。",
+      "bytes": 540070
+    },
+    {
+      "path": "reports/datasets/pingpong_baidu_out_v1/label_quality_contact_06.jpg",
+      "batch": "datasets/pingpong_baidu_out_v1",
+      "purpose": "Baidu标注质量抽样拼图：全图标注框及第一目标局部放大，序号对应交互页；不是模型预测。",
+      "scope": "E:/BaiduNetdiskDownload/pingpongdata----out；字节/解码像素去重及逐图标注核验。",
+      "bytes": 560587
+    },
+    {
+      "path": "reports/datasets/pingpong_baidu_out_v1/label_quality_contact_07.jpg",
+      "batch": "datasets/pingpong_baidu_out_v1",
+      "purpose": "Baidu标注质量抽样拼图：全图标注框及第一目标局部放大，序号对应交互页；不是模型预测。",
+      "scope": "E:/BaiduNetdiskDownload/pingpongdata----out；字节/解码像素去重及逐图标注核验。",
+      "bytes": 596700
+    },
+    {
+      "path": "reports/datasets/pingpong_baidu_out_v1/label_quality_contact_08.jpg",
+      "batch": "datasets/pingpong_baidu_out_v1",
+      "purpose": "Baidu标注质量抽样拼图：全图标注框及第一目标局部放大，序号对应交互页；不是模型预测。",
+      "scope": "E:/BaiduNetdiskDownload/pingpongdata----out；字节/解码像素去重及逐图标注核验。",
+      "bytes": 581133
+    },
+    {
+      "path": "reports/datasets/pingpong_baidu_out_v1/label_quality_contact_09.jpg",
+      "batch": "datasets/pingpong_baidu_out_v1",
+      "purpose": "Baidu标注质量抽样拼图：全图标注框及第一目标局部放大，序号对应交互页；不是模型预测。",
+      "scope": "E:/BaiduNetdiskDownload/pingpongdata----out；字节/解码像素去重及逐图标注核验。",
+      "bytes": 579135
+    },
+    {
+      "path": "reports/datasets/pingpong_baidu_out_v1/label_quality_contact_10.jpg",
+      "batch": "datasets/pingpong_baidu_out_v1",
+      "purpose": "Baidu标注质量抽样拼图：全图标注框及第一目标局部放大，序号对应交互页；不是模型预测。",
+      "scope": "E:/BaiduNetdiskDownload/pingpongdata----out；字节/解码像素去重及逐图标注核验。",
+      "bytes": 558920
+    },
+    {
+      "path": "reports/datasets/pingpong_baidu_out_v1/label_quality_contact_11.jpg",
+      "batch": "datasets/pingpong_baidu_out_v1",
+      "purpose": "Baidu标注质量抽样拼图：全图标注框及第一目标局部放大，序号对应交互页；不是模型预测。",
+      "scope": "E:/BaiduNetdiskDownload/pingpongdata----out；字节/解码像素去重及逐图标注核验。",
+      "bytes": 556985
+    },
+    {
+      "path": "reports/datasets/pingpong_baidu_out_v1/label_quality_contact_12.jpg",
+      "batch": "datasets/pingpong_baidu_out_v1",
+      "purpose": "Baidu标注质量抽样拼图：全图标注框及第一目标局部放大，序号对应交互页；不是模型预测。",
+      "scope": "E:/BaiduNetdiskDownload/pingpongdata----out；字节/解码像素去重及逐图标注核验。",
+      "bytes": 558904
+    },
+    {
+      "path": "reports/datasets/pingpong_baidu_out_v1/label_quality_gallery.html",
+      "batch": "datasets/pingpong_baidu_out_v1",
+      "purpose": "Baidu原始标注交互浏览：新增/已用筛选、标注框/球心开关、无损局部放大及待复查清单导出；图片内嵌可离线打开。",
+      "scope": "E:/BaiduNetdiskDownload/pingpongdata----out；字节/解码像素去重及逐图标注核验。",
+      "bytes": 38892557
+    },
+    {
+      "path": "reports/datasets/pingpong_baidu_out_v1/label_quality_review.zh-CN.md",
+      "batch": "datasets/pingpong_baidu_out_v1",
+      "purpose": "Baidu框选质量可视化入口、抽样规则、坐标约定和逐页拼图导航。",
+      "scope": "E:/BaiduNetdiskDownload/pingpongdata----out；字节/解码像素去重及逐图标注核验。",
+      "bytes": 3175
+    },
+    {
+      "path": "reports/datasets/pingpong_baidu_out_v1/label_quality_samples.json",
+      "batch": "datasets/pingpong_baidu_out_v1",
+      "purpose": "框选质量抽样的逐图来源、哈希、原始XML和训练标注像素坐标；不含模型预测。",
+      "scope": "E:/BaiduNetdiskDownload/pingpongdata----out；字节/解码像素去重及逐图标注核验。",
+      "bytes": 113448
+    },
+    {
+      "path": "reports/datasets/pingpong_baidu_out_v1/source_audit.jsonl",
+      "batch": "datasets/pingpong_baidu_out_v1",
+      "purpose": "Baidu逐图文件/像素哈希、实际尺寸、XML标注验证记录。",
+      "scope": "E:/BaiduNetdiskDownload/pingpongdata----out；字节/解码像素去重及逐图标注核验。",
+      "bytes": 12231546
+    },
+    {
+      "path": "reports/datasets/pingpong_baidu_out_v1/source_inventory.json",
+      "batch": "datasets/pingpong_baidu_out_v1",
+      "purpose": "2026-11-13 Baidu源目录文件数、扩展名、体积；源文件只读。",
+      "scope": "E:/BaiduNetdiskDownload/pingpongdata----out；字节/解码像素去重及逐图标注核验。",
+      "bytes": 233
+    },
+    {
+      "path": "reports/datasets/pingpong_baidu_out_v1/source_preview.jpg",
+      "batch": "datasets/pingpong_baidu_out_v1",
+      "purpose": "Baidu有效新图与文件名父图候选的带标注预览和球心局部放大。",
+      "scope": "E:/BaiduNetdiskDownload/pingpongdata----out；字节/解码像素去重及逐图标注核验。",
+      "bytes": 198782
+    },
+    {
+      "path": "reports/datasets/pingpong_baidu_out_v1/source_preview.json",
+      "batch": "datasets/pingpong_baidu_out_v1",
+      "purpose": "Baidu新增预览的图片来源、父图候选和文件名前缀数量。",
+      "scope": "E:/BaiduNetdiskDownload/pingpongdata----out；字节/解码像素去重及逐图标注核验。",
+      "bytes": 1768
+    },
+    {
+      "path": "reports/datasets/native_merged_v2_baiduout_20261113/data_preparation.json",
+      "batch": "datasets/native_merged_v2_baiduout_20261113",
+      "purpose": "原图实验数据列表、图片/球框数量、哈希、变体和来源检查。",
+      "scope": "v1原train＋additional_v1＋Baidu有效新图；原val/test固定。",
+      "bytes": 2554
+    },
+    {
+      "path": "reports/experiments/native_merged_v2_baiduout_20261113/all_combinations.csv",
+      "batch": "experiments/native_merged_v2_baiduout_20261113",
+      "purpose": "训练模型×数据×推理尺寸×后端×精度×batch的已有结果。",
+      "scope": "按n、s顺序训练/评估；不覆盖旧原图三组实验。",
+      "bytes": 18788
+    },
+    {
+      "path": "reports/experiments/native_merged_v2_baiduout_20261113/all_models_combinations.csv",
+      "batch": "experiments/native_merged_v2_baiduout_20261113",
+      "purpose": "历史48项加本轮24项，共72项模型/尺寸/后端/batch组合；suite_id区分批次。",
+      "scope": "按n、s顺序训练/评估；不覆盖旧原图三组实验。",
+      "bytes": 53382
+    },
+    {
+      "path": "reports/experiments/native_merged_v2_baiduout_20261113/center_results.csv",
+      "batch": "experiments/native_merged_v2_baiduout_20261113",
+      "purpose": "增量训练各模型的val/test球心P/R/F1、TP/FP/FN、中位/P95/P99和转换变化。",
+      "scope": "按n、s顺序训练/评估；不覆盖旧原图三组实验。",
+      "bytes": 16283
+    },
+    {
+      "path": "reports/experiments/native_merged_v2_baiduout_20261113/completion_verification.json",
+      "batch": "experiments/native_merged_v2_baiduout_20261113",
+      "purpose": "本目录批次完成核验：组合数、权重/engine/ONNX哈希、缓存、保留集顺序、训练选模和最终测速次数。",
+      "scope": "按n、s顺序训练/评估；不覆盖旧原图三组实验。",
+      "bytes": 2732
+    },
+    {
+      "path": "reports/experiments/native_merged_v2_baiduout_20261113/final_analysis.json",
+      "batch": "experiments/native_merged_v2_baiduout_20261113",
+      "purpose": "本目录批次实际训练耗时、选中权重、原图FP32/FP16结果及完成核验。",
+      "scope": "按n、s顺序训练/评估；不覆盖旧原图三组实验。",
+      "bytes": 70959
+    },
+    {
+      "path": "reports/experiments/native_merged_v2_baiduout_20261113/native_results.png",
+      "batch": "experiments/native_merged_v2_baiduout_20261113",
+      "purpose": "本目录批次训练曲线及原图TensorRT FP16精度/速度对照，RTX3090。",
+      "scope": "按n、s顺序训练/评估；不覆盖旧原图三组实验。",
+      "bytes": 241174
+    },
+    {
+      "path": "reports/experiments/native_merged_v2_baiduout_20261113/native_results.svg",
+      "batch": "experiments/native_merged_v2_baiduout_20261113",
+      "purpose": "训练和原图精度/速度对照的可导出矢量图。",
+      "scope": "按n、s顺序训练/评估；不覆盖旧原图三组实验。",
+      "bytes": 118520
+    },
+    {
+      "path": "reports/experiments/native_merged_v2_baiduout_20261113/process.json",
+      "batch": "experiments/native_merged_v2_baiduout_20261113",
+      "purpose": "队列进程ID与创建时间，用于防重复启动。",
+      "scope": "按n、s顺序训练/评估；不覆盖旧原图三组实验。",
+      "bytes": 58
+    },
+    {
+      "path": "reports/experiments/native_merged_v2_baiduout_20261113/progress.json",
+      "batch": "experiments/native_merged_v2_baiduout_20261113",
+      "purpose": "训练/评估/队列状态；实际批次张量及轮数用于判断进展。",
+      "scope": "按n、s顺序训练/评估；不覆盖旧原图三组实验。",
+      "bytes": 815
+    },
+    {
+      "path": "reports/experiments/native_merged_v2_baiduout_20261113/queue.lock",
+      "batch": "experiments/native_merged_v2_baiduout_20261113",
+      "purpose": "操作系统持有的互斥锁；文件存在不等于队列仍运行。",
+      "scope": "按n、s顺序训练/评估；不覆盖旧原图三组实验。",
+      "bytes": 1
+    },
+    {
+      "path": "reports/experiments/native_merged_v2_baiduout_20261113/summary.json",
+      "batch": "experiments/native_merged_v2_baiduout_20261113",
+      "purpose": "旧基线及三组新实验全部可用组合汇总，保留未完成状态。",
+      "scope": "按n、s顺序训练/评估；不覆盖旧原图三组实验。",
+      "bytes": 55717
+    },
+    {
+      "path": "reports/training/native_merged_v2_baiduout_yolo26n_1280/configuration.json",
+      "batch": "training/native_merged_v2_baiduout_yolo26n_1280",
+      "purpose": "本次训练参数、初始化权重哈希、数据范围及原图输入尺寸。",
+      "scope": "数据pingpong_merged_v2，原图1280×1024、batch8、最多100轮、球心F1早停20轮。",
+      "bytes": 2727
+    },
+    {
+      "path": "reports/training/native_merged_v2_baiduout_yolo26n_1280/epoch_metrics.jsonl",
+      "batch": "training/native_merged_v2_baiduout_yolo26n_1280",
+      "purpose": "逐轮完整val球心、框指标和误差，包含用于早停的fitness。",
+      "scope": "数据pingpong_merged_v2，原图1280×1024、batch8、最多100轮、球心F1早停20轮。",
+      "bytes": 28082
+    },
+    {
+      "path": "reports/training/native_merged_v2_baiduout_yolo26n_1280/preflight.json",
+      "batch": "training/native_merged_v2_baiduout_yolo26n_1280",
+      "purpose": "正式优化前的实际训练张量、数据量及验证尺寸检查。",
+      "scope": "数据pingpong_merged_v2，原图1280×1024、batch8、最多100轮、球心F1早停20轮。",
+      "bytes": 263
+    },
+    {
+      "path": "reports/training/native_merged_v2_baiduout_yolo26n_1280/progress.json",
+      "batch": "training/native_merged_v2_baiduout_yolo26n_1280",
+      "purpose": "训练/评估/队列状态；实际批次张量及轮数用于判断进展。",
+      "scope": "数据pingpong_merged_v2，原图1280×1024、batch8、最多100轮、球心F1早停20轮。",
+      "bytes": 3025
+    },
+    {
+      "path": "reports/training/native_merged_v2_baiduout_yolo26n_1280/result.json",
+      "batch": "training/native_merged_v2_baiduout_yolo26n_1280",
+      "purpose": "训练完成记录、最佳球心epoch、权重路径与SHA256；仅完成后生成。",
+      "scope": "数据pingpong_merged_v2，原图1280×1024、batch8、最多100轮、球心F1早停20轮。",
+      "bytes": 1220
+    },
+    {
+      "path": "reports/evaluation/native_merged_v2_baiduout_yolo26n_1280_conversion_v1/native_merged_v2_baiduout_yolo26n_1280_conversion_v1.json",
+      "batch": "evaluation/native_merged_v2_baiduout_yolo26n_1280_conversion_v1",
+      "purpose": "此模型的完整尺寸/后端矩阵主报告、源权重哈希与全量指标。",
+      "scope": "对应球心best，全val1272/test830，两尺寸12项；P/R/F1和定位误差为重点。",
+      "bytes": 103112
+    },
+    {
+      "path": "reports/evaluation/native_merged_v2_baiduout_yolo26n_1280_conversion_v1/progress.json",
+      "batch": "evaluation/native_merged_v2_baiduout_yolo26n_1280_conversion_v1",
+      "purpose": "训练/评估/队列状态；实际批次张量及轮数用于判断进展。",
+      "scope": "对应球心best，全val1272/test830，两尺寸12项；P/R/F1和定位误差为重点。",
+      "bytes": 145
+    },
+    {
+      "path": "reports/training/native_merged_v2_baiduout_yolo26s_1280/configuration.json",
+      "batch": "training/native_merged_v2_baiduout_yolo26s_1280",
+      "purpose": "本次训练参数、初始化权重哈希、数据范围及原图输入尺寸。",
+      "scope": "数据pingpong_merged_v2，原图1280×1024、batch8、最多100轮、球心F1早停20轮。",
+      "bytes": 2727
+    },
+    {
+      "path": "reports/training/native_merged_v2_baiduout_yolo26s_1280/epoch_metrics.jsonl",
+      "batch": "training/native_merged_v2_baiduout_yolo26s_1280",
+      "purpose": "逐轮完整val球心、框指标和误差，包含用于早停的fitness。",
+      "scope": "数据pingpong_merged_v2，原图1280×1024、batch8、最多100轮、球心F1早停20轮。",
+      "bytes": 36851
+    },
+    {
+      "path": "reports/training/native_merged_v2_baiduout_yolo26s_1280/preflight.json",
+      "batch": "training/native_merged_v2_baiduout_yolo26s_1280",
+      "purpose": "正式优化前的实际训练张量、数据量及验证尺寸检查。",
+      "scope": "数据pingpong_merged_v2，原图1280×1024、batch8、最多100轮、球心F1早停20轮。",
+      "bytes": 263
+    },
+    {
+      "path": "reports/training/native_merged_v2_baiduout_yolo26s_1280/progress.json",
+      "batch": "training/native_merged_v2_baiduout_yolo26s_1280",
+      "purpose": "训练/评估/队列状态；实际批次张量及轮数用于判断进展。",
+      "scope": "数据pingpong_merged_v2，原图1280×1024、batch8、最多100轮、球心F1早停20轮。",
+      "bytes": 3024
+    },
+    {
+      "path": "reports/training/native_merged_v2_baiduout_yolo26s_1280/result.json",
+      "batch": "training/native_merged_v2_baiduout_yolo26s_1280",
+      "purpose": "训练完成记录、最佳球心epoch、权重路径与SHA256；仅完成后生成。",
+      "scope": "数据pingpong_merged_v2，原图1280×1024、batch8、最多100轮、球心F1早停20轮。",
+      "bytes": 1217
+    },
+    {
+      "path": "reports/evaluation/native_merged_v2_baiduout_yolo26s_1280_conversion_v1/native_merged_v2_baiduout_yolo26s_1280_conversion_v1.json",
+      "batch": "evaluation/native_merged_v2_baiduout_yolo26s_1280_conversion_v1",
+      "purpose": "此模型的完整尺寸/后端矩阵主报告、源权重哈希与全量指标。",
+      "scope": "对应球心best，全val1272/test830，两尺寸12项；P/R/F1和定位误差为重点。",
+      "bytes": 103955
+    },
+    {
+      "path": "reports/evaluation/native_merged_v2_baiduout_yolo26s_1280_conversion_v1/progress.json",
+      "batch": "evaluation/native_merged_v2_baiduout_yolo26s_1280_conversion_v1",
+      "purpose": "训练/评估/队列状态；实际批次张量及轮数用于判断进展。",
+      "scope": "对应球心best，全val1272/test830，两尺寸12项；P/R/F1和定位误差为重点。",
+      "bytes": 145
+    },
+    {
+      "path": "reports/datasets/native_resolution_suite_v1/data_preparation.json",
+      "batch": "datasets/native_resolution_suite_v1",
+      "purpose": "原图实验数据列表、图片/球框数量、哈希、变体和来源检查。",
+      "scope": "v1 train6618张，合并train17404张；val1272/test830固定；合并含2997背景变体。",
+      "bytes": 2359
+    },
+    {
+      "path": "reports/experiments/native_resolution_suite_v1/all_combinations.csv",
+      "batch": "experiments/native_resolution_suite_v1",
+      "purpose": "训练模型×数据×推理尺寸×后端×精度×batch的已有结果。",
+      "scope": "顺序训练n/v1、n/合并、s/合并；1280×1024，球心F1选模，原图推理优先。",
+      "bytes": 32001
+    },
+    {
+      "path": "reports/experiments/native_resolution_suite_v1/center_precision_recall.csv",
+      "batch": "experiments/native_resolution_suite_v1",
+      "purpose": "球心专表：48个推理组合×val/test共96行，P/R、TP/FP/FN、同batch转换变化，不含IoU指标。",
+      "scope": "顺序训练n/v1、n/合并、s/合并；1280×1024，球心F1选模，原图推理优先。",
+      "bytes": 34311
+    },
+    {
+      "path": "reports/experiments/native_resolution_suite_v1/center_precision_recall.json",
+      "batch": "experiments/native_resolution_suite_v1",
+      "purpose": "球心P/R专表的完整精确数值、配置、源权重哈希及尚无INT8结果的说明。",
+      "scope": "顺序训练n/v1、n/合并、s/合并；1280×1024，球心F1选模，原图推理优先。",
+      "bytes": 98994
+    },
+    {
+      "path": "reports/experiments/native_resolution_suite_v1/completion_verification.json",
+      "batch": "experiments/native_resolution_suite_v1",
+      "purpose": "本目录批次完成核验：组合数、权重/engine/ONNX哈希、缓存、保留集顺序、训练选模和最终测速次数。",
+      "scope": "顺序训练n/v1、n/合并、s/合并；1280×1024，球心F1选模，原图推理优先。",
+      "bytes": 4061
+    },
+    {
+      "path": "reports/experiments/native_resolution_suite_v1/final_analysis.json",
+      "batch": "experiments/native_resolution_suite_v1",
+      "purpose": "本目录批次实际训练耗时、选中权重、原图FP32/FP16结果及完成核验。",
+      "scope": "顺序训练n/v1、n/合并、s/合并；1280×1024，球心F1选模，原图推理优先。",
+      "bytes": 33644
+    },
+    {
+      "path": "reports/experiments/native_resolution_suite_v1/native_results.png",
+      "batch": "experiments/native_resolution_suite_v1",
+      "purpose": "本目录批次训练曲线及原图TensorRT FP16精度/速度对照，RTX3090。",
+      "scope": "顺序训练n/v1、n/合并、s/合并；1280×1024，球心F1选模，原图推理优先。",
+      "bytes": 311616
+    },
+    {
+      "path": "reports/experiments/native_resolution_suite_v1/native_results.svg",
+      "batch": "experiments/native_resolution_suite_v1",
+      "purpose": "训练和原图精度/速度对照的可导出矢量图。",
+      "scope": "顺序训练n/v1、n/合并、s/合并；1280×1024，球心F1选模，原图推理优先。",
+      "bytes": 121804
+    },
+    {
+      "path": "reports/experiments/native_resolution_suite_v1/process.json",
+      "batch": "experiments/native_resolution_suite_v1",
+      "purpose": "队列进程ID与创建时间，用于防重复启动。",
+      "scope": "顺序训练n/v1、n/合并、s/合并；1280×1024，球心F1选模，原图推理优先。",
+      "bytes": 57
+    },
+    {
+      "path": "reports/experiments/native_resolution_suite_v1/progress.json",
+      "batch": "experiments/native_resolution_suite_v1",
+      "purpose": "训练/评估/队列状态；实际批次张量及轮数用于判断进展。",
+      "scope": "顺序训练n/v1、n/合并、s/合并；1280×1024，球心F1选模，原图推理优先。",
+      "bytes": 862
+    },
+    {
+      "path": "reports/experiments/native_resolution_suite_v1/queue.lock",
+      "batch": "experiments/native_resolution_suite_v1",
+      "purpose": "操作系统持有的互斥锁；文件存在不等于队列仍运行。",
+      "scope": "顺序训练n/v1、n/合并、s/合并；1280×1024，球心F1选模，原图推理优先。",
+      "bytes": 1
+    },
+    {
+      "path": "reports/experiments/native_resolution_suite_v1/summary.json",
+      "batch": "experiments/native_resolution_suite_v1",
+      "purpose": "旧基线及三组新实验全部可用组合汇总，保留未完成状态。",
+      "scope": "顺序训练n/v1、n/合并、s/合并；1280×1024，球心F1选模，原图推理优先。",
+      "bytes": 103616
+    },
+    {
+      "path": "reports/training/native_v1_yolo26n_1280/configuration.json",
+      "batch": "training/native_v1_yolo26n_1280",
+      "purpose": "本次训练参数、初始化权重哈希、数据范围及原图输入尺寸。",
+      "scope": "数据 native_v1；1280×1024、batch8；53轮早停，评估使用第33轮球心best。",
+      "bytes": 2591
+    },
+    {
+      "path": "reports/training/native_v1_yolo26n_1280/epoch_metrics.jsonl",
+      "batch": "training/native_v1_yolo26n_1280",
+      "purpose": "逐轮完整val球心、框指标和误差，包含用于早停的fitness。",
+      "scope": "数据 native_v1；1280×1024、batch8；53轮早停，评估使用第33轮球心best。",
+      "bytes": 46540
+    },
+    {
+      "path": "reports/training/native_v1_yolo26n_1280/preflight.json",
+      "batch": "training/native_v1_yolo26n_1280",
+      "purpose": "正式优化前的实际训练张量、数据量及验证尺寸检查。",
+      "scope": "数据 native_v1；1280×1024、batch8；53轮早停，评估使用第33轮球心best。",
+      "bytes": 246
+    },
+    {
+      "path": "reports/training/native_v1_yolo26n_1280/progress.json",
+      "batch": "training/native_v1_yolo26n_1280",
+      "purpose": "训练/评估/队列状态；实际批次张量及轮数用于判断进展。",
+      "scope": "数据 native_v1；1280×1024、batch8；53轮早停，评估使用第33轮球心best。",
+      "bytes": 2937
+    },
+    {
+      "path": "reports/training/native_v1_yolo26n_1280/result.json",
+      "batch": "training/native_v1_yolo26n_1280",
+      "purpose": "训练完成记录、最佳球心epoch、权重路径与SHA256；仅完成后生成。",
+      "scope": "数据 native_v1；1280×1024、batch8；53轮早停，评估使用第33轮球心best。",
+      "bytes": 1161
+    },
+    {
+      "path": "reports/evaluation/native_v1_yolo26n_1280_conversion_v1/native_v1_yolo26n_1280_conversion_v1.json",
+      "batch": "evaluation/native_v1_yolo26n_1280_conversion_v1",
+      "purpose": "此模型的完整尺寸/后端矩阵主报告、源权重哈希与全量指标。",
+      "scope": "此训练球心best；全val1272/test830；两尺寸、6后端/batch组合每档。",
+      "bytes": 103096
+    },
+    {
+      "path": "reports/evaluation/native_v1_yolo26n_1280_conversion_v1/progress.json",
+      "batch": "evaluation/native_v1_yolo26n_1280_conversion_v1",
+      "purpose": "训练/评估/队列状态；实际批次张量及轮数用于判断进展。",
+      "scope": "此训练球心best；全val1272/test830；两尺寸、6后端/batch组合每档。",
+      "bytes": 145
+    },
+    {
+      "path": "reports/training/native_v1_additional_yolo26n_1280/configuration.json",
+      "batch": "training/native_v1_additional_yolo26n_1280",
+      "purpose": "本次训练参数、初始化权重哈希、数据范围及原图输入尺寸。",
+      "scope": "数据 native_v1_additional；1280×1024、batch8；44轮早停，评估使用第24轮球心best。",
+      "bytes": 2681
+    },
+    {
+      "path": "reports/training/native_v1_additional_yolo26n_1280/epoch_metrics.jsonl",
+      "batch": "training/native_v1_additional_yolo26n_1280",
+      "purpose": "逐轮完整val球心、框指标和误差，包含用于早停的fitness。",
+      "scope": "数据 native_v1_additional；1280×1024、batch8；44轮早停，评估使用第24轮球心best。",
+      "bytes": 38616
+    },
+    {
+      "path": "reports/training/native_v1_additional_yolo26n_1280/progress.json",
+      "batch": "training/native_v1_additional_yolo26n_1280",
+      "purpose": "训练/评估/队列状态；实际批次张量及轮数用于判断进展。",
+      "scope": "数据 native_v1_additional；1280×1024、batch8；44轮早停，评估使用第24轮球心best。",
+      "bytes": 2997
+    },
+    {
+      "path": "reports/training/native_v1_additional_yolo26n_1280/result.json",
+      "batch": "training/native_v1_additional_yolo26n_1280",
+      "purpose": "训练完成记录、最佳球心epoch、权重路径与SHA256；仅完成后生成。",
+      "scope": "数据 native_v1_additional；1280×1024、batch8；44轮早停，评估使用第24轮球心best。",
+      "bytes": 1206
+    },
+    {
+      "path": "reports/evaluation/native_v1_additional_yolo26n_1280_conversion_v1/native_v1_additional_yolo26n_1280_conversion_v1.json",
+      "batch": "evaluation/native_v1_additional_yolo26n_1280_conversion_v1",
+      "purpose": "此模型的完整尺寸/后端矩阵主报告、源权重哈希与全量指标。",
+      "scope": "此训练球心best；全val1272/test830；两尺寸、6后端/batch组合每档。",
+      "bytes": 103079
+    },
+    {
+      "path": "reports/evaluation/native_v1_additional_yolo26n_1280_conversion_v1/progress.json",
+      "batch": "evaluation/native_v1_additional_yolo26n_1280_conversion_v1",
+      "purpose": "训练/评估/队列状态；实际批次张量及轮数用于判断进展。",
+      "scope": "此训练球心best；全val1272/test830；两尺寸、6后端/batch组合每档。",
+      "bytes": 145
+    },
+    {
+      "path": "reports/training/native_v1_additional_yolo26s_1280/configuration.json",
+      "batch": "training/native_v1_additional_yolo26s_1280",
+      "purpose": "本次训练参数、初始化权重哈希、数据范围及原图输入尺寸。",
+      "scope": "数据 native_v1_additional；1280×1024、batch8；50轮早停，评估使用第30轮球心best。",
+      "bytes": 2681
+    },
+    {
+      "path": "reports/training/native_v1_additional_yolo26s_1280/epoch_metrics.jsonl",
+      "batch": "training/native_v1_additional_yolo26s_1280",
+      "purpose": "逐轮完整val球心、框指标和误差，包含用于早停的fitness。",
+      "scope": "数据 native_v1_additional；1280×1024、batch8；50轮早停，评估使用第30轮球心best。",
+      "bytes": 43888
+    },
+    {
+      "path": "reports/training/native_v1_additional_yolo26s_1280/preflight.json",
+      "batch": "training/native_v1_additional_yolo26s_1280",
+      "purpose": "正式优化前的实际训练张量、数据量及验证尺寸检查。",
+      "scope": "数据 native_v1_additional；1280×1024、batch8；50轮早停，评估使用第30轮球心best。",
+      "bytes": 258
+    },
+    {
+      "path": "reports/training/native_v1_additional_yolo26s_1280/progress.json",
+      "batch": "training/native_v1_additional_yolo26s_1280",
+      "purpose": "训练/评估/队列状态；实际批次张量及轮数用于判断进展。",
+      "scope": "数据 native_v1_additional；1280×1024、batch8；50轮早停，评估使用第30轮球心best。",
+      "bytes": 2995
+    },
+    {
+      "path": "reports/training/native_v1_additional_yolo26s_1280/result.json",
+      "batch": "training/native_v1_additional_yolo26s_1280",
+      "purpose": "训练完成记录、最佳球心epoch、权重路径与SHA256；仅完成后生成。",
+      "scope": "数据 native_v1_additional；1280×1024、batch8；50轮早停，评估使用第30轮球心best。",
+      "bytes": 1203
+    },
+    {
+      "path": "reports/evaluation/native_v1_additional_yolo26s_1280_conversion_v1/native_v1_additional_yolo26s_1280_conversion_v1.json",
+      "batch": "evaluation/native_v1_additional_yolo26s_1280_conversion_v1",
+      "purpose": "此模型的完整尺寸/后端矩阵主报告、源权重哈希与全量指标。",
+      "scope": "此训练球心best；全val1272/test830；两尺寸、6后端/batch组合每档。",
+      "bytes": 104152
+    },
+    {
+      "path": "reports/evaluation/native_v1_additional_yolo26s_1280_conversion_v1/progress.json",
+      "batch": "evaluation/native_v1_additional_yolo26s_1280_conversion_v1",
+      "purpose": "训练/评估/队列状态；实际批次张量及轮数用于判断进展。",
+      "scope": "此训练球心best；全val1272/test830；两尺寸、6后端/batch组合每档。",
+      "bytes": 145
+    }
+  ],
+  "count": 139
+}

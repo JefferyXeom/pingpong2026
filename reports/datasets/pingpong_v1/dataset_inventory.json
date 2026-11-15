@@ -1,0 +1,1381 @@
+﻿{
+    "generated_at":  "2026-11-08T17:40:05.2618996+08:00",
+    "source":  "C:\\Users\\Administrator\\Desktop\\yolov5data",
+    "workspace":  "D:\\workspace\\pingpong_yolo26",
+    "source_modified":  false,
+    "enumeration_complete":  true,
+    "enumeration_errors":  [
+
+                           ],
+    "total_files":  48853,
+    "total_bytes":  49761794048,
+    "image_files":  22793,
+    "text_files":  3018,
+    "free_bytes":  94368980992,
+    "minimum_free_bytes":  5368709120,
+    "estimated_free_after_full_copy_bytes":  44607186944,
+    "full_copy_fits_reserve":  true,
+    "space_estimate_note":  "Logical file bytes only; allocation overhead, training caches, environments and exports require additional space.",
+    "extensions":  [
+                       {
+                           "extension":  ".png",
+                           "count":  22793,
+                           "bytes":  37130253586
+                       },
+                       {
+                           "extension":  ".zip",
+                           "count":  2,
+                           "bytes":  12609062934
+                       },
+                       {
+                           "extension":  ".xml",
+                           "count":  23027,
+                           "bytes":  14273175
+                       },
+                       {
+                           "extension":  ".cache",
+                           "count":  4,
+                           "bytes":  3032133
+                       },
+                       {
+                           "extension":  ".npy",
+                           "count":  3,
+                           "bytes":  3028755
+                       },
+                       {
+                           "extension":  ".txt",
+                           "count":  3018,
+                           "bytes":  1822903
+                       },
+                       {
+                           "extension":  ".bat",
+                           "count":  2,
+                           "bytes":  174321
+                       },
+                       {
+                           "extension":  ".xlsx",
+                           "count":  1,
+                           "bytes":  133902
+                       },
+                       {
+                           "extension":  ".py",
+                           "count":  3,
+                           "bytes":  12339
+                       }
+                   ],
+    "directories":  [
+                        {
+                            "directory":  "data\\img_data",
+                            "files":  7942,
+                            "bytes":  9233968218
+                        },
+                        {
+                            "directory":  "VOCData",
+                            "files":  3,
+                            "bytes":  9232848055
+                        },
+                        {
+                            "directory":  "VOCData\\images",
+                            "files":  4944,
+                            "bytes":  9231901249
+                        },
+                        {
+                            "directory":  "data\\060101",
+                            "files":  6572,
+                            "bytes":  6775799359
+                        },
+                        {
+                            "directory":  "VOCData\\processed_images",
+                            "files":  4944,
+                            "bytes":  5155720178
+                        },
+                        {
+                            "directory":  "data",
+                            "files":  1,
+                            "bytes":  3376218799
+                        },
+                        {
+                            "directory":  "data\\img_data.0527",
+                            "files":  4207,
+                            "bytes":  3375970033
+                        },
+                        {
+                            "directory":  "data\\标记2",
+                            "files":  4208,
+                            "bytes":  3363377600
+                        },
+                        {
+                            "directory":  "waste_data\\Annotations(no use)",
+                            "files":  10015,
+                            "bytes":  6103105
+                        },
+                        {
+                            "directory":  "waste_data\\dataSet_path(last)",
+                            "files":  7,
+                            "bytes":  5329638
+                        },
+                        {
+                            "directory":  "VOCData\\Annotations",
+                            "files":  2997,
+                            "bytes":  2066965
+                        },
+                        {
+                            "directory":  "VOCData\\dataSet_path",
+                            "files":  6,
+                            "bytes":  1545764
+                        },
+                        {
+                            "directory":  "waste_data\\ImageSets(last)",
+                            "files":  4,
+                            "bytes":  531066
+                        },
+                        {
+                            "directory":  "VOCData\\labels",
+                            "files":  2997,
+                            "bytes":  244356
+                        },
+                        {
+                            "directory":  "VOCData\\ImageSets",
+                            "files":  4,
+                            "bytes":  161098
+                        },
+                        {
+                            "directory":  "(root)",
+                            "files":  2,
+                            "bytes":  8565
+                        }
+                    ],
+    "config_paths":  [
+
+                     ],
+    "label_pair_candidates":  {
+                                  "adjacent":  0,
+                                  "images_to_labels":  2997,
+                                  "ambiguous":  0,
+                                  "missing":  13802,
+                                  "unique_stem_candidate":  5994
+                              },
+    "unresolved_examples":  [
+                                {
+                                    "image":  "data\\060101\\060101img_-1570948790_left.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1571024154_right.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1571247585_left.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1571324576_right.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1571551279_left.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1571623512_right.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1571852195_left.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1571924082_right.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1572149485_left.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1572224522_right.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1572452000_left.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1572524510_right.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1572750250_left.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1572823658_right.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1573050672_left.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1573124339_right.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1573351011_left.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1573424908_right.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1573650502_left.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1573723879_right.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1573950405_left.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1574023809_right.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1574249025_left.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1574324623_right.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1574553001_left.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1574842409_left.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1575152038_left.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1575453045_left.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1575750950_left.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1575825299_right.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1576046997_left.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1576124399_right.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1576353976_left.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1576426455_right.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1576646746_left.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1576724918_right.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1576945771_left.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1577024955_right.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1577252066_left.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1577325139_right.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1577546318_left.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1577625348_right.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1577848421_left.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1577924754_right.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1578150203_left.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1578225371_right.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1578450746_left.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1578525623_right.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1578753923_left.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1578826333_right.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1579052469_left.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1579125392_right.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1579349845_left.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1579425337_right.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1579648034_left.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1579724547_right.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1579953320_left.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1580025593_right.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1580253916_left.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1580326421_right.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1580552504_left.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1580848997_left.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1580925447_right.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1581154680_left.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1581226607_right.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1581446129_left.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1581526389_right.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1581753558_left.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1581826664_right.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1582052673_left.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1582126490_right.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1582353145_left.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1582426775_right.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1582646802_left.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1582725607_right.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1582954838_left.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1583026520_right.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1583254142_left.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1583326716_right.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1583555337_left.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1583626585_right.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1583852085_left.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1583926658_right.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1584156150_left.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1584226639_right.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1584455978_left.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1584526623_right.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1584753778_left.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1584826870_right.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1585055532_left.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1585127036_right.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1585354677_left.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1585427319_right.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1585643589_left.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1585726915_right.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1585944162_left.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1586027183_right.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1586253014_left.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1586326929_right.png",
+                                    "status":  "missing"
+                                },
+                                {
+                                    "image":  "data\\060101\\060101img_-1586555119_left.png",
+                                    "status":  "missing"
+                                }
+                            ],
+    "label_sample_limit":  100,
+    "sampled_labels":  [
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_100052852_left.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_100278006_right.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_-100674158_left.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_-100752188_right.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_100878931_right.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_-100970618_left.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_-101051820_right.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_101179245_right.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_101257923_left.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_-101275009_left.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_-101352452_right.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_101478502_right.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_101569614_left.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_-101578836_left.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_-101652443_right.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_101778552_right.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_101851475_left.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_-101874963_left.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_-101952667_right.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_102078696_right.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_102161458_left.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_-102171587_left.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_-102250798_right.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_102378650_right.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_102457118_left.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_-102473370_left.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_-102551731_right.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_102678719_right.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_102769924_left.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_-102780846_left.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_-102852190_right.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_102978629_right.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_103070907_left.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_-103075549_left.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_-103152255_right.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_103280317_right.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_103354232_left.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_-103374746_left.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_-103450585_right.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_103578892_right.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_103654466_left.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_-103669766_left.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_-103753175_right.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_103879145_right.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_103955252_left.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_-103980653_left.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_-104052680_right.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_104178701_right.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_104252441_left.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_-104264982_left.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_-104353428_right.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_104479191_right.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_104552878_left.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_-104575808_left.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_-104652642_right.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_104778960_right.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_104851701_left.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_-104880300_left.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_-104952238_right.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_105079309_right.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_105150660_left.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_-105175445_left.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_-105251888_right.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_105378757_right.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_105463338_left.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_-105474800_left.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_-105552546_right.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_105679717_right.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_105772500_left.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_-105778049_left.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_-105852111_right.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_105979349_right.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_106052180_left.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_-106077258_left.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_-106151873_right.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_106279160_right.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_106350017_left.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_-106374421_left.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_-106452103_right.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_-106679206_left.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_-106752300_right.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_-106971207_left.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_-107052978_right.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_-107271974_left.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_-107351941_right.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_-107578855_left.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_-107652568_right.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_107779550_right.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_107854912_left.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_-107882282_left.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_-107953299_right.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_108079701_right.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_108163375_left.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_-108178229_left.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_-108252304_right.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_108379415_right.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_108457015_left.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_-108463059_left.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_-108553125_right.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           },
+                           {
+                               "path":  "VOCData\\labels\\0601_2img_108679514_right.txt",
+                               "objects":  2,
+                               "invalid_detection_rows":  0,
+                               "class_ids":  [
+                                                 0
+                                             ]
+                           }
+                       ],
+    "executables":  [
+                        {
+                            "name":  "python",
+                            "path":  null
+                        },
+                        {
+                            "name":  "py",
+                            "path":  "C:\\WINDOWS\\py.exe"
+                        },
+                        {
+                            "name":  "nvidia-smi",
+                            "path":  "C:\\WINDOWS\\system32\\nvidia-smi.exe"
+                        },
+                        {
+                            "name":  "trtexec",
+                            "path":  null
+                        }
+                    ]
+}

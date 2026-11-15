@@ -1,0 +1,99 @@
+{
+  "source_images": 18086,
+  "sample_images": 96,
+  "seed": 20261115,
+  "statistics": {
+    "new": {
+      "images": 10997,
+      "objects": 13912,
+      "object_count_histogram": {
+        "1": 8304,
+        "2": 2471,
+        "3": 222
+      },
+      "filename_prefix_counts": {
+        "0": 1965,
+        "1": 9032
+      },
+      "quantile_order": [
+        "min",
+        "p05",
+        "p50",
+        "p95",
+        "max"
+      ],
+      "box_width_px": [
+        6.0,
+        9.0,
+        13.0,
+        18.0,
+        27.0
+      ],
+      "box_height_px": [
+        5.0,
+        9.0,
+        13.0,
+        17.0,
+        25.0
+      ]
+    },
+    "used": {
+      "images": 7089,
+      "objects": 8888,
+      "object_count_histogram": {
+        "1": 5425,
+        "2": 1529,
+        "3": 135
+      },
+      "filename_prefix_counts": {
+        "0": 7089
+      },
+      "quantile_order": [
+        "min",
+        "p05",
+        "p50",
+        "p95",
+        "max"
+      ],
+      "box_width_px": [
+        6.0,
+        9.0,
+        13.0,
+        17.0,
+        25.0
+      ],
+      "box_height_px": [
+        5.0,
+        8.0,
+        13.0,
+        16.0,
+        24.0
+      ]
+    }
+  },
+  "sampling": "32 random per new/used group balanced by filename prefix, plus 4 each smallest/largest/elongated/multiple-or-edge; deduplicate selected images.",
+  "sample_groups": {
+    "new": 48,
+    "used": 48
+  },
+  "source_and_labels_modified": false,
+  "model_predictions_used": false,
+  "sampled_image_hashes_and_xml_conversion_verified": true,
+  "rendering": "Context is JPEG92 full resolution; embedded object crops are lossless PNG at original pixels; HTML zoom uses nearest-neighbor. Static sheets are JPEG previews.",
+  "coordinates": "Training convention: center=(VOC_min+VOC_max)/2-1, extent=VOC_max-VOC_min; raw XML shown separately.",
+  "limits": "Geometric validity is not visual annotation correctness; sample is partly targeted, not a population error-rate estimate.",
+  "contact_sheets": [
+    "label_quality_contact_01.jpg",
+    "label_quality_contact_02.jpg",
+    "label_quality_contact_03.jpg",
+    "label_quality_contact_04.jpg",
+    "label_quality_contact_05.jpg",
+    "label_quality_contact_06.jpg",
+    "label_quality_contact_07.jpg",
+    "label_quality_contact_08.jpg",
+    "label_quality_contact_09.jpg",
+    "label_quality_contact_10.jpg",
+    "label_quality_contact_11.jpg",
+    "label_quality_contact_12.jpg"
+  ]
+}

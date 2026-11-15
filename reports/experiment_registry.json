@@ -1,0 +1,1031 @@
+{
+  "as_of_date": "2026-11-15",
+  "task": "single-class ball detection and 2D center localization",
+  "classes": {
+    "0": "ball"
+  },
+  "trained_architectures": [
+    "YOLO26n",
+    "YOLO26s"
+  ],
+  "historical_baseline_scope": "Historical960 results retained; native completed runs included separately by experiment ID.",
+  "not_in_historical_baseline": [
+    "YOLO26s",
+    "native-1280 training",
+    "background-variant training",
+    "INT8 calibration"
+  ],
+  "models": [
+    {
+      "id": "pretrained_yolo26n",
+      "architecture": "YOLO26n",
+      "path": "models/yolo26n.pt",
+      "epoch": null,
+      "sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef",
+      "purpose": "预训练初始化；不是已训练的乒乓球模型"
+    },
+    {
+      "id": "smoke_epoch1",
+      "architecture": "YOLO26n",
+      "path": "runs/detect/smoke_yolo26n_960/weights/best.pt",
+      "epoch": 1,
+      "sha256": "ec8fa66ab252f27c73edd909dec38a00d7f376f297cebf6a043327b946cb1439",
+      "purpose": "小规模训练及早期转换流程验证"
+    },
+    {
+      "id": "baseline_best_epoch3",
+      "architecture": "YOLO26n",
+      "path": "runs/detect/baseline_yolo26n_960/weights/best.pt",
+      "epoch": 3,
+      "sha256": "16fe6a196bf145aa88786d6c3a87b49a1bf89f9dbdc445e7e8038d4bbb53cb79",
+      "purpose": "按验证框mAP选择的best；完成后的推理权重"
+    },
+    {
+      "id": "diagnostic_best_epoch3",
+      "architecture": "YOLO26n",
+      "path": "reports/evaluation/baseline_yolo26n_960/diagnostics_epoch24/baseline_diagnostics/best.pt",
+      "epoch": 3,
+      "sha256": "0465e73d1f8abf8fd36615f3863d060167b42ff82012afb3c9b9acb9a720888b",
+      "purpose": "第24轮中断阶段保留的best诊断快照"
+    },
+    {
+      "id": "diagnostic_last_epoch24",
+      "architecture": "YOLO26n",
+      "path": "reports/evaluation/baseline_yolo26n_960/diagnostics_epoch24/baseline_diagnostics/last.pt",
+      "epoch": 24,
+      "sha256": "7a15be0f1f33594c9daa1e25ad8e7abc7a2c9883001044d7ea8f5d249a4756bf",
+      "purpose": "第24轮中断阶段last诊断快照；不是第28轮"
+    },
+    {
+      "id": "baseline_last_epoch28",
+      "architecture": "YOLO26n",
+      "path": "runs/detect/baseline_yolo26n_960/weights/last.pt",
+      "epoch": 28,
+      "sha256": "fb770bff46a07b46234fd32b816842ad9e6d65880cbbd038e988d6cbe579db3f",
+      "purpose": "最终last；按完整验证球心指标选中"
+    },
+    {
+      "id": "pingpong_yolo26n_center_v1",
+      "architecture": "YOLO26n",
+      "path": "models/pingpong_yolo26n_center_v1/weights.pt",
+      "epoch": 28,
+      "sha256": "fb770bff46a07b46234fd32b816842ad9e6d65880cbbd038e988d6cbe579db3f",
+      "purpose": "当前模型包；正式原图/转换矩阵的唯一源模型"
+    },
+    {
+      "id": "native_v1_yolo26n_1280_best",
+      "architecture": "YOLO26n",
+      "path": "runs/detect/native_v1_yolo26n_1280/weights/best.pt",
+      "epoch": 33,
+      "sha256": "2c889ad027db03126b335394c0fdea2d04361b24f12f293475a1549085f92c97",
+      "purpose": "原图训练；按完整val球心F1选中，用于同名转换矩阵。"
+    },
+    {
+      "id": "native_v1_additional_yolo26n_1280_best",
+      "architecture": "YOLO26n",
+      "path": "runs/detect/native_v1_additional_yolo26n_1280/weights/best.pt",
+      "epoch": 24,
+      "sha256": "7b5f7399cc7b7caa657fc30819309bc0715ee68e60c4662e5f6bdb79fe224386",
+      "purpose": "原图训练；按完整val球心F1选中，用于同名转换矩阵。"
+    },
+    {
+      "id": "native_v1_additional_yolo26s_1280_best",
+      "architecture": "YOLO26s",
+      "path": "runs/detect/native_v1_additional_yolo26s_1280/weights/best.pt",
+      "epoch": 30,
+      "sha256": "6d2bf3963070efe40d7a009d0a9450efb6b0e88f9993b9c84a78d821e0d782c8",
+      "purpose": "原图训练；按完整val球心F1选中，用于同名转换矩阵。"
+    },
+    {
+      "id": "native_merged_v2_baiduout_yolo26n_1280_best",
+      "architecture": "YOLO26n",
+      "path": "runs/detect/native_merged_v2_baiduout_yolo26n_1280/weights/best.pt",
+      "epoch": 12,
+      "sha256": "d25c43e4a05b7e1fc72614341b572a0a22882c295409fe039508a3d3dd566e1c",
+      "purpose": "merged_v2球心best；Baidu增量原图转换矩阵唯一源权重"
+    },
+    {
+      "id": "native_merged_v2_baiduout_yolo26s_1280_best",
+      "architecture": "YOLO26s",
+      "path": "runs/detect/native_merged_v2_baiduout_yolo26s_1280/weights/best.pt",
+      "epoch": 22,
+      "sha256": "433c47f818aaf07b4e1d34df64a7bad3ee744d1fb21b1f1d00b08915af9a89f0",
+      "purpose": "merged_v2球心best；Baidu增量原图转换矩阵唯一源权重"
+    }
+  ],
+  "datasets": {
+    "pingpong_v1": {
+      "selected": 8720,
+      "split_counts": {
+        "test": 830,
+        "val": 1272,
+        "train": 6618
+      },
+      "image_bytes": 15033543186,
+      "coordinate_convention": "Legacy project VOC: center=((min+max)/2-1)/size, extent=(max-min)/size; invalid boxes are excluded for review, never silently clipped.",
+      "split_policy": "Entire recording 20240527_3 is validation; entire recording 20240527_2 is test. All other canonical batches are training. Exact duplicate content is retained once, preferring held-out splits. Background variants must follow the original split and only augment training.",
+      "heldout_limit": "Recording boundaries inferred from existing directory names; site separation is not established.",
+      "objects": 10270,
+      "negative_images": 0,
+      "difficult_objects": 0,
+      "image_dimensions": {
+        "1280x1024": 8720
+      },
+      "box_min_side_pixels_median": 12.0,
+      "boxes_under_four_pixels_after_resize": {
+        "640": 887,
+        "960": 134,
+        "1280": 2
+      },
+      "batch_counts": {
+        "may27_recording2": 830,
+        "may27_recording3": 1272,
+        "june01_recording1": 1520,
+        "june01_recording2": 2997,
+        "may27_recording1": 2101
+      },
+      "free_gib_after_copy": 68.82751083374023,
+      "independent_copies": true,
+      "background_variants_included": false,
+      "exact_duplicate_images_removed": 0,
+      "invalid_pairs_excluded": 0,
+      "missing_annotation_images_excluded": 4185
+    },
+    "pingpong_additional_v1": {
+      "images": 10786,
+      "objects": 14042,
+      "image_bytes": 14547226447,
+      "split": "unassigned",
+      "source_directory_counts": {
+        "D:\\yolov5-master\\VOCData\\images": 7789,
+        "D:\\yolov5-master\\history_VOCOdata\\VOCData_1\\images": 2997
+      },
+      "image_and_annotation_copy_sha256_verified": true,
+      "labels_written_and_verified": true,
+      "active_dataset_unchanged": true,
+      "sources_unchanged": true,
+      "free_gib_after_copy": 50.225521087646484,
+      "excluded": "Existing exact image duplicates, conflicting/invalid/missing annotations and unreviewed empty annotations. Archives are inventoried only.",
+      "usage": "Independent supplementary backup only. No data.yaml generated; review recording provenance, background variants and held-out overlap before training."
+    },
+    "pingpong_baidu_out_v1": {
+      "version": "pingpong_baidu_out_v1",
+      "images": 10997,
+      "objects": 13912,
+      "image_bytes": 16323221677,
+      "source_files_modified": false,
+      "negative_images": 0,
+      "split": "train-only",
+      "duplicates_not_copied": 7089,
+      "audit": "reports/datasets/pingpong_baidu_out_v1/audit_summary.json"
+    },
+    "pingpong_merged_v2": {
+      "split_counts_and_lists": {
+        "train": {
+          "images": 28401,
+          "objects": 36093,
+          "list": "configs/datasets/native_merged_v2_baiduout_20261113/pingpong_merged_v2_train.txt",
+          "sha256": "4171c3440157262f48e8414746a94141bb1622d98cad4818974e10e598bd49a8"
+        },
+        "val": {
+          "images": 1272,
+          "objects": 1272,
+          "list": "configs/datasets/native_merged_v2_baiduout_20261113/pingpong_merged_v2_val.txt",
+          "sha256": "e22da33d8b9c3d322e20e689f5c8b47629615baf44aba3b78b712aff826326b5"
+        },
+        "test": {
+          "images": 830,
+          "objects": 859,
+          "list": "configs/datasets/native_merged_v2_baiduout_20261113/pingpong_merged_v2_test.txt",
+          "sha256": "e9141cc0d25aec41bb322cf6456e5d78e985f60501ddaaa3492edfa9bab33a6b"
+        },
+        "yaml": "configs/datasets/native_merged_v2_baiduout_20261113/pingpong_merged_v2.yaml"
+      },
+      "data_preparation": "reports/datasets/native_merged_v2_baiduout_20261113/data_preparation.json"
+    }
+  },
+  "training_runs": [
+    {
+      "id": "smoke_yolo26n_960",
+      "model_id": "pretrained_yolo26n",
+      "epochs_completed": 1,
+      "batch": 8,
+      "imgsz": 960,
+      "input_shape_height_width": [
+        960,
+        960
+      ],
+      "rect": false,
+      "multi_scale": 0,
+      "data": "datasets/pingpong_v1/data_smoke.yaml",
+      "counts": {
+        "train": {
+          "images": 192,
+          "objects": 234
+        },
+        "val": {
+          "images": 64,
+          "objects": 64
+        }
+      },
+      "actual_args": "runs/detect/smoke_yolo26n_960/args.yaml",
+      "reports": "reports/training/smoke_yolo26n_960"
+    },
+    {
+      "id": "baseline_yolo26n_960",
+      "model_id": "pretrained_yolo26n",
+      "epochs_completed": 28,
+      "epochs_requested": 100,
+      "patience": 25,
+      "batch": 16,
+      "imgsz": 960,
+      "input_shape_height_width": [
+        960,
+        960
+      ],
+      "rect": false,
+      "multi_scale": 0,
+      "amp": true,
+      "training_images": 6618,
+      "training_objects": 8139,
+      "validation_images": 1272,
+      "validation_objects": 1272,
+      "batches_per_epoch": 414,
+      "manual_resume_from_epoch": 24,
+      "best_box_epoch": 3,
+      "selected_center_epoch": 28,
+      "training_minutes_excluding_pause": 63.82525,
+      "actual_args": "runs/detect/baseline_yolo26n_960/args.yaml",
+      "reports": "reports/training/baseline_yolo26n_960"
+    },
+    {
+      "id": "native_v1_yolo26n_1280",
+      "architecture": "YOLO26n",
+      "initialization": "models/yolo26n.pt",
+      "initialization_sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef",
+      "epochs_completed": 53,
+      "selected_center_epoch": 33,
+      "selected_model_id": "native_v1_yolo26n_1280_best",
+      "epochs_requested": 100,
+      "patience": 20,
+      "batch": 8,
+      "imgsz": 1280,
+      "input_shape_height_width": [
+        1024,
+        1280
+      ],
+      "rect": true,
+      "multi_scale": 0,
+      "amp": true,
+      "counts": {
+        "train": {
+          "images": 6618,
+          "objects": 8139,
+          "list": "configs/datasets/native_resolution_suite_v1/native_v1_train.txt",
+          "sha256": "e867236ff42001a096aa9c8798199d9b799ad5c8a06781773a0fb44bcbec9582"
+        },
+        "val": {
+          "images": 1272,
+          "objects": 1272,
+          "list": "configs/datasets/native_resolution_suite_v1/native_v1_val.txt",
+          "sha256": "e22da33d8b9c3d322e20e689f5c8b47629615baf44aba3b78b712aff826326b5"
+        },
+        "test": {
+          "images": 830,
+          "objects": 859,
+          "list": "configs/datasets/native_resolution_suite_v1/native_v1_test.txt",
+          "sha256": "e9141cc0d25aec41bb322cf6456e5d78e985f60501ddaaa3492edfa9bab33a6b"
+        },
+        "yaml": "configs/datasets/native_resolution_suite_v1/native_v1.yaml"
+      },
+      "actual_args": "runs/detect/native_v1_yolo26n_1280/args.yaml",
+      "reports": "reports/training/native_v1_yolo26n_1280",
+      "selection": "center5 F1, conf=.25, complete v1 val; test not used"
+    },
+    {
+      "id": "native_v1_additional_yolo26n_1280",
+      "architecture": "YOLO26n",
+      "initialization": "models/yolo26n.pt",
+      "initialization_sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef",
+      "epochs_completed": 44,
+      "selected_center_epoch": 24,
+      "selected_model_id": "native_v1_additional_yolo26n_1280_best",
+      "epochs_requested": 100,
+      "patience": 20,
+      "batch": 8,
+      "imgsz": 1280,
+      "input_shape_height_width": [
+        1024,
+        1280
+      ],
+      "rect": true,
+      "multi_scale": 0,
+      "amp": true,
+      "counts": {
+        "train": {
+          "images": 17404,
+          "objects": 22181,
+          "list": "configs/datasets/native_resolution_suite_v1/native_v1_additional_train.txt",
+          "sha256": "d0242f85006e1d4264eb2ed119bbbd1799faf9cb0578324aa80f8996f1b9eb89"
+        },
+        "val": {
+          "images": 1272,
+          "objects": 1272,
+          "list": "configs/datasets/native_resolution_suite_v1/native_v1_additional_val.txt",
+          "sha256": "e22da33d8b9c3d322e20e689f5c8b47629615baf44aba3b78b712aff826326b5"
+        },
+        "test": {
+          "images": 830,
+          "objects": 859,
+          "list": "configs/datasets/native_resolution_suite_v1/native_v1_additional_test.txt",
+          "sha256": "e9141cc0d25aec41bb322cf6456e5d78e985f60501ddaaa3492edfa9bab33a6b"
+        },
+        "yaml": "configs/datasets/native_resolution_suite_v1/native_v1_additional.yaml"
+      },
+      "actual_args": "runs/detect/native_v1_additional_yolo26n_1280/args.yaml",
+      "reports": "reports/training/native_v1_additional_yolo26n_1280",
+      "selection": "center5 F1, conf=.25, complete v1 val; test not used"
+    },
+    {
+      "id": "native_v1_additional_yolo26s_1280",
+      "architecture": "YOLO26s",
+      "initialization": "models/yolo26s.pt",
+      "initialization_sha256": "646f8bc3fe0a656803d95c294f7852321748cb29d13466a1af8862e2db384a1b",
+      "epochs_completed": 50,
+      "selected_center_epoch": 30,
+      "selected_model_id": "native_v1_additional_yolo26s_1280_best",
+      "epochs_requested": 100,
+      "patience": 20,
+      "batch": 8,
+      "imgsz": 1280,
+      "input_shape_height_width": [
+        1024,
+        1280
+      ],
+      "rect": true,
+      "multi_scale": 0,
+      "amp": true,
+      "counts": {
+        "train": {
+          "images": 17404,
+          "objects": 22181,
+          "list": "configs/datasets/native_resolution_suite_v1/native_v1_additional_train.txt",
+          "sha256": "d0242f85006e1d4264eb2ed119bbbd1799faf9cb0578324aa80f8996f1b9eb89"
+        },
+        "val": {
+          "images": 1272,
+          "objects": 1272,
+          "list": "configs/datasets/native_resolution_suite_v1/native_v1_additional_val.txt",
+          "sha256": "e22da33d8b9c3d322e20e689f5c8b47629615baf44aba3b78b712aff826326b5"
+        },
+        "test": {
+          "images": 830,
+          "objects": 859,
+          "list": "configs/datasets/native_resolution_suite_v1/native_v1_additional_test.txt",
+          "sha256": "e9141cc0d25aec41bb322cf6456e5d78e985f60501ddaaa3492edfa9bab33a6b"
+        },
+        "yaml": "configs/datasets/native_resolution_suite_v1/native_v1_additional.yaml"
+      },
+      "actual_args": "runs/detect/native_v1_additional_yolo26s_1280/args.yaml",
+      "reports": "reports/training/native_v1_additional_yolo26s_1280",
+      "selection": "center5 F1, conf=.25, complete v1 val; test not used"
+    },
+    {
+      "id": "native_merged_v2_baiduout_yolo26n_1280",
+      "architecture": "YOLO26n",
+      "initialization": "models/yolo26n.pt",
+      "initialization_sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef",
+      "epochs_completed": 32,
+      "selected_center_epoch": 12,
+      "selected_model_id": "native_merged_v2_baiduout_yolo26n_1280_best",
+      "epochs_requested": 100,
+      "patience": 20,
+      "batch": 8,
+      "imgsz": 1280,
+      "input_shape_height_width": [
+        1024,
+        1280
+      ],
+      "rect": true,
+      "multi_scale": 0,
+      "amp": true,
+      "counts": {
+        "train": {
+          "images": 28401,
+          "objects": 36093,
+          "list": "configs/datasets/native_merged_v2_baiduout_20261113/pingpong_merged_v2_train.txt",
+          "sha256": "4171c3440157262f48e8414746a94141bb1622d98cad4818974e10e598bd49a8"
+        },
+        "val": {
+          "images": 1272,
+          "objects": 1272,
+          "list": "configs/datasets/native_merged_v2_baiduout_20261113/pingpong_merged_v2_val.txt",
+          "sha256": "e22da33d8b9c3d322e20e689f5c8b47629615baf44aba3b78b712aff826326b5"
+        },
+        "test": {
+          "images": 830,
+          "objects": 859,
+          "list": "configs/datasets/native_merged_v2_baiduout_20261113/pingpong_merged_v2_test.txt",
+          "sha256": "e9141cc0d25aec41bb322cf6456e5d78e985f60501ddaaa3492edfa9bab33a6b"
+        },
+        "yaml": "configs/datasets/native_merged_v2_baiduout_20261113/pingpong_merged_v2.yaml"
+      },
+      "actual_args": "runs/detect/native_merged_v2_baiduout_yolo26n_1280/args.yaml",
+      "reports": "reports/training/native_merged_v2_baiduout_yolo26n_1280",
+      "selection": "center5 F1, conf=.25, complete v1 val; test not used"
+    },
+    {
+      "id": "native_merged_v2_baiduout_yolo26s_1280",
+      "architecture": "YOLO26s",
+      "initialization": "models/yolo26s.pt",
+      "initialization_sha256": "646f8bc3fe0a656803d95c294f7852321748cb29d13466a1af8862e2db384a1b",
+      "epochs_completed": 42,
+      "selected_center_epoch": 22,
+      "selected_model_id": "native_merged_v2_baiduout_yolo26s_1280_best",
+      "epochs_requested": 100,
+      "patience": 20,
+      "batch": 8,
+      "imgsz": 1280,
+      "input_shape_height_width": [
+        1024,
+        1280
+      ],
+      "rect": true,
+      "multi_scale": 0,
+      "amp": true,
+      "counts": {
+        "train": {
+          "images": 28401,
+          "objects": 36093,
+          "list": "configs/datasets/native_merged_v2_baiduout_20261113/pingpong_merged_v2_train.txt",
+          "sha256": "4171c3440157262f48e8414746a94141bb1622d98cad4818974e10e598bd49a8"
+        },
+        "val": {
+          "images": 1272,
+          "objects": 1272,
+          "list": "configs/datasets/native_merged_v2_baiduout_20261113/pingpong_merged_v2_val.txt",
+          "sha256": "e22da33d8b9c3d322e20e689f5c8b47629615baf44aba3b78b712aff826326b5"
+        },
+        "test": {
+          "images": 830,
+          "objects": 859,
+          "list": "configs/datasets/native_merged_v2_baiduout_20261113/pingpong_merged_v2_test.txt",
+          "sha256": "e9141cc0d25aec41bb322cf6456e5d78e985f60501ddaaa3492edfa9bab33a6b"
+        },
+        "yaml": "configs/datasets/native_merged_v2_baiduout_20261113/pingpong_merged_v2.yaml"
+      },
+      "actual_args": "runs/detect/native_merged_v2_baiduout_yolo26s_1280/args.yaml",
+      "reports": "reports/training/native_merged_v2_baiduout_yolo26s_1280",
+      "selection": "center5 F1, conf=.25, complete v1 val; test not used"
+    }
+  ],
+  "evaluation_batches": [
+    {
+      "id": "smoke_conversion_v1",
+      "model_ids": [
+        "smoke_epoch1"
+      ],
+      "images": 8,
+      "shape_hw": [
+        960,
+        960
+      ],
+      "reports": "reports/evaluation/smoke_conversion_v1",
+      "artifacts": [
+        "artifacts/smoke_yolo26n_960",
+        "artifacts/smoke_yolo26n_960_e2e"
+      ],
+      "purpose": "conversion smoke only"
+    },
+    {
+      "id": "diagnostics_epoch24",
+      "model_ids": [
+        "diagnostic_best_epoch3",
+        "diagnostic_last_epoch24"
+      ],
+      "train_subset_images": 384,
+      "val_subset_images": 256,
+      "test_images": 0,
+      "reports": "reports/evaluation/baseline_yolo26n_960/diagnostics_epoch24"
+    },
+    {
+      "id": "center_selection_v1",
+      "val_model_ids": [
+        "baseline_best_epoch3",
+        "baseline_last_epoch28"
+      ],
+      "val_images": 1272,
+      "test_model_ids": [
+        "baseline_last_epoch28"
+      ],
+      "test_images": 830,
+      "reports": "reports/evaluation/baseline_yolo26n_960/center_selection_v1",
+      "selection": "highest full-val center5 F1 at fixed conf .25 among best/last; no test selection"
+    },
+    {
+      "id": "center_conversion_matrix_v1",
+      "model_ids": [
+        "pingpong_yolo26n_center_v1"
+      ],
+      "weights_sha256": "fb770bff46a07b46234fd32b816842ad9e6d65880cbbd038e988d6cbe579db3f",
+      "val_images": 1272,
+      "test_images": 830,
+      "case_count": 12,
+      "reports": "reports/evaluation/center_conversion_matrix_v1",
+      "artifacts": "artifacts/center_conversion_matrix_v1",
+      "cases": [
+        {
+          "id": "h768_w960_pytorch_fp32_b1",
+          "backend": "pytorch_fp32",
+          "batch": 1,
+          "shape_hw": [
+            768,
+            960
+          ],
+          "test_conf025": {
+            "gt": 859,
+            "predictions": 877,
+            "center5_matches": 824,
+            "center5_precision": 0.9395667046750285,
+            "center5_recall": 0.959254947613504,
+            "center5_f1": 0.9493087557603687,
+            "center10_matches": 824,
+            "matched_error_px_p50_p95_p99": [
+              1.2096456970315712,
+              2.46135248949507,
+              3.0660378803193
+            ],
+            "width_ratio_median": 0.5642852783203107,
+            "height_ratio_median": 0.5069103240966797,
+            "missed_frames_center5": 35,
+            "extra_frames_center5": 51
+          }
+        },
+        {
+          "id": "h768_w960_pytorch_fp32_b2",
+          "backend": "pytorch_fp32",
+          "batch": 2,
+          "shape_hw": [
+            768,
+            960
+          ],
+          "test_conf025": {
+            "gt": 859,
+            "predictions": 877,
+            "center5_matches": 824,
+            "center5_precision": 0.9395667046750285,
+            "center5_recall": 0.959254947613504,
+            "center5_f1": 0.9493087557603687,
+            "center10_matches": 824,
+            "matched_error_px_p50_p95_p99": [
+              1.2096456970315712,
+              2.46135248949507,
+              3.0660378803193
+            ],
+            "width_ratio_median": 0.5642852783203107,
+            "height_ratio_median": 0.5069103240966797,
+            "missed_frames_center5": 35,
+            "extra_frames_center5": 51
+          }
+        },
+        {
+          "id": "h768_w960_onnx_cpu_fp32_b2",
+          "backend": "onnx_cpu_fp32",
+          "batch": 2,
+          "shape_hw": [
+            768,
+            960
+          ],
+          "test_conf025": {
+            "gt": 859,
+            "predictions": 877,
+            "center5_matches": 824,
+            "center5_precision": 0.9395667046750285,
+            "center5_recall": 0.959254947613504,
+            "center5_f1": 0.9493087557603687,
+            "center10_matches": 824,
+            "matched_error_px_p50_p95_p99": [
+              1.2096456970315712,
+              2.46135248949507,
+              3.0660378803193
+            ],
+            "width_ratio_median": 0.5642852783203107,
+            "height_ratio_median": 0.5069103240966797,
+            "missed_frames_center5": 35,
+            "extra_frames_center5": 51
+          }
+        },
+        {
+          "id": "h768_w960_tensorrt_fp32_b2",
+          "backend": "tensorrt_fp32",
+          "batch": 2,
+          "shape_hw": [
+            768,
+            960
+          ],
+          "test_conf025": {
+            "gt": 859,
+            "predictions": 877,
+            "center5_matches": 824,
+            "center5_precision": 0.9395667046750285,
+            "center5_recall": 0.959254947613504,
+            "center5_f1": 0.9493087557603687,
+            "center10_matches": 824,
+            "matched_error_px_p50_p95_p99": [
+              1.2096456970315712,
+              2.46135248949507,
+              3.0660378803193
+            ],
+            "width_ratio_median": 0.5642852783203107,
+            "height_ratio_median": 0.5069103240966797,
+            "missed_frames_center5": 35,
+            "extra_frames_center5": 51
+          }
+        },
+        {
+          "id": "h768_w960_tensorrt_fp16_b1",
+          "backend": "tensorrt_fp16",
+          "batch": 1,
+          "shape_hw": [
+            768,
+            960
+          ],
+          "test_conf025": {
+            "gt": 859,
+            "predictions": 877,
+            "center5_matches": 824,
+            "center5_precision": 0.9395667046750285,
+            "center5_recall": 0.959254947613504,
+            "center5_f1": 0.9493087557603687,
+            "center10_matches": 824,
+            "matched_error_px_p50_p95_p99": [
+              1.2133257982394603,
+              2.5047181419468854,
+              3.074056852520708
+            ],
+            "width_ratio_median": 0.5614045795641447,
+            "height_ratio_median": 0.5087730006167763,
+            "missed_frames_center5": 35,
+            "extra_frames_center5": 51
+          }
+        },
+        {
+          "id": "h768_w960_tensorrt_fp16_b2",
+          "backend": "tensorrt_fp16",
+          "batch": 2,
+          "shape_hw": [
+            768,
+            960
+          ],
+          "test_conf025": {
+            "gt": 859,
+            "predictions": 877,
+            "center5_matches": 824,
+            "center5_precision": 0.9395667046750285,
+            "center5_recall": 0.959254947613504,
+            "center5_f1": 0.9493087557603687,
+            "center10_matches": 824,
+            "matched_error_px_p50_p95_p99": [
+              1.2133425672441431,
+              2.5047181419468854,
+              3.0942214408422926
+            ],
+            "width_ratio_median": 0.5614045795641447,
+            "height_ratio_median": 0.5087730006167763,
+            "missed_frames_center5": 35,
+            "extra_frames_center5": 51
+          }
+        },
+        {
+          "id": "h1024_w1280_pytorch_fp32_b1",
+          "backend": "pytorch_fp32",
+          "batch": 1,
+          "shape_hw": [
+            1024,
+            1280
+          ],
+          "test_conf025": {
+            "gt": 859,
+            "predictions": 884,
+            "center5_matches": 819,
+            "center5_precision": 0.9264705882352942,
+            "center5_recall": 0.9534342258440046,
+            "center5_f1": 0.9397590361445783,
+            "center10_matches": 819,
+            "matched_error_px_p50_p95_p99": [
+              1.316547444239598,
+              2.7351441483866084,
+              3.312768121822171
+            ],
+            "width_ratio_median": 0.5547960069444444,
+            "height_ratio_median": 0.4916848575367647,
+            "missed_frames_center5": 40,
+            "extra_frames_center5": 61
+          }
+        },
+        {
+          "id": "h1024_w1280_pytorch_fp32_b2",
+          "backend": "pytorch_fp32",
+          "batch": 2,
+          "shape_hw": [
+            1024,
+            1280
+          ],
+          "test_conf025": {
+            "gt": 859,
+            "predictions": 884,
+            "center5_matches": 819,
+            "center5_precision": 0.9264705882352942,
+            "center5_recall": 0.9534342258440046,
+            "center5_f1": 0.9397590361445783,
+            "center10_matches": 819,
+            "matched_error_px_p50_p95_p99": [
+              1.316547444239598,
+              2.7351441483866084,
+              3.312768121822171
+            ],
+            "width_ratio_median": 0.5547960069444444,
+            "height_ratio_median": 0.4916848575367647,
+            "missed_frames_center5": 40,
+            "extra_frames_center5": 61
+          }
+        },
+        {
+          "id": "h1024_w1280_onnx_cpu_fp32_b2",
+          "backend": "onnx_cpu_fp32",
+          "batch": 2,
+          "shape_hw": [
+            1024,
+            1280
+          ],
+          "test_conf025": {
+            "gt": 859,
+            "predictions": 884,
+            "center5_matches": 819,
+            "center5_precision": 0.9264705882352942,
+            "center5_recall": 0.9534342258440046,
+            "center5_f1": 0.9397590361445783,
+            "center10_matches": 819,
+            "matched_error_px_p50_p95_p99": [
+              1.316547444239598,
+              2.7351441483866084,
+              3.312768121822171
+            ],
+            "width_ratio_median": 0.5547960069444444,
+            "height_ratio_median": 0.4916848575367647,
+            "missed_frames_center5": 40,
+            "extra_frames_center5": 61
+          }
+        },
+        {
+          "id": "h1024_w1280_tensorrt_fp32_b2",
+          "backend": "tensorrt_fp32",
+          "batch": 2,
+          "shape_hw": [
+            1024,
+            1280
+          ],
+          "test_conf025": {
+            "gt": 859,
+            "predictions": 884,
+            "center5_matches": 819,
+            "center5_precision": 0.9264705882352942,
+            "center5_recall": 0.9534342258440046,
+            "center5_f1": 0.9397590361445783,
+            "center10_matches": 819,
+            "matched_error_px_p50_p95_p99": [
+              1.316547444239598,
+              2.7351441483866084,
+              3.312768121822171
+            ],
+            "width_ratio_median": 0.5547960069444444,
+            "height_ratio_median": 0.4916848575367647,
+            "missed_frames_center5": 40,
+            "extra_frames_center5": 61
+          }
+        },
+        {
+          "id": "h1024_w1280_tensorrt_fp16_b1",
+          "backend": "tensorrt_fp16",
+          "batch": 1,
+          "shape_hw": [
+            1024,
+            1280
+          ],
+          "test_conf025": {
+            "gt": 859,
+            "predictions": 885,
+            "center5_matches": 819,
+            "center5_precision": 0.9254237288135593,
+            "center5_recall": 0.9534342258440046,
+            "center5_f1": 0.9392201834862385,
+            "center10_matches": 819,
+            "matched_error_px_p50_p95_p99": [
+              1.3050383136138188,
+              2.7417488918966892,
+              3.3653100067935817
+            ],
+            "width_ratio_median": 0.555555555555552,
+            "height_ratio_median": 0.4875,
+            "missed_frames_center5": 40,
+            "extra_frames_center5": 61
+          }
+        },
+        {
+          "id": "h1024_w1280_tensorrt_fp16_b2",
+          "backend": "tensorrt_fp16",
+          "batch": 2,
+          "shape_hw": [
+            1024,
+            1280
+          ],
+          "test_conf025": {
+            "gt": 859,
+            "predictions": 885,
+            "center5_matches": 819,
+            "center5_precision": 0.9254237288135593,
+            "center5_recall": 0.9534342258440046,
+            "center5_f1": 0.9392201834862385,
+            "center10_matches": 819,
+            "matched_error_px_p50_p95_p99": [
+              1.3173274512056625,
+              2.7417488918966892,
+              3.3653100067935817
+            ],
+            "width_ratio_median": 0.555555555555552,
+            "height_ratio_median": 0.4875,
+            "missed_frames_center5": 40,
+            "extra_frames_center5": 61
+          }
+        }
+      ]
+    },
+    {
+      "id": "native_v1_yolo26n_1280_conversion_v1",
+      "model_ids": [
+        "native_v1_yolo26n_1280_best"
+      ],
+      "weights_sha256": "2c889ad027db03126b335394c0fdea2d04361b24f12f293475a1549085f92c97",
+      "val_images": 1272,
+      "test_images": 830,
+      "case_count": 12,
+      "state": "complete",
+      "reports": "reports/evaluation/native_v1_yolo26n_1280_conversion_v1",
+      "artifacts": "artifacts/native_v1_yolo26n_1280_conversion_v1"
+    },
+    {
+      "id": "native_v1_additional_yolo26n_1280_conversion_v1",
+      "model_ids": [
+        "native_v1_additional_yolo26n_1280_best"
+      ],
+      "weights_sha256": "7b5f7399cc7b7caa657fc30819309bc0715ee68e60c4662e5f6bdb79fe224386",
+      "val_images": 1272,
+      "test_images": 830,
+      "case_count": 12,
+      "state": "complete",
+      "reports": "reports/evaluation/native_v1_additional_yolo26n_1280_conversion_v1",
+      "artifacts": "artifacts/native_v1_additional_yolo26n_1280_conversion_v1"
+    },
+    {
+      "id": "native_v1_additional_yolo26s_1280_conversion_v1",
+      "model_ids": [
+        "native_v1_additional_yolo26s_1280_best"
+      ],
+      "weights_sha256": "6d2bf3963070efe40d7a009d0a9450efb6b0e88f9993b9c84a78d821e0d782c8",
+      "val_images": 1272,
+      "test_images": 830,
+      "case_count": 12,
+      "state": "complete",
+      "reports": "reports/evaluation/native_v1_additional_yolo26s_1280_conversion_v1",
+      "artifacts": "artifacts/native_v1_additional_yolo26s_1280_conversion_v1"
+    },
+    {
+      "id": "native_merged_v2_baiduout_yolo26n_1280_conversion_v1",
+      "model_ids": [
+        "native_merged_v2_baiduout_yolo26n_1280_best"
+      ],
+      "weights_sha256": "d25c43e4a05b7e1fc72614341b572a0a22882c295409fe039508a3d3dd566e1c",
+      "val_images": 1272,
+      "test_images": 830,
+      "case_count": 12,
+      "state": "complete",
+      "reports": "reports/evaluation/native_merged_v2_baiduout_yolo26n_1280_conversion_v1",
+      "artifacts": "artifacts/native_merged_v2_baiduout_yolo26n_1280_conversion_v1"
+    },
+    {
+      "id": "native_merged_v2_baiduout_yolo26s_1280_conversion_v1",
+      "model_ids": [
+        "native_merged_v2_baiduout_yolo26s_1280_best"
+      ],
+      "weights_sha256": "433c47f818aaf07b4e1d34df64a7bad3ee744d1fb21b1f1d00b08915af9a89f0",
+      "val_images": 1272,
+      "test_images": 830,
+      "case_count": 12,
+      "state": "complete",
+      "reports": "reports/evaluation/native_merged_v2_baiduout_yolo26s_1280_conversion_v1",
+      "artifacts": "artifacts/native_merged_v2_baiduout_yolo26s_1280_conversion_v1"
+    }
+  ],
+  "deployment_target": {
+    "target_gpu_user_reported": "NVIDIA GeForce RTX 2060 SUPER",
+    "target_os": "Ubuntu",
+    "actual_hardware_and_software_verified": false,
+    "stereo_pairs_per_second_required": 120,
+    "images_per_second_required": 240,
+    "stereo_pair_arrival_interval_ms": 8.333333333333334,
+    "end_to_end_latency_limit_ms": null,
+    "sustained_processing_without_growing_backlog": true,
+    "preferred_precision_first": "FP16",
+    "accuracy_priority": "Preserve ball-center localization; do not lower spatial resolution by default to meet throughput.",
+    "reference_original_shape_height_width": [
+      1024,
+      1280
+    ],
+    "baseline_input_shape_height_width": [
+      768,
+      960
+    ],
+    "primary_model": "YOLO26n",
+    "larger_model_comparison": "YOLO26s native-resolution combined-data training explicitly requested; compare center accuracy and throughput after completion",
+    "initial_input_shapes_height_width": [
+      [
+        768,
+        960
+      ],
+      [
+        1024,
+        1280
+      ]
+    ],
+    "lower_resolution_policy": "Conditional tradeoff only after equal-resolution engine/pipeline optimization and paired accuracy-speed evaluation.",
+    "int8_policy": "Optional after FP16 measurement; require representative calibration and full localization/false-positive validation.",
+    "batch_sizes_to_compare": [
+      1,
+      2
+    ],
+    "batch_2_policy": "Two synchronized left/right images from the same capture time",
+    "provisional_engine_only_headroom_goal_images_per_second": 300,
+    "target_gpu_benchmark_completed": false,
+    "notes": [
+      "Input shape and batch changes require compatible TensorRT engines.",
+      "Rebuild engines on the Ubuntu/2060 SUPER target with a stack supporting Turing SM 7.5.",
+      "Record GPU-only and full-pipeline throughput separately, plus P50/P95/P99 latency, backlog and drops.",
+      "Validate ball center accuracy and false positives for every resolution and precision.",
+      "The 300-image-per-second headroom goal is a planning target, not a measured result."
+    ]
+  },
+  "native_suite": {
+    "configuration": "configs\\native_resolution_suite_v1.json",
+    "progress": "reports/experiments/native_resolution_suite_v1/progress.json",
+    "summary": "reports/experiments/native_resolution_suite_v1/summary.json",
+    "runs": [
+      {
+        "id": "native_v1_yolo26n_1280",
+        "architecture": "YOLO26n",
+        "pretrained": "models/yolo26n.pt",
+        "dataset": "native_v1"
+      },
+      {
+        "id": "native_v1_additional_yolo26n_1280",
+        "architecture": "YOLO26n",
+        "pretrained": "models/yolo26n.pt",
+        "dataset": "native_v1_additional"
+      },
+      {
+        "id": "native_v1_additional_yolo26s_1280",
+        "architecture": "YOLO26s",
+        "pretrained": "models/yolo26s.pt",
+        "dataset": "native_v1_additional"
+      }
+    ],
+    "state": "complete",
+    "completed_utc": "2026-11-10T01:37:51.909452+00:00",
+    "final_results": "docs/experiments/native_resolution_suite_v1_results.zh-CN.md"
+  },
+  "followup_suites": {
+    "native_merged_v2_baiduout_20261113": {
+      "configuration": "configs/native_merged_v2_baiduout_20261113.json",
+      "data_preparation": "reports/datasets/native_merged_v2_baiduout_20261113/data_preparation.json",
+      "summary": "reports\\experiments\\native_merged_v2_baiduout_20261113\\summary.json",
+      "runs": [
+        {
+          "id": "native_merged_v2_baiduout_yolo26n_1280",
+          "architecture": "YOLO26n",
+          "dataset": "pingpong_merged_v2",
+          "state": "training_complete",
+          "evaluation": "complete"
+        },
+        {
+          "id": "native_merged_v2_baiduout_yolo26s_1280",
+          "architecture": "YOLO26s",
+          "dataset": "pingpong_merged_v2",
+          "state": "training_complete",
+          "evaluation": "complete"
+        }
+      ],
+      "documentation": "docs\\experiments\\native_merged_v2_baiduout_20261113.zh-CN.md",
+      "final_report": "docs/experiments/native_merged_v2_baiduout_20261113_results.zh-CN.md",
+      "state": "complete"
+    }
+  }
+}

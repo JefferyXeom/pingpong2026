@@ -1,0 +1,101 @@
+{
+  "summary": {
+    "source_roots": [
+      "D:\\yolov5-master\\VOCData",
+      "D:\\yolov5-master\\history_VOCOdata"
+    ],
+    "total_files": 78572,
+    "total_bytes": 37251793325,
+    "images": 24766,
+    "xml_summary": {
+      "xml_files": 14878,
+      "empty_xml_files": 0,
+      "class:ball": 18476
+    },
+    "image_statuses": {
+      "verified_pair": 20872,
+      "missing_annotation": 3894
+    },
+    "images_matching_active_dataset": 2997,
+    "active_annotation_conflicts": 0,
+    "unique_verified_additional_images": 10786,
+    "unique_additional_image_bytes": 14547226447,
+    "new_duplicate_annotation_conflict_groups": 0,
+    "previously_orphaned_xml_with_image_candidates": 0,
+    "free_bytes": 68555341824,
+    "estimated_free_after_new_images_bytes": 54008115377,
+    "negative_sample_note": "Empty annotations are candidates only; missing annotation is not a verified negative.",
+    "active_dataset_changed": false,
+    "source_files_changed": false,
+    "annotation_comparison": "Unordered one-to-one boxes; exact class; absolute normalized coordinate tolerance 1e-7."
+  },
+  "new_image_groups": [
+    {
+      "directory": "D:\\yolov5-master\\VOCData\\images",
+      "filename_family": "#_img_#",
+      "new_images": 379,
+      "bytes": 559675738,
+      "examples": [
+        "0_img_10.png",
+        "0_img_100.png",
+        "0_img_101.png",
+        "0_img_102.png",
+        "0_img_103.png"
+      ]
+    },
+    {
+      "directory": "D:\\yolov5-master\\VOCData\\images",
+      "filename_family": "indexed_img",
+      "new_images": 6710,
+      "bytes": 9859167766,
+      "examples": [
+        "0_img_100_1.png",
+        "0_img_100_10.png",
+        "0_img_100_11.png",
+        "0_img_100_12.png",
+        "0_img_100_13.png"
+      ]
+    },
+    {
+      "directory": "D:\\yolov5-master\\VOCData\\images",
+      "filename_family": "numeric",
+      "new_images": 700,
+      "bytes": 1003074887,
+      "examples": [
+        "001.png",
+        "002.png",
+        "003.png",
+        "004.png",
+        "005.png"
+      ]
+    },
+    {
+      "directory": "D:\\yolov5-master\\history_VOCOdata\\VOCData_1\\images",
+      "filename_family": "white_background",
+      "new_images": 2997,
+      "bytes": 3125308056,
+      "examples": [
+        "0601_2img_-100674158_left_white.png",
+        "0601_2img_-100752188_right_white.png",
+        "0601_2img_-100970618_left_white.png",
+        "0601_2img_-101051820_right_white.png",
+        "0601_2img_-101275009_left_white.png"
+      ]
+    }
+  ],
+  "statuses_by_directory": {
+    "D:\\yolov5-master\\VOCData\\images": {
+      "verified_pair": 7789
+    },
+    "D:\\yolov5-master\\history_VOCOdata\\VOCDatahk\\images": {
+      "verified_pair": 7089
+    },
+    "D:\\yolov5-master\\history_VOCOdata\\VOCData_1\\images": {
+      "verified_pair": 5994,
+      "missing_annotation": 3894
+    }
+  },
+  "conflict_examples": [],
+  "orphan_recovery_examples": [],
+  "preview": "reports/datasets/pingpong_additional_v1/additional_data_preview.jpg"
+}

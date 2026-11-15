@@ -1,0 +1,442 @@
+{
+  "source": "C:\\Users\\Administrator\\Desktop\\yolov5data",
+  "groups": {
+    ".": {
+      "extensions": {
+        ".py": 1,
+        ".txt": 1
+      },
+      "bytes": 8565,
+      "examples": [
+        "change.py",
+        "训练指令.txt"
+      ]
+    },
+    "data": {
+      "extensions": {
+        ".zip": 1
+      },
+      "bytes": 3376218799,
+      "examples": [
+        "img_data.0527.zip"
+      ]
+    },
+    "data\\060101": {
+      "extensions": {
+        ".png": 3751
+      },
+      "bytes": 6773794164,
+      "examples": [
+        "060101img_-1570948790_left.png",
+        "060101img_-1571024154_right.png",
+        "060101img_-1571247585_left.png",
+        "060101img_-1571324576_right.png",
+        "060101img_-1571551279_left.png"
+      ]
+    },
+    "data\\060101\\text": {
+      "extensions": {
+        ".xml": 2815,
+        ".txt": 3,
+        ".bat": 2,
+        ".xlsx": 1
+      },
+      "bytes": 2005195,
+      "examples": [
+        "060101img_1563815841_left.xml",
+        "060101img_1564087975_left.xml",
+        "060101img_1564377535_left.xml",
+        "060101img_1564600503_right.xml",
+        "060101img_1564671680_left.xml"
+      ]
+    },
+    "data\\img_data": {
+      "extensions": {
+        ".txt": 1
+      },
+      "bytes": 4,
+      "examples": [
+        "classes.txt.txt"
+      ]
+    },
+    "data\\img_data\\Annotations": {
+      "extensions": {
+        ".xml": 2997
+      },
+      "bytes": 2066965,
+      "examples": [
+        "0601_2img_-100674158_left.xml",
+        "0601_2img_-100752188_right.xml",
+        "0601_2img_-100970618_left.xml",
+        "0601_2img_-101051820_right.xml",
+        "0601_2img_-101275009_left.xml"
+      ]
+    },
+    "data\\img_data\\images": {
+      "extensions": {
+        ".png": 4944
+      },
+      "bytes": 9231901249,
+      "examples": [
+        "0601_2img_-100674158_left.png",
+        "0601_2img_-100752188_right.png",
+        "0601_2img_-100970618_left.png",
+        "0601_2img_-101051820_right.png",
+        "0601_2img_-101275009_left.png"
+      ]
+    },
+    "data\\img_data.0527\\img_data": {
+      "extensions": {
+        ".txt": 1
+      },
+      "bytes": 4,
+      "examples": [
+        "classes.txt.txt"
+      ]
+    },
+    "data\\img_data.0527\\img_data\\images": {
+      "extensions": {
+        ".png": 2104
+      },
+      "bytes": 3374808533,
+      "examples": [
+        "img_0_left.png",
+        "img_0_right.png",
+        "img_10_left.png",
+        "img_10_right.png",
+        "img_11_left.png"
+      ]
+    },
+    "data\\img_data.0527\\img_data\\labels": {
+      "extensions": {
+        ".txt": 1,
+        ".xml": 2101
+      },
+      "bytes": 1161496,
+      "examples": [
+        "classes.txt",
+        "img_0_left.xml",
+        "img_0_right.xml",
+        "img_10_left.xml",
+        "img_10_right.xml"
+      ]
+    },
+    "data\\标记2\\annotations\\0527_2": {
+      "extensions": {
+        ".xml": 830
+      },
+      "bytes": 497512,
+      "examples": [
+        "left_img_1716813521391378.xml",
+        "left_img_1716813521565902.xml",
+        "left_img_1716813521732730.xml",
+        "left_img_1716813521902751.xml",
+        "left_img_1716813522067818.xml"
+      ]
+    },
+    "data\\标记2\\annotations\\0527_3": {
+      "extensions": {
+        ".xml": 1272
+      },
+      "bytes": 751875,
+      "examples": [
+        "left_img_1716814980159847.xml",
+        "left_img_1716814980751181.xml",
+        "left_img_1716814981057240.xml",
+        "left_img_1716814981352765.xml",
+        "left_img_1716814981660039.xml"
+      ]
+    },
+    "data\\标记2\\images\\20240527_2": {
+      "extensions": {
+        ".png": 830
+      },
+      "bytes": 1317102717,
+      "examples": [
+        "left_img_1716813521391378.png",
+        "left_img_1716813521565902.png",
+        "left_img_1716813521732730.png",
+        "left_img_1716813521902751.png",
+        "left_img_1716813522067818.png"
+      ]
+    },
+    "data\\标记2\\images\\20240527_3": {
+      "extensions": {
+        ".png": 1276
+      },
+      "bytes": 2045025496,
+      "examples": [
+        "left_img_1716814980159847.png",
+        "left_img_1716814980751181.png",
+        "left_img_1716814981057240.png",
+        "left_img_1716814981352765.png",
+        "left_img_1716814981660039.png"
+      ]
+    },
+    "VOCData": {
+      "extensions": {
+        ".zip": 1,
+        ".py": 2
+      },
+      "bytes": 9232848055,
+      "examples": [
+        "images.zip",
+        "split_train_val.py",
+        "text_to_yolo.py"
+      ]
+    },
+    "VOCData\\Annotations": {
+      "extensions": {
+        ".xml": 2997
+      },
+      "bytes": 2066965,
+      "examples": [
+        "0601_2img_-100674158_left.xml",
+        "0601_2img_-100752188_right.xml",
+        "0601_2img_-100970618_left.xml",
+        "0601_2img_-101051820_right.xml",
+        "0601_2img_-101275009_left.xml"
+      ]
+    },
+    "VOCData\\dataSet_path": {
+      "extensions": {
+        ".txt": 3,
+        ".cache": 2,
+        ".npy": 1
+      },
+      "bytes": 1545764,
+      "examples": [
+        "test.txt",
+        "train.cache",
+        "train.cache.npy",
+        "train.txt",
+        "val.cache"
+      ]
+    },
+    "VOCData\\images": {
+      "extensions": {
+        ".png": 4944
+      },
+      "bytes": 9231901249,
+      "examples": [
+        "0601_2img_-100674158_left.png",
+        "0601_2img_-100752188_right.png",
+        "0601_2img_-100970618_left.png",
+        "0601_2img_-101051820_right.png",
+        "0601_2img_-101275009_left.png"
+      ]
+    },
+    "VOCData\\ImageSets\\Main": {
+      "extensions": {
+        ".txt": 4
+      },
+      "bytes": 161098,
+      "examples": [
+        "test.txt",
+        "train.txt",
+        "trainval.txt",
+        "val.txt"
+      ]
+    },
+    "VOCData\\labels": {
+      "extensions": {
+        ".txt": 2997
+      },
+      "bytes": 244356,
+      "examples": [
+        "0601_2img_-100674158_left.txt",
+        "0601_2img_-100752188_right.txt",
+        "0601_2img_-100970618_left.txt",
+        "0601_2img_-101051820_right.txt",
+        "0601_2img_-101275009_left.txt"
+      ]
+    },
+    "VOCData\\processed_images": {
+      "extensions": {
+        ".png": 4944
+      },
+      "bytes": 5155720178,
+      "examples": [
+        "0601_2img_-100674158_left.png",
+        "0601_2img_-100752188_right.png",
+        "0601_2img_-100970618_left.png",
+        "0601_2img_-101051820_right.png",
+        "0601_2img_-101275009_left.png"
+      ]
+    },
+    "waste_data\\Annotations(no use)": {
+      "extensions": {
+        ".xml": 10015
+      },
+      "bytes": 6103105,
+      "examples": [
+        "060101img_1563815841_left.xml",
+        "060101img_1564087975_left.xml",
+        "060101img_1564377535_left.xml",
+        "060101img_1564600503_right.xml",
+        "060101img_1564671680_left.xml"
+      ]
+    },
+    "waste_data\\dataSet_path(last)": {
+      "extensions": {
+        ".txt": 3,
+        ".cache": 2,
+        ".npy": 2
+      },
+      "bytes": 5329638,
+      "examples": [
+        "test.txt",
+        "train.cache",
+        "train.cache.npy",
+        "train.txt",
+        "val.cache"
+      ]
+    },
+    "waste_data\\ImageSets(last)\\Main": {
+      "extensions": {
+        ".txt": 4
+      },
+      "bytes": 531066,
+      "examples": [
+        "test.txt",
+        "train.txt",
+        "trainval.txt",
+        "val.txt"
+      ]
+    }
+  },
+  "xml_classes": {
+    "ball": 27586
+  },
+  "xml_failures": [],
+  "samples": {
+    "./.txt": {
+      "file": "训练指令.txt",
+      "content": "python train.py --weights weights/yolov5s.pt  --cfg models/yolov5s.yaml  --data data/myvoc.yaml --epoch 400 --batch-size 64 --img 640   --device 0"
+    },
+    "data\\060101\\text/.xml": {
+      "file": "data\\060101\\text\\060101img_1563815841_left.xml",
+      "content": "<annotation>\n\t<folder>imageyolo</folder>\n\t<filename>img_1563815841_left.png</filename>\n\t<path>C:\\Users\\夜游独行\\Downloads\\imageyolo\\imageyolo\\img_1563815841_left.png</path>\n\t<source>\n\t\t<database>Unknown</database>\n\t</source>\n\t<size>\n\t\t<width>1280</width>\n\t\t<height>1024</height>\n\t\t<depth>3</depth>\n\t</size>\n\t<segmented>0</segmented>\n\t<object>\n\t\t<name>ball</name>\n\t\t<pose>Unspecified</pose>\n\t\t<truncated>0</truncated>\n\t\t<difficult>0</difficult>\n\t\t<bndbox>\n\t\t\t<xmin>783</xmin>\n\t\t\t<ymin>942</ymin>\n\t\t\t<xmax>811</xmax>\n\t\t\t<ymax>971</ymax>\n\t\t</bndbox>\n\t</object>\n</annotation>\n"
+    },
+    "data\\060101\\text/.txt": {
+      "file": "data\\060101\\text\\classes.txt",
+      "content": "ball\n"
+    },
+    "data\\img_data/.txt": {
+      "file": "data\\img_data\\classes.txt.txt",
+      "content": "ball"
+    },
+    "data\\img_data\\Annotations/.xml": {
+      "file": "data\\img_data\\Annotations\\0601_2img_-100674158_left.xml",
+      "content": "<annotation>\n\t<folder>images</folder>\n\t<filename>0601_2img_-100674158_left.png</filename>\n\t<path>C:\\Users\\Administrator\\Desktop\\img_data\\images\\0601_2img_-100674158_left.png</path>\n\t<source>\n\t\t<database>Unknown</database>\n\t</source>\n\t<size>\n\t\t<width>1280</width>\n\t\t<height>1024</height>\n\t\t<depth>3</depth>\n\t</size>\n\t<segmented>0</segmented>\n\t<object>\n\t\t<name>ball</name>\n\t\t<pose>Unspecified</pose>\n\t\t<truncated>0</truncated>\n\t\t<difficult>0</difficult>\n\t\t<bndbox>\n\t\t\t<xmin>742</xmin>\n\t\t\t<ymin>355</ymin>\n\t\t\t<xmax>751</xmax>\n\t\t\t<ymax>365</ymax>\n\t\t</bndbox>\n\t</object>\n\t<object>\n\t\t<name>ball</name>\n\t\t<pose>Unspecified</pose>\n\t\t<truncated>0</truncated>\n\t\t<difficult>0</difficult>\n\t\t<bndbox>\n\t\t\t<xmin>785</xmin>\n\t\t\t<ymin>930</ymin>\n\t\t\t<xmax>801</xmax>\n\t\t\t<ymax>942</ymax>\n\t\t</bndbox>\n\t</object>\n</annotation>\n"
+    },
+    "data\\img_data.0527\\img_data/.txt": {
+      "file": "data\\img_data.0527\\img_data\\classes.txt.txt",
+      "content": "ball"
+    },
+    "data\\img_data.0527\\img_data\\labels/.txt": {
+      "file": "data\\img_data.0527\\img_data\\labels\\classes.txt",
+      "content": "ball\n"
+    },
+    "data\\img_data.0527\\img_data\\labels/.xml": {
+      "file": "data\\img_data.0527\\img_data\\labels\\img_0_left.xml",
+      "content": "<annotation>\n\t<folder>images</folder>\n\t<filename>img_0_left.png</filename>\n\t<path>E:\\img_data\\images\\img_0_left.png</path>\n\t<source>\n\t\t<database>Unknown</database>\n\t</source>\n\t<size>\n\t\t<width>1280</width>\n\t\t<height>1024</height>\n\t\t<depth>3</depth>\n\t</size>\n\t<segmented>0</segmented>\n\t<object>\n\t\t<name>ball</name>\n\t\t<pose>Unspecified</pose>\n\t\t<truncated>0</truncated>\n\t\t<difficult>0</difficult>\n\t\t<bndbox>\n\t\t\t<xmin>421</xmin>\n\t\t\t<ymin>324</ymin>\n\t\t\t<xmax>431</xmax>\n\t\t\t<ymax>333</ymax>\n\t\t</bndbox>\n\t</object>\n</annotation>\n"
+    },
+    "data\\标记2\\annotations\\0527_2/.xml": {
+      "file": "data\\标记2\\annotations\\0527_2\\left_img_1716813521391378.xml",
+      "content": "<annotation verified=\"yes\">\n\t<folder>20240527_2</folder>\n\t<filename>left_img_1716813521391378.png</filename>\n\t<path>D:\\Pingpong\\标记2\\标记2\\20240527_2\\left_img_1716813521391378.png</path>\n\t<source>\n\t\t<database>Unknown</database>\n\t</source>\n\t<size>\n\t\t<width>1280</width>\n\t\t<height>1024</height>\n\t\t<depth>3</depth>\n\t</size>\n\t<segmented>0</segmented>\n\t<object>\n\t\t<name>ball</name>\n\t\t<pose>Unspecified</pose>\n\t\t<truncated>0</truncated>\n\t\t<difficult>0</difficult>\n\t\t<bndbox>\n\t\t\t<xmin>868</xmin>\n\t\t\t<ymin>287</ymin>\n\t\t\t<xmax>879</xmax>\n\t\t\t<ymax>300</ymax>\n\t\t</bndbox>\n\t</object>\n</annotation>\n"
+    },
+    "data\\标记2\\annotations\\0527_3/.xml": {
+      "file": "data\\标记2\\annotations\\0527_3\\left_img_1716814980159847.xml",
+      "content": "<annotation verified=\"yes\">\n\t<folder>20240527_3</folder>\n\t<filename>left_img_1716814980159847.png</filename>\n\t<path>D:\\Pingpong\\标记2\\标记2\\20240527_3\\left_img_1716814980159847.png</path>\n\t<source>\n\t\t<database>Unknown</database>\n\t</source>\n\t<size>\n\t\t<width>1280</width>\n\t\t<height>1024</height>\n\t\t<depth>3</depth>\n\t</size>\n\t<segmented>0</segmented>\n\t<object>\n\t\t<name>ball</name>\n\t\t<pose>Unspecified</pose>\n\t\t<truncated>0</truncated>\n\t\t<difficult>0</difficult>\n\t\t<bndbox>\n\t\t\t<xmin>697</xmin>\n\t\t\t<ymin>385</ymin>\n\t\t\t<xmax>717</xmax>\n\t\t\t<ymax>402</ymax>\n\t\t</bndbox>\n\t</object>\n</annotation>\n"
+    },
+    "VOCData\\Annotations/.xml": {
+      "file": "VOCData\\Annotations\\0601_2img_-100674158_left.xml",
+      "content": "<annotation>\n\t<folder>images</folder>\n\t<filename>0601_2img_-100674158_left.png</filename>\n\t<path>C:\\Users\\Administrator\\Desktop\\img_data\\images\\0601_2img_-100674158_left.png</path>\n\t<source>\n\t\t<database>Unknown</database>\n\t</source>\n\t<size>\n\t\t<width>1280</width>\n\t\t<height>1024</height>\n\t\t<depth>3</depth>\n\t</size>\n\t<segmented>0</segmented>\n\t<object>\n\t\t<name>ball</name>\n\t\t<pose>Unspecified</pose>\n\t\t<truncated>0</truncated>\n\t\t<difficult>0</difficult>\n\t\t<bndbox>\n\t\t\t<xmin>742</xmin>\n\t\t\t<ymin>355</ymin>\n\t\t\t<xmax>751</xmax>\n\t\t\t<ymax>365</ymax>\n\t\t</bndbox>\n\t</object>\n\t<object>\n\t\t<name>ball</name>\n\t\t<pose>Unspecified</pose>\n\t\t<truncated>0</truncated>\n\t\t<difficult>0</difficult>\n\t\t<bndbox>\n\t\t\t<xmin>785</xmin>\n\t\t\t<ymin>930</ymin>\n\t\t\t<xmax>801</xmax>\n\t\t\t<ymax>942</ymax>\n\t\t</bndbox>\n\t</object>\n</annotation>\n"
+    },
+    "VOCData\\dataSet_path/.txt": {
+      "file": "VOCData\\dataSet_path\\test.txt",
+      "content": ""
+    },
+    "VOCData\\ImageSets\\Main/.txt": {
+      "file": "VOCData\\ImageSets\\Main\\test.txt",
+      "content": ""
+    },
+    "VOCData\\labels/.txt": {
+      "file": "VOCData\\labels\\0601_2img_-100674158_left.txt",
+      "content": "0 0.582421875 0.3505859375 0.00703125 0.009765625\n0 0.61875 0.9130859375 0.0125 0.01171875\n"
+    },
+    "waste_data\\Annotations(no use)/.xml": {
+      "file": "waste_data\\Annotations(no use)\\060101img_1563815841_left.xml",
+      "content": "<annotation>\n\t<folder>imageyolo</folder>\n\t<filename>img_1563815841_left.png</filename>\n\t<path>C:\\Users\\夜游独行\\Downloads\\imageyolo\\imageyolo\\img_1563815841_left.png</path>\n\t<source>\n\t\t<database>Unknown</database>\n\t</source>\n\t<size>\n\t\t<width>1280</width>\n\t\t<height>1024</height>\n\t\t<depth>3</depth>\n\t</size>\n\t<segmented>0</segmented>\n\t<object>\n\t\t<name>ball</name>\n\t\t<pose>Unspecified</pose>\n\t\t<truncated>0</truncated>\n\t\t<difficult>0</difficult>\n\t\t<bndbox>\n\t\t\t<xmin>783</xmin>\n\t\t\t<ymin>942</ymin>\n\t\t\t<xmax>811</xmax>\n\t\t\t<ymax>971</ymax>\n\t\t</bndbox>\n\t</object>\n</annotation>\n"
+    },
+    "waste_data\\dataSet_path(last)/.txt": {
+      "file": "waste_data\\dataSet_path(last)\\test.txt",
+      "content": ""
+    },
+    "waste_data\\ImageSets(last)\\Main/.txt": {
+      "file": "waste_data\\ImageSets(last)\\Main\\test.txt",
+      "content": ""
+    }
+  },
+  "configs": {
+    "VOCData\\split_train_val.py": "# coding:utf-8\n\nimport os\nimport random\nimport argparse\n\nparser = argparse.ArgumentParser()\n#xml文件的地址，根据自己的数据进行修改 xml一般存放在Annotations下\nparser.add_argument('--xml_path', default='Annotations', type=str, help='input xml label path')\n#数据集的划分，地址选择自己数据下的ImageSets/Main\nparser.add_argument('--txt_path', default='ImageSets/Main', type=str, help='output txt label path')\nopt = parser.parse_args()\n\ntrainval_percent = 1.0  # 训练集和验证集所占比例。 这里没有划分测试集\ntrain_percent = 0.9     # 训练集所占比例，可自己进行调整\nxmlfilepath = opt.xml_path\ntxtsavepath = opt.txt_path\ntotal_xml = os.listdir(xmlfilepath)\nif not os.path.exists(txtsavepath):\n    os.makedirs(txtsavepath)\n\nnum = len(total_xml)\nlist_index = range(num)\ntv = int(num * trainval_percent)\ntr = int(tv * train_percent)\ntrainval = random.sample(list_index, tv)\ntrain = random.sample(trainval, tr)\n\nfile_trainval = open(txtsavepath + '/trainval.txt', 'w')\nfile_test = open(txtsavepath + '/test.txt', 'w')\nfile_train = open(txtsavepath + '/train.txt', 'w')\nfile_val = open(txtsavepath + '/val.txt', 'w')\n\nfor i in list_index:\n    name = total_xml[i][:-4] + '\\n'\n    if i in trainval:\n        file_trainval.write(name)\n        if i in train:\n            file_train.write(name)\n        else:\n            file_val.write(name)\n    else:\n        file_test.write(name)\n\nfile_trainval.close()\nfile_train.close()\nfile_val.close()\nfile_test.close()\n",
+    "VOCData\\text_to_yolo.py": "# -*- coding: utf-8 -*-\nimport xml.etree.ElementTree as ET\nimport os\nfrom os import getcwd\n\nsets = ['train', 'val', 'test']\nclasses = [\"ball\"]  # 改成自己的类别\nabs_path = os.getcwd()\nprint(abs_path)\n\n\ndef convert(size, box):\n    dw = 1. / (size[0])\n    dh = 1. / (size[1])\n    x = (box[0] + box[1]) / 2.0 - 1\n    y = (box[2] + box[3]) / 2.0 - 1\n    w = box[1] - box[0]\n    h = box[3] - box[2]\n    x = x * dw\n    w = w * dw\n    y = y * dh\n    h = h * dh\n    return x, y, w, h\n\n\ndef convert_annotation(image_id):\n    in_file = open('D:/yolov5-master/VOCData/Annotations/%s.xml' % (image_id), encoding='UTF-8')\n    out_file = open('D:/yolov5-master/VOCData/labels/%s.txt' % (image_id), 'w')\n    tree = ET.parse(in_file)\n    root = tree.getroot()\n    size = root.find('size')\n    w = int(size.find('width').text)\n    h = int(size.find('height').text)\n    for obj in root.iter('object'):\n        difficult = obj.find('difficult').text\n        # difficult = obj.find('Difficult').text\n        cls = obj.find('name').text\n        if cls not in classes or int(difficult) == 1:\n            continue\n        cls_id = classes.index(cls)\n        xmlbox = obj.find('bndbox')\n        b = (float(xmlbox.find('xmin').text), float(xmlbox.find('xmax').text), float(xmlbox.find('ymin').text),\n             float(xmlbox.find('ymax').text))\n        b1, b2, b3, b4 = b\n        # 标注越界修正\n        if b2 > w:\n            b2 = w\n        if b4 > h:\n            b4 = h\n        b = (b1, b2, b3, b4)\n        bb = convert((w, h), b)\n        out_file.write(str(cls_id) + \" \" + \" \".join([str(a) for a in bb]) + '\\n')\n\n\nwd = getcwd()\nfor image_set in sets:\n    if not os.path.exists('D:/yolov5-master/VOCData/labels/'):\n        os.makedirs('D:/yolov5-master/VOCData/labels/')\n    image_ids = open('D:/yolov5-master/VOCData/ImageSets/Main/%s.txt' % (image_set)).read().strip().split()\n\n    if not os.path.exists('D:/yolov5-master/VOCData/dataSet_path/'):\n        os.makedirs('D:/yolov5-master/VOCData/dataSet_path/')\n\n    list_file = open('dataSet_path/%s.txt' % (image_set), 'w')\n    # 这行路径不需更改，这是相对路径\n    for image_id in image_ids:\n        list_file.write('D:/yolov5-master/VOCData/images/%s.jpg\\n' % (image_id))\n        convert_annotation(image_id)\n    list_file.close()\n"
+  },
+  "environments": [
+    {
+      "executable": "C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "returncode": 0,
+      "stdout": "{\"python\": \"3.12.3 (tags/v3.12.3:f6650f9, Apr  9 2024, 14:05:25) [MSC v.1938 64 bit (AMD64)]\", \"modules\": {\"torch\": false, \"ultralytics\": false, \"PIL\": false, \"tensorrt\": false, \"onnx\": false, \"cv2\": false}}",
+      "stderr": ""
+    },
+    {
+      "executable": "D:\\ProgramData\\anaconda3\\python.exe",
+      "returncode": 0,
+      "stdout": "{\"python\": \"3.10.9 | packaged by Anaconda, Inc. | (main, Mar  1 2023, 18:18:15) [MSC v.1916 64 bit (AMD64)]\", \"modules\": {\"torch\": true, \"ultralytics\": false, \"PIL\": true, \"tensorrt\": false, \"onnx\": false, \"cv2\": false}}",
+      "stderr": ""
+    },
+    {
+      "executable": "D:\\ProgramData\\anaconda3\\envs\\pingpong\\python.exe",
+      "returncode": 0,
+      "stdout": "{\"python\": \"3.9.5 (default, May 18 2021, 14:42:02) [MSC v.1916 64 bit (AMD64)]\", \"modules\": {\"torch\": false, \"ultralytics\": false, \"PIL\": true, \"tensorrt\": false, \"onnx\": false, \"cv2\": true}}",
+      "stderr": ""
+    },
+    {
+      "executable": "D:\\ProgramData\\anaconda3\\envs\\pingpong-project\\python.exe",
+      "returncode": 0,
+      "stdout": "{\"python\": \"3.6.13 |Anaconda, Inc.| (default, Mar 16 2021, 11:37:27) [MSC v.1916 64 bit (AMD64)]\", \"modules\": {\"torch\": false, \"ultralytics\": false, \"PIL\": false, \"tensorrt\": false, \"onnx\": false, \"cv2\": false}}",
+      "stderr": ""
+    },
+    {
+      "executable": "D:\\ProgramData\\anaconda3\\envs\\pingpong_web\\python.exe",
+      "returncode": 0,
+      "stdout": "{\"python\": \"3.13.1 | packaged by Anaconda, Inc. | (main, Dec 11 2024, 17:02:46) [MSC v.1929 64 bit (AMD64)]\", \"modules\": {\"torch\": false, \"ultralytics\": false, \"PIL\": false, \"tensorrt\": false, \"onnx\": false, \"cv2\": true}}",
+      "stderr": ""
+    },
+    {
+      "executable": "D:\\ProgramData\\anaconda3\\envs\\pingpong_web2\\python.exe",
+      "returncode": 0,
+      "stdout": "{\"python\": \"3.9.5 (default, May 18 2021, 14:42:02) [MSC v.1916 64 bit (AMD64)]\", \"modules\": {\"torch\": false, \"ultralytics\": false, \"PIL\": false, \"tensorrt\": false, \"onnx\": false, \"cv2\": false}}",
+      "stderr": ""
+    },
+    {
+      "executable": "D:\\ProgramData\\anaconda3\\envs\\py36env\\python.exe",
+      "returncode": 0,
+      "stdout": "{\"python\": \"3.6.13 |Anaconda, Inc.| (default, Mar 16 2021, 11:37:27) [MSC v.1916 64 bit (AMD64)]\", \"modules\": {\"torch\": false, \"ultralytics\": false, \"PIL\": false, \"tensorrt\": false, \"onnx\": false, \"cv2\": false}}",
+      "stderr": ""
+    },
+    {
+      "executable": "D:\\ProgramData\\anaconda3\\envs\\yolov5\\python.exe",
+      "returncode": 0,
+      "stdout": "{\"python\": \"3.8.19 (default, Mar 20 2024, 19:55:45) [MSC v.1916 64 bit (AMD64)]\", \"modules\": {\"torch\": true, \"ultralytics\": true, \"PIL\": true, \"tensorrt\": false, \"onnx\": false, \"cv2\": true}}",
+      "stderr": ""
+    },
+    {
+      "executable": "D:\\ProgramData\\anaconda3\\envs\\your_env_name\\python.exe",
+      "returncode": 0,
+      "stdout": "{\"python\": \"3.8.19 (default, Mar 20 2024, 19:55:45) [MSC v.1916 64 bit (AMD64)]\", \"modules\": {\"torch\": false, \"ultralytics\": false, \"PIL\": false, \"tensorrt\": false, \"onnx\": false, \"cv2\": false}}",
+      "stderr": ""
+    }
+  ]
+}

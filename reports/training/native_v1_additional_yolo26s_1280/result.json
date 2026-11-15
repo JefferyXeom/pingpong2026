@@ -1,0 +1,39 @@
+{
+  "run": {
+    "id": "native_v1_additional_yolo26s_1280",
+    "architecture": "YOLO26s",
+    "pretrained": "models/yolo26s.pt",
+    "dataset": "native_v1_additional"
+  },
+  "source_configuration": "configuration.json",
+  "epochs_completed": 50,
+  "selected_epoch": 30,
+  "selected_validation": {
+    "gt": 1272,
+    "predictions": 1292,
+    "center5_matches": 1266,
+    "center10_matches": 1267,
+    "center5_precision": 0.9798761609907121,
+    "center5_recall": 0.9952830188679245,
+    "center5_f1": 0.9875195007800311,
+    "matched_error_px_p50_p95_p99": [
+      1.2368075847625732,
+      2.78536651134491,
+      3.409377450942991
+    ],
+    "actual_shapes_height_width": [
+      [
+        1024,
+        1280
+      ]
+    ],
+    "conf": 0.25,
+    "precision": "FP32",
+    "missing_gt_center5": 6
+  },
+  "best": "runs/detect/native_v1_additional_yolo26s_1280/weights/best.pt",
+  "best_sha256": "6d2bf3963070efe40d7a009d0a9450efb6b0e88f9993b9c84a78d821e0d782c8",
+  "last": "runs/detect/native_v1_additional_yolo26s_1280/weights/last.pt",
+  "selection": "center5 F1, conf=.25, complete v1 val; test not used",
+  "completed_utc": "2026-11-10T00:53:13.269377+00:00"
+}

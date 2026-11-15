@@ -1,0 +1,25 @@
+{
+  "suite_id": "native_resolution_suite_v1",
+  "state": "complete",
+  "pid": 9560,
+  "completed": [
+    "native_v1_yolo26n_1280_train",
+    "native_v1_yolo26n_1280_evaluate",
+    "native_v1_yolo26n_1280_benchmark",
+    "native_v1_yolo26n_1280_summary",
+    "native_v1_additional_yolo26n_1280_train",
+    "native_v1_additional_yolo26n_1280_evaluate",
+    "native_v1_additional_yolo26n_1280_benchmark",
+    "native_v1_additional_yolo26n_1280_summary",
+    "native_v1_additional_yolo26s_1280_train",
+    "native_v1_additional_yolo26s_1280_evaluate",
+    "native_v1_additional_yolo26s_1280_benchmark",
+    "native_v1_additional_yolo26s_1280_summary"
+  ],
+  "stage": "all_training_and_evaluation_complete",
+  "command": [
+    "scripts/summarize_native_suite.py"
+  ],
+  "updated_utc": "2026-11-10T01:37:51.909452+00:00",
+  "child_pid": 34360
+}

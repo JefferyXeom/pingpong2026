@@ -1,0 +1,23 @@
+{
+  "suite_id": "native_merged_v2_baiduout_20261113",
+  "state": "complete",
+  "pid": 24200,
+  "completed": [
+    "native_merged_v2_baiduout_yolo26n_1280_train",
+    "native_merged_v2_baiduout_yolo26n_1280_evaluate",
+    "native_merged_v2_baiduout_yolo26n_1280_benchmark",
+    "native_merged_v2_baiduout_yolo26n_1280_summary",
+    "native_merged_v2_baiduout_yolo26s_1280_train",
+    "native_merged_v2_baiduout_yolo26s_1280_evaluate",
+    "native_merged_v2_baiduout_yolo26s_1280_benchmark",
+    "native_merged_v2_baiduout_yolo26s_1280_summary"
+  ],
+  "stage": "all_training_and_evaluation_complete",
+  "command": [
+    "scripts/summarize_followup_suite.py",
+    "--suite",
+    "native_merged_v2_baiduout_20261113"
+  ],
+  "updated_utc": "2026-11-13T22:47:47.481547+00:00",
+  "child_pid": 33136
+}

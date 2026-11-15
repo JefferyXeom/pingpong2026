@@ -1,0 +1,99 @@
+{
+  "suite_id": "native_merged_v2_baiduout_20261113",
+  "date": "2026-11-13",
+  "objective": "Add audited novel Baidu source images to merged dataset, compare n/s at native resolution",
+  "original_width_height": [
+    1280,
+    1024
+  ],
+  "training_height_width": [
+    1024,
+    1280
+  ],
+  "inference_shapes_height_width": [
+    [
+      1024,
+      1280
+    ],
+    [
+      768,
+      960
+    ]
+  ],
+  "primary_inference_height_width": [
+    1024,
+    1280
+  ],
+  "conf": 0.25,
+  "center_match_radius_pixels": 5,
+  "train": {
+    "imgsz": 1280,
+    "rect": true,
+    "batch": 8,
+    "epochs": 100,
+    "patience": 20,
+    "optimizer": "MuSGD",
+    "lr0": 0.01,
+    "lrf": 0.01,
+    "momentum": 0.937,
+    "weight_decay": 0.0005,
+    "warmup_epochs": 3.0,
+    "nbs": 64,
+    "amp": true,
+    "workers": 2,
+    "cache": false,
+    "seed": 20261109,
+    "deterministic": true,
+    "mosaic": 0.0,
+    "close_mosaic": 0,
+    "scale": 0.0,
+    "translate": 0.0,
+    "degrees": 0.0,
+    "shear": 0.0,
+    "perspective": 0.0,
+    "mixup": 0.0,
+    "copy_paste": 0.0,
+    "flipud": 0.0,
+    "fliplr": 0.5,
+    "hsv_h": 0.015,
+    "hsv_s": 0.7,
+    "hsv_v": 0.4,
+    "multi_scale": 0.0,
+    "nms": false,
+    "max_det": 300,
+    "save_period": -1,
+    "plots": false,
+    "val": true,
+    "device": 0
+  },
+  "validation": {
+    "precision": "FP32",
+    "batch_max": 8,
+    "padding": 0,
+    "selection": "highest full-validation center5 F1 at conf=.25; ties choose latest checkpoint",
+    "early_stopping": "20 epochs without strict center5 F1 improvement"
+  },
+  "additional_policy": "All previous v1/additional train plus new unique validated Baidu images; duplicates excluded; native1280x1024; no verified negatives.",
+  "holdout_policy": "Keep original v1 val/test unchanged; no additional images enter holdouts; exact content and known-parent overlap checked; independence of unknown historical recording families is not established",
+  "runs": [
+    {
+      "id": "native_merged_v2_baiduout_yolo26n_1280",
+      "architecture": "YOLO26n",
+      "pretrained": "models/yolo26n.pt",
+      "dataset": "pingpong_merged_v2"
+    },
+    {
+      "id": "native_merged_v2_baiduout_yolo26s_1280",
+      "architecture": "YOLO26s",
+      "pretrained": "models/yolo26s.pt",
+      "dataset": "pingpong_merged_v2"
+    }
+  ],
+  "data_preparation": "reports/datasets/native_merged_v2_baiduout_20261113/data_preparation.json",
+  "summary_command": [
+    "scripts/summarize_followup_suite.py",
+    "--suite",
+    "native_merged_v2_baiduout_20261113"
+  ],
+  "initialization_policy": "Official pretrained per architecture; full merged training, not resume of completed B/C optimizer. Same settings/seed for prior comparison."
+}

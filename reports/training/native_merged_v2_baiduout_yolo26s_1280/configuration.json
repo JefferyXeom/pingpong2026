@@ -1,0 +1,90 @@
+{
+  "suite_id": "native_merged_v2_baiduout_20261113",
+  "run": {
+    "id": "native_merged_v2_baiduout_yolo26s_1280",
+    "architecture": "YOLO26s",
+    "pretrained": "models/yolo26s.pt",
+    "dataset": "pingpong_merged_v2"
+  },
+  "settings": {
+    "imgsz": 1280,
+    "rect": true,
+    "batch": 8,
+    "epochs": 100,
+    "patience": 20,
+    "optimizer": "MuSGD",
+    "lr0": 0.01,
+    "lrf": 0.01,
+    "momentum": 0.937,
+    "weight_decay": 0.0005,
+    "warmup_epochs": 3.0,
+    "nbs": 64,
+    "amp": true,
+    "workers": 2,
+    "cache": false,
+    "seed": 20261109,
+    "deterministic": true,
+    "mosaic": 0.0,
+    "close_mosaic": 0,
+    "scale": 0.0,
+    "translate": 0.0,
+    "degrees": 0.0,
+    "shear": 0.0,
+    "perspective": 0.0,
+    "mixup": 0.0,
+    "copy_paste": 0.0,
+    "flipud": 0.0,
+    "fliplr": 0.5,
+    "hsv_h": 0.015,
+    "hsv_s": 0.7,
+    "hsv_v": 0.4,
+    "multi_scale": 0.0,
+    "nms": false,
+    "max_det": 300,
+    "save_period": -1,
+    "plots": false,
+    "val": true,
+    "device": 0,
+    "data": "D:\\workspace\\pingpong_yolo26\\configs\\datasets\\native_merged_v2_baiduout_20261113\\pingpong_merged_v2.yaml",
+    "project": "D:\\workspace\\pingpong_yolo26\\runs\\detect",
+    "name": "native_merged_v2_baiduout_yolo26s_1280",
+    "exist_ok": false
+  },
+  "data": {
+    "train": {
+      "images": 28401,
+      "objects": 36093,
+      "list": "configs/datasets/native_merged_v2_baiduout_20261113/pingpong_merged_v2_train.txt",
+      "sha256": "4171c3440157262f48e8414746a94141bb1622d98cad4818974e10e598bd49a8"
+    },
+    "val": {
+      "images": 1272,
+      "objects": 1272,
+      "list": "configs/datasets/native_merged_v2_baiduout_20261113/pingpong_merged_v2_val.txt",
+      "sha256": "e22da33d8b9c3d322e20e689f5c8b47629615baf44aba3b78b712aff826326b5"
+    },
+    "test": {
+      "images": 830,
+      "objects": 859,
+      "list": "configs/datasets/native_merged_v2_baiduout_20261113/pingpong_merged_v2_test.txt",
+      "sha256": "e9141cc0d25aec41bb322cf6456e5d78e985f60501ddaaa3492edfa9bab33a6b"
+    },
+    "yaml": "configs/datasets/native_merged_v2_baiduout_20261113/pingpong_merged_v2.yaml"
+  },
+  "source_weights": "D:\\workspace\\pingpong_yolo26\\models\\yolo26s.pt",
+  "source_sha256": "646f8bc3fe0a656803d95c294f7852321748cb29d13466a1af8862e2db384a1b",
+  "original_width_height": [
+    1280,
+    1024
+  ],
+  "training_height_width": [
+    1024,
+    1280
+  ],
+  "validation_precision": "FP32",
+  "fitness": "full-val center5 F1 at fixed conf=.25; ties latest checkpoint",
+  "gpu": "NVIDIA GeForce RTX 3090",
+  "torch": "2.11.0+cu128",
+  "cuda": "12.8",
+  "started_utc": "2026-11-13T15:10:05.861279+00:00"
+}

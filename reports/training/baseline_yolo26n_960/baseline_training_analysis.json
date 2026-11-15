@@ -1,0 +1,106 @@
+{
+  "updated_at_utc": "2026-11-08T14:14:55.572389+00:00",
+  "run": "D:\\workspace\\pingpong_yolo26\\runs\\detect\\baseline_yolo26n_960",
+  "normal_completion_report_exists": true,
+  "completed_epochs": 28,
+  "best_epoch": 3,
+  "best_epoch_metrics": {
+    "epoch": 3.0,
+    "time": 433.706,
+    "train/box_loss": 1.94853,
+    "train/cls_loss": 0.74798,
+    "train/l1_loss": 0.00124,
+    "metrics/precision(B)": 0.1709,
+    "metrics/recall(B)": 0.73035,
+    "metrics/mAP50(B)": 0.15126,
+    "metrics/mAP50-95(B)": 0.04012,
+    "val/box_loss": 2.77939,
+    "val/cls_loss": 2.98841,
+    "val/l1_loss": 0.00287,
+    "lr/pg0": 0.0293823,
+    "lr/pg1": 0.00979411,
+    "lr/pg2": 0.0293823,
+    "lr/pg3": 0.00979411,
+    "lr/pg4": 0.0293823,
+    "lr/pg5": 0.00979411,
+    "lr/pg6": 0.0293823,
+    "lr/pg7": 0.00979411
+  },
+  "latest_epoch_metrics": {
+    "epoch": 28.0,
+    "time": 533.415,
+    "train/box_loss": 1.56312,
+    "train/cls_loss": 0.44989,
+    "train/l1_loss": 0.00097,
+    "metrics/precision(B)": 0.0411,
+    "metrics/recall(B)": 0.03302,
+    "metrics/mAP50(B)": 0.00185,
+    "metrics/mAP50-95(B)": 0.00023,
+    "val/box_loss": 3.75934,
+    "val/cls_loss": 3.82202,
+    "val/l1_loss": 0.00376,
+    "lr/pg0": 0.021981,
+    "lr/pg1": 0.007327,
+    "lr/pg2": 0.021981,
+    "lr/pg3": 0.007327,
+    "lr/pg4": 0.021981,
+    "lr/pg5": 0.007327,
+    "lr/pg6": 0.021981,
+    "lr/pg7": 0.007327
+  },
+  "dataset": {
+    "train": {
+      "images": 6618,
+      "objects": 8139,
+      "image_gib": 10.875831540673971,
+      "recordings": {
+        "june01_recording1": 1520,
+        "june01_recording2": 2997,
+        "may27_recording1": 2101
+      }
+    },
+    "val": {
+      "images": 1272,
+      "objects": 1272,
+      "image_gib": 1.8985991114750504,
+      "recordings": {
+        "may27_recording3": 1272
+      }
+    },
+    "test": {
+      "images": 830,
+      "objects": 859,
+      "image_gib": 1.226647493429482,
+      "recordings": {
+        "may27_recording2": 830
+      }
+    }
+  },
+  "batch": 16,
+  "training_batches_per_epoch": 414,
+  "input_size": 960,
+  "median_recent_epoch_seconds": 131.83500000000004,
+  "configured_max_epochs": 100,
+  "early_stopping_patience": 25,
+  "total_recorded_training_minutes_excluding_pause": 63.82525,
+  "estimated_remaining_minutes_if_max_epochs": 0,
+  "estimated_early_stop_epoch_if_no_improvement": 28,
+  "estimated_remaining_minutes_if_no_improvement": 0,
+  "time_note": "Measured epoch time includes training and validation. CSV timer resets on resume; negative differences omitted. Startup, final validation and competing jobs can add time.",
+  "manual_interruption": "User confirmed previous stop was manual. Resumed from completed epoch 24.",
+  "interpretation": "Box AP deteriorates after warmup while training AP improves. Supplemental center checks show strong ball localization with predictions about half the validation box dimensions. Low box AP alone must not be interpreted as failed ball localization. Review box annotation consistency; keep original labels and splits unchanged.",
+  "final_best_validation": {
+    "stage": "baseline",
+    "run": "D:\\workspace\\pingpong_yolo26\\runs\\detect\\baseline_yolo26n_960",
+    "best": "D:\\workspace\\pingpong_yolo26\\runs\\detect\\baseline_yolo26n_960\\weights\\best.pt",
+    "last": "D:\\workspace\\pingpong_yolo26\\runs\\detect\\baseline_yolo26n_960\\weights\\last.pt",
+    "metrics": {
+      "metrics/precision(B)": 0.17047128129602357,
+      "metrics/recall(B)": 0.7279874213836478,
+      "metrics/mAP50(B)": 0.14973550734388547,
+      "metrics/mAP50-95(B)": 0.0399260732449669,
+      "fitness": 0.0399260732449669
+    },
+    "free_gib": 50.213417053222656
+  }
+}

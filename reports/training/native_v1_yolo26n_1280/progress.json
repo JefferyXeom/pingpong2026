@@ -1,0 +1,103 @@
+{
+  "state": "complete",
+  "run_id": "native_v1_yolo26n_1280",
+  "pid": 34840,
+  "max_epochs": 100,
+  "batches_seen_this_process": 43884,
+  "data": {
+    "train": {
+      "images": 6618,
+      "objects": 8139,
+      "list": "configs/datasets/native_resolution_suite_v1/native_v1_train.txt",
+      "sha256": "e867236ff42001a096aa9c8798199d9b799ad5c8a06781773a0fb44bcbec9582"
+    },
+    "val": {
+      "images": 1272,
+      "objects": 1272,
+      "list": "configs/datasets/native_resolution_suite_v1/native_v1_val.txt",
+      "sha256": "e22da33d8b9c3d322e20e689f5c8b47629615baf44aba3b78b712aff826326b5"
+    },
+    "test": {
+      "images": 830,
+      "objects": 859,
+      "list": "configs/datasets/native_resolution_suite_v1/native_v1_test.txt",
+      "sha256": "e9141cc0d25aec41bb322cf6456e5d78e985f60501ddaaa3492edfa9bab33a6b"
+    },
+    "yaml": "configs/datasets/native_resolution_suite_v1/native_v1.yaml"
+  },
+  "updated_utc": "2026-11-09T14:48:17.833284+00:00",
+  "epoch_in_progress": 54,
+  "training_batch_actual": 8,
+  "observed_tensor_bchw": [
+    2,
+    3,
+    1024,
+    1280
+  ],
+  "elapsed_seconds_this_process": 7206.747449636459,
+  "free_gib": 49.98072814941406,
+  "epochs_completed": 53,
+  "last_metrics": {
+    "metrics/precision(B)": 0.05466,
+    "metrics/recall(B)": 0.05346,
+    "metrics/mAP50(B)": 0.00864,
+    "metrics/mAP50-95(B)": 0.00102,
+    "metrics/center5_precision": 0.96625,
+    "metrics/center5_recall": 0.96777,
+    "metrics/center5_F1": 0.96701,
+    "metrics/center_error_p50": 1.27128,
+    "metrics/center_error_p95": 2.86896,
+    "metrics/center_error_p99": 3.53619,
+    "val/box_loss": 4.94453,
+    "val/cls_loss": 2.41121,
+    "val/l1_loss": 0.00522
+  },
+  "center_validation": {
+    "gt": 1272,
+    "predictions": 1274,
+    "center5_matches": 1231,
+    "center10_matches": 1232,
+    "center5_precision": 0.966248037676609,
+    "center5_recall": 0.9677672955974843,
+    "center5_f1": 0.96700706991359,
+    "matched_error_px_p50_p95_p99": [
+      1.2712828516960144,
+      2.8689611196517943,
+      3.536187629699707
+    ],
+    "actual_shapes_height_width": [
+      [
+        1024,
+        1280
+      ]
+    ],
+    "conf": 0.25,
+    "precision": "FP32",
+    "missing_gt_center5": 41
+  },
+  "selected_epoch": 33,
+  "selected_val_center": {
+    "gt": 1272,
+    "predictions": 1262,
+    "center5_matches": 1242,
+    "center10_matches": 1243,
+    "center5_precision": 0.9841521394611727,
+    "center5_recall": 0.9764150943396226,
+    "center5_f1": 0.9802683504340962,
+    "matched_error_px_p50_p95_p99": [
+      1.225462555885315,
+      2.735002756118774,
+      3.3709330749511706
+    ],
+    "actual_shapes_height_width": [
+      [
+        1024,
+        1280
+      ]
+    ],
+    "conf": 0.25,
+    "precision": "FP32",
+    "missing_gt_center5": 30
+  },
+  "completed_utc": "2026-11-09T14:48:19.308938+00:00"
+}

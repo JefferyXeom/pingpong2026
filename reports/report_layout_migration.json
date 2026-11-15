@@ -1,0 +1,488 @@
+{
+  "operation": "relocate reports and update textual path references only",
+  "files": [
+    {
+      "old_path": "reports\\environment_freeze.txt",
+      "new_path": "reports/environment/windows_rtx3090/environment_freeze.txt",
+      "sha256_before": "806a38c7f2f9f9389f7aaf73726e39cc5773dcf186fac6e86921307322df4ccc",
+      "sha256_after": "806a38c7f2f9f9389f7aaf73726e39cc5773dcf186fac6e86921307322df4ccc",
+      "content_changed_for_path_references": false
+    },
+    {
+      "old_path": "reports\\dataset_inventory.json",
+      "new_path": "reports/datasets/pingpong_v1/dataset_inventory.json",
+      "sha256_before": "39c96fc2eb278279e91f734817dd97ee171c47f9b5c96b73efd514dac08dc817",
+      "sha256_after": "39c96fc2eb278279e91f734817dd97ee171c47f9b5c96b73efd514dac08dc817",
+      "content_changed_for_path_references": false
+    },
+    {
+      "old_path": "reports\\dataset_detail.json",
+      "new_path": "reports/datasets/pingpong_v1/dataset_detail.json",
+      "sha256_before": "c9767da3ac67b6658fe5c2804c59c7d7ad379f2ea32c029f887b95f2575fb0bc",
+      "sha256_after": "c9767da3ac67b6658fe5c2804c59c7d7ad379f2ea32c029f887b95f2575fb0bc",
+      "content_changed_for_path_references": false
+    },
+    {
+      "old_path": "reports\\dataset_preparation.json",
+      "new_path": "reports/datasets/pingpong_v1/dataset_preparation.json",
+      "sha256_before": "fd1bfdb10d4d4714b851a451254d276a866a1723a1c2b40f9b19d5644ba9fd0a",
+      "sha256_after": "fd1bfdb10d4d4714b851a451254d276a866a1723a1c2b40f9b19d5644ba9fd0a",
+      "content_changed_for_path_references": false
+    },
+    {
+      "old_path": "reports\\dataset_verification.json",
+      "new_path": "reports/datasets/pingpong_v1/dataset_verification.json",
+      "sha256_before": "5f517a4b1dae61d306452f56fda7c14465dbda0cadbb2c5d375c51f7bf0b94f2",
+      "sha256_after": "216fa97eda0b70a7762288a38f0e65684b7b270ed1f61e0bd5a4050676c9ef35",
+      "content_changed_for_path_references": true
+    },
+    {
+      "old_path": "reports\\dataset_preview.jpg",
+      "new_path": "reports/datasets/pingpong_v1/dataset_preview.jpg",
+      "sha256_before": "7b1fb0c053f93f27c42e3e1afe341e23498e376c79d3b012ca34845e6821adb9",
+      "sha256_after": "7b1fb0c053f93f27c42e3e1afe341e23498e376c79d3b012ca34845e6821adb9",
+      "content_changed_for_path_references": false
+    },
+    {
+      "old_path": "reports\\pairing_review.json",
+      "new_path": "reports/datasets/pingpong_v1/pairing_review.json",
+      "sha256_before": "d0a27cd6c2c351158d07ace25bdacf56ab6a624cf52b277801ff622bcc4dda89",
+      "sha256_after": "d0a27cd6c2c351158d07ace25bdacf56ab6a624cf52b277801ff622bcc4dda89",
+      "content_changed_for_path_references": false
+    },
+    {
+      "old_path": "reports\\archive_inventory.json",
+      "new_path": "reports/datasets/pingpong_v1/archive_inventory.json",
+      "sha256_before": "6f98f5a8cbd887177ac7132376d72e2d502afbbe1a23a57065947cb3f2fcd411",
+      "sha256_after": "6f98f5a8cbd887177ac7132376d72e2d502afbbe1a23a57065947cb3f2fcd411",
+      "content_changed_for_path_references": false
+    },
+    {
+      "old_path": "reports\\additional_data_audit.json",
+      "new_path": "reports/datasets/pingpong_additional_v1/additional_data_audit.json",
+      "sha256_before": "1cc4c31beced48f967df7b07f0177e9083ab5738352748c72a2b37b6a1b2a248",
+      "sha256_after": "1cc4c31beced48f967df7b07f0177e9083ab5738352748c72a2b37b6a1b2a248",
+      "content_changed_for_path_references": false
+    },
+    {
+      "old_path": "reports\\additional_data_summary.json",
+      "new_path": "reports/datasets/pingpong_additional_v1/additional_data_summary.json",
+      "sha256_before": "11540542b64e8619a60027564c37c5fb5aacd27380a123e0db6e51f4bb79c2c3",
+      "sha256_after": "11540542b64e8619a60027564c37c5fb5aacd27380a123e0db6e51f4bb79c2c3",
+      "content_changed_for_path_references": false
+    },
+    {
+      "old_path": "reports\\additional_data_review.json",
+      "new_path": "reports/datasets/pingpong_additional_v1/additional_data_review.json",
+      "sha256_before": "2ec3ea1bad0c6d09084edb57f7b648f556a5b1531a2624a61e0c3145be21bb74",
+      "sha256_after": "0ec9f52d2c47157a9bccd3998f1c23ead98f80833bc1c23fa2092e60a86c57f8",
+      "content_changed_for_path_references": true
+    },
+    {
+      "old_path": "reports\\additional_data_provenance.json",
+      "new_path": "reports/datasets/pingpong_additional_v1/additional_data_provenance.json",
+      "sha256_before": "e28cfb622b6e476dbff4fe9386eb8eef35bf3811a6ccf90f0a27176fca282ec4",
+      "sha256_after": "e28cfb622b6e476dbff4fe9386eb8eef35bf3811a6ccf90f0a27176fca282ec4",
+      "content_changed_for_path_references": false
+    },
+    {
+      "old_path": "reports\\additional_dataset_verification.json",
+      "new_path": "reports/datasets/pingpong_additional_v1/additional_dataset_verification.json",
+      "sha256_before": "a6a65136a874708c6365c90fed4efc1874eae39ab0eebe60b0b5ad1999a0f09b",
+      "sha256_after": "a6a65136a874708c6365c90fed4efc1874eae39ab0eebe60b0b5ad1999a0f09b",
+      "content_changed_for_path_references": false
+    },
+    {
+      "old_path": "reports\\additional_data_preview.jpg",
+      "new_path": "reports/datasets/pingpong_additional_v1/additional_data_preview.jpg",
+      "sha256_before": "029598f88efbd6ca2ce254c6b99ebcc4b67eed3b5abef9612d737b4be9bda5c1",
+      "sha256_after": "029598f88efbd6ca2ce254c6b99ebcc4b67eed3b5abef9612d737b4be9bda5c1",
+      "content_changed_for_path_references": false
+    },
+    {
+      "old_path": "reports\\smoke_yolo26n_960_result.json",
+      "new_path": "reports/training/smoke_yolo26n_960/smoke_yolo26n_960_result.json",
+      "sha256_before": "579aec5ce5a144c85a406aadad3faef0ed28f3086a917103b0d84d8908d2952d",
+      "sha256_after": "579aec5ce5a144c85a406aadad3faef0ed28f3086a917103b0d84d8908d2952d",
+      "content_changed_for_path_references": false
+    },
+    {
+      "old_path": "reports\\baseline_process.json",
+      "new_path": "reports/training/baseline_yolo26n_960/baseline_process.json",
+      "sha256_before": "280438a2569ba3f49fb16d10a0506e5bd5ec7306481790d045cfbe7b4fef7c0d",
+      "sha256_after": "280438a2569ba3f49fb16d10a0506e5bd5ec7306481790d045cfbe7b4fef7c0d",
+      "content_changed_for_path_references": false
+    },
+    {
+      "old_path": "reports\\baseline_launch_history.jsonl",
+      "new_path": "reports/training/baseline_yolo26n_960/baseline_launch_history.jsonl",
+      "sha256_before": "bc02ed83ee35c948710bce8218dfb0b78c5b413fc14f1c96425f13e8e85f1246",
+      "sha256_after": "bc02ed83ee35c948710bce8218dfb0b78c5b413fc14f1c96425f13e8e85f1246",
+      "content_changed_for_path_references": false
+    },
+    {
+      "old_path": "reports\\baseline_yolo26n_960_progress.json",
+      "new_path": "reports/training/baseline_yolo26n_960/baseline_yolo26n_960_progress.json",
+      "sha256_before": "490437accacceb7ccc45ba6fb88feb98b204c2a4c3530ec88388d04acd56e241",
+      "sha256_after": "490437accacceb7ccc45ba6fb88feb98b204c2a4c3530ec88388d04acd56e241",
+      "content_changed_for_path_references": false
+    },
+    {
+      "old_path": "reports\\baseline_yolo26n_960_result.json",
+      "new_path": "reports/training/baseline_yolo26n_960/baseline_yolo26n_960_result.json",
+      "sha256_before": "539ea4dc27f9ba20942e75f760a331a3150dfc0084cd1862618d31d48117b5e3",
+      "sha256_after": "539ea4dc27f9ba20942e75f760a331a3150dfc0084cd1862618d31d48117b5e3",
+      "content_changed_for_path_references": false
+    },
+    {
+      "old_path": "reports\\baseline_interruption_review.json",
+      "new_path": "reports/training/baseline_yolo26n_960/baseline_interruption_review.json",
+      "sha256_before": "c51233ee03da8a10d7e7fd792e32e0eb1429e3a496ed7ebb3eae5cc270c47d21",
+      "sha256_after": "c51233ee03da8a10d7e7fd792e32e0eb1429e3a496ed7ebb3eae5cc270c47d21",
+      "content_changed_for_path_references": false
+    },
+    {
+      "old_path": "reports\\baseline_training_analysis.json",
+      "new_path": "reports/training/baseline_yolo26n_960/baseline_training_analysis.json",
+      "sha256_before": "540ef1377b7287269c39c1bccd77d1ce343464cdbe4e08fb400a8dea509f668c",
+      "sha256_after": "540ef1377b7287269c39c1bccd77d1ce343464cdbe4e08fb400a8dea509f668c",
+      "content_changed_for_path_references": false
+    },
+    {
+      "old_path": "reports\\baseline_learning_curves.png",
+      "new_path": "reports/training/baseline_yolo26n_960/baseline_learning_curves.png",
+      "sha256_before": "3e8d2d7da27b853e81b33c49c88b600491eabdc6fd0b21608588ea124fa900ab",
+      "sha256_after": "3e8d2d7da27b853e81b33c49c88b600491eabdc6fd0b21608588ea124fa900ab",
+      "content_changed_for_path_references": false
+    },
+    {
+      "old_path": "reports\\baseline_diagnostics\\best.pt",
+      "new_path": "reports\\evaluation\\baseline_yolo26n_960\\diagnostics_epoch24\\baseline_diagnostics\\best.pt",
+      "sha256_before": "0465e73d1f8abf8fd36615f3863d060167b42ff82012afb3c9b9acb9a720888b",
+      "sha256_after": "0465e73d1f8abf8fd36615f3863d060167b42ff82012afb3c9b9acb9a720888b",
+      "content_changed_for_path_references": false
+    },
+    {
+      "old_path": "reports\\baseline_diagnostics\\last.pt",
+      "new_path": "reports\\evaluation\\baseline_yolo26n_960\\diagnostics_epoch24\\baseline_diagnostics\\last.pt",
+      "sha256_before": "7a15be0f1f33594c9daa1e25ad8e7abc7a2c9883001044d7ea8f5d249a4756bf",
+      "sha256_after": "7a15be0f1f33594c9daa1e25ad8e7abc7a2c9883001044d7ea8f5d249a4756bf",
+      "content_changed_for_path_references": false
+    },
+    {
+      "old_path": "reports\\baseline_diagnostics\\train_subset.txt",
+      "new_path": "reports\\evaluation\\baseline_yolo26n_960\\diagnostics_epoch24\\baseline_diagnostics\\train_subset.txt",
+      "sha256_before": "17947198b08069259fb549e3215ebd11a13b1f9f4d18a412e3be85a1c3e23c90",
+      "sha256_after": "17947198b08069259fb549e3215ebd11a13b1f9f4d18a412e3be85a1c3e23c90",
+      "content_changed_for_path_references": false
+    },
+    {
+      "old_path": "reports\\baseline_diagnostics\\train_subset.yaml",
+      "new_path": "reports\\evaluation\\baseline_yolo26n_960\\diagnostics_epoch24\\baseline_diagnostics\\train_subset.yaml",
+      "sha256_before": "3286678d300b274bf6ec594a643df0871084c4642b8001151eec586769d3954a",
+      "sha256_after": "2dc3df6d1f2e2079fe7474e36c44ac2e24a9b013fab922517a3694a0e2cb4b81",
+      "content_changed_for_path_references": true
+    },
+    {
+      "old_path": "reports\\baseline_diagnostics\\val_subset.txt",
+      "new_path": "reports\\evaluation\\baseline_yolo26n_960\\diagnostics_epoch24\\baseline_diagnostics\\val_subset.txt",
+      "sha256_before": "c2e39f917deaf527b936312e5e75b6d2c698d21aec28a9f1f36b4b9a18f292ff",
+      "sha256_after": "c2e39f917deaf527b936312e5e75b6d2c698d21aec28a9f1f36b4b9a18f292ff",
+      "content_changed_for_path_references": false
+    },
+    {
+      "old_path": "reports\\baseline_diagnostics\\val_subset.yaml",
+      "new_path": "reports\\evaluation\\baseline_yolo26n_960\\diagnostics_epoch24\\baseline_diagnostics\\val_subset.yaml",
+      "sha256_before": "319432e67947a479b59f919e46a92df50900cc9e3e2b01626e2939a1887973d0",
+      "sha256_after": "e539d2440dc0fb6f324b06b43d44b1cf384e0d0a3ec563e525b8ba20df48c1eb",
+      "content_changed_for_path_references": true
+    },
+    {
+      "old_path": "reports\\baseline_diagnostics.json",
+      "new_path": "reports/evaluation/baseline_yolo26n_960/diagnostics_epoch24/baseline_diagnostics.json",
+      "sha256_before": "125c5a1d7b0847258db9d2d32ac153e02057201ba9e75ce2899d9e4f828810cc",
+      "sha256_after": "05e40b5d871413befde6913f4588936791cd020db09de930273b5f98158ace30",
+      "content_changed_for_path_references": true
+    },
+    {
+      "old_path": "reports\\baseline_center_diagnostics.json",
+      "new_path": "reports/evaluation/baseline_yolo26n_960/diagnostics_epoch24/baseline_center_diagnostics.json",
+      "sha256_before": "350435dc2acbef590dbc41b0fbb87f73cc2bd3d53eec4b08f49c2f2805de4d5d",
+      "sha256_after": "350435dc2acbef590dbc41b0fbb87f73cc2bd3d53eec4b08f49c2f2805de4d5d",
+      "content_changed_for_path_references": false
+    },
+    {
+      "old_path": "reports\\baseline_prediction_crops.jpg",
+      "new_path": "reports/evaluation/baseline_yolo26n_960/diagnostics_epoch24/baseline_prediction_crops.jpg",
+      "sha256_before": "b46168a7027ae53c13b605d8bd6ad5b1b1ffeabfb4bb5416ba87fcc4e58c657e",
+      "sha256_after": "b46168a7027ae53c13b605d8bd6ad5b1b1ffeabfb4bb5416ba87fcc4e58c657e",
+      "content_changed_for_path_references": false
+    },
+    {
+      "old_path": "reports\\train_val_domain_review.json",
+      "new_path": "reports/evaluation/baseline_yolo26n_960/diagnostics_epoch24/train_val_domain_review.json",
+      "sha256_before": "b889bb7eaf8b25d692b0d171c7aa8f8f4a22e76fb04f2119f090905f07b7c282",
+      "sha256_after": "845eb941d43a5342fc03d87ca295bc81b72820cf6dd38962a5ff82e369b3c001",
+      "content_changed_for_path_references": true
+    },
+    {
+      "old_path": "reports\\train_val_domain_preview.jpg",
+      "new_path": "reports/evaluation/baseline_yolo26n_960/diagnostics_epoch24/train_val_domain_preview.jpg",
+      "sha256_before": "f65e2d6ca5890fe3c2dc952c52567db092f60d46d28eedd6f376872b6a42da20",
+      "sha256_after": "f65e2d6ca5890fe3c2dc952c52567db092f60d46d28eedd6f376872b6a42da20",
+      "content_changed_for_path_references": false
+    },
+    {
+      "old_path": "reports\\baseline_full_val_centers.json",
+      "new_path": "reports/evaluation/baseline_yolo26n_960/center_selection_v1/baseline_full_val_centers.json",
+      "sha256_before": "586bcd1523140cee69a6d7dc42f2a49c017f3577662f5d6800949951d0dc30a3",
+      "sha256_after": "ba671f6aed911afdec25f413f543fcb430d76c7156b76b60857ff4cbd56ff35d",
+      "content_changed_for_path_references": true
+    },
+    {
+      "old_path": "reports\\baseline_full_val_centers_best_frames.json",
+      "new_path": "reports/evaluation/baseline_yolo26n_960/center_selection_v1/baseline_full_val_centers_best_frames.json",
+      "sha256_before": "db1a7fab31b8d9ed360ccd64e23afadea664a1fc242e6f8e228ae29a0b8987f1",
+      "sha256_after": "db1a7fab31b8d9ed360ccd64e23afadea664a1fc242e6f8e228ae29a0b8987f1",
+      "content_changed_for_path_references": false
+    },
+    {
+      "old_path": "reports\\baseline_full_val_centers_last_frames.json",
+      "new_path": "reports/evaluation/baseline_yolo26n_960/center_selection_v1/baseline_full_val_centers_last_frames.json",
+      "sha256_before": "4165c0026a764ec474832c90b1fb6b9b8b277fa3a7e14d8c5729b59ea08c0bf7",
+      "sha256_after": "4165c0026a764ec474832c90b1fb6b9b8b277fa3a7e14d8c5729b59ea08c0bf7",
+      "content_changed_for_path_references": false
+    },
+    {
+      "old_path": "reports\\baseline_full_test_centers.json",
+      "new_path": "reports/evaluation/baseline_yolo26n_960/center_selection_v1/baseline_full_test_centers.json",
+      "sha256_before": "0cb4bf9e8a9c11b6af1dfaeb93c75208b97df217a8e0575715f3794603f23fd9",
+      "sha256_after": "f9488209070e2ee31b86bbe6f5ec1172f73279a9121803a5c019ccbfea23debc",
+      "content_changed_for_path_references": true
+    },
+    {
+      "old_path": "reports\\baseline_full_test_centers_last_frames.json",
+      "new_path": "reports/evaluation/baseline_yolo26n_960/center_selection_v1/baseline_full_test_centers_last_frames.json",
+      "sha256_before": "826fdf912c21b5edc7c29fc0dfe6c012f60c6f18d6bdf5df80db16e4c9235e63",
+      "sha256_after": "826fdf912c21b5edc7c29fc0dfe6c012f60c6f18d6bdf5df80db16e4c9235e63",
+      "content_changed_for_path_references": false
+    },
+    {
+      "old_path": "reports\\trained_model_selection.json",
+      "new_path": "reports/evaluation/baseline_yolo26n_960/center_selection_v1/trained_model_selection.json",
+      "sha256_before": "5dbef3f7ce48a38bf03c252e650e185245b563539cbe9f003882f93a5cda9930",
+      "sha256_after": "8ed143ce402b9b9df7c4058773cdcd762e6ae3cccda0c5a1118599f0c12fd489",
+      "content_changed_for_path_references": true
+    },
+    {
+      "old_path": "reports\\conversion_comparison.json",
+      "new_path": "reports/evaluation/smoke_conversion_v1/conversion_comparison.json",
+      "sha256_before": "1ee045089cd7db1427f8ce58cb8f5c4ce29c4b65c7c559f1848cb37361186be7",
+      "sha256_after": "1ee045089cd7db1427f8ce58cb8f5c4ce29c4b65c7c559f1848cb37361186be7",
+      "content_changed_for_path_references": false
+    },
+    {
+      "old_path": "reports\\center_conversion_matrix_v1.json",
+      "new_path": "reports/evaluation/center_conversion_matrix_v1/center_conversion_matrix_v1.json",
+      "sha256_before": "1f56971cc7e5534c7f3805332661ecfe487e257c5f7aaa3442816e67419bc7d6",
+      "sha256_after": "1f56971cc7e5534c7f3805332661ecfe487e257c5f7aaa3442816e67419bc7d6",
+      "content_changed_for_path_references": false
+    },
+    {
+      "old_path": "reports\\center_conversion_matrix_progress.json",
+      "new_path": "reports/evaluation/center_conversion_matrix_v1/center_conversion_matrix_progress.json",
+      "sha256_before": "a4fc1c58b030036a512c42a2756dc5e500d4fa714b464e23f45af930a691798a",
+      "sha256_after": "a4fc1c58b030036a512c42a2756dc5e500d4fa714b464e23f45af930a691798a",
+      "content_changed_for_path_references": false
+    },
+    {
+      "old_path": "reports\\center_conversion_matrix_summary.json",
+      "new_path": "reports/evaluation/center_conversion_matrix_v1/center_conversion_matrix_summary.json",
+      "sha256_before": "966eb954abcf59d26194ceb9b3d344a1b1288d6f1430e0251a61df7291eff01a",
+      "sha256_after": "966eb954abcf59d26194ceb9b3d344a1b1288d6f1430e0251a61df7291eff01a",
+      "content_changed_for_path_references": false
+    },
+    {
+      "old_path": "reports\\center_conversion_matrix_summary.csv",
+      "new_path": "reports/evaluation/center_conversion_matrix_v1/center_conversion_matrix_summary.csv",
+      "sha256_before": "f910e6117d3f57bb87db56a9de95c0c3faa2201f1122f378a7be56225c95a7d5",
+      "sha256_after": "f910e6117d3f57bb87db56a9de95c0c3faa2201f1122f378a7be56225c95a7d5",
+      "content_changed_for_path_references": false
+    },
+    {
+      "old_path": "reports\\center_conversion_matrix_verification.json",
+      "new_path": "reports/evaluation/center_conversion_matrix_v1/center_conversion_matrix_verification.json",
+      "sha256_before": "a4d931ead1d5e35d3ce103e21498126f21ae3132923e0858fa3c8060f18015f0",
+      "sha256_after": "a4d931ead1d5e35d3ce103e21498126f21ae3132923e0858fa3c8060f18015f0",
+      "content_changed_for_path_references": false
+    },
+    {
+      "old_path": "reports\\center_conversion_matrix_comparison.png",
+      "new_path": "reports/evaluation/center_conversion_matrix_v1/center_conversion_matrix_comparison.png",
+      "sha256_before": "d39ad6d9a662ac640ff14496d481e31c6337fa9e8b7d93bd1e0e1b32c861b241",
+      "sha256_after": "d39ad6d9a662ac640ff14496d481e31c6337fa9e8b7d93bd1e0e1b32c861b241",
+      "content_changed_for_path_references": false
+    },
+    {
+      "old_path": "reports\\center_conversion_regressions.json",
+      "new_path": "reports/evaluation/center_conversion_matrix_v1/center_conversion_regressions.json",
+      "sha256_before": "db2ebec69d24182b3c5e318ef9403c6e9b9bd46e23ff1ec58759eae7a94ddf03",
+      "sha256_after": "db2ebec69d24182b3c5e318ef9403c6e9b9bd46e23ff1ec58759eae7a94ddf03",
+      "content_changed_for_path_references": false
+    },
+    {
+      "old_path": "reports\\conversion_original_image_crops.jpg",
+      "new_path": "reports/evaluation/center_conversion_matrix_v1/conversion_original_image_crops.jpg",
+      "sha256_before": "b4affadade0991c5be59cdabebdc5e07ccf64993985eb85ee2aec009d2b7f7d8",
+      "sha256_after": "b4affadade0991c5be59cdabebdc5e07ccf64993985eb85ee2aec009d2b7f7d8",
+      "content_changed_for_path_references": false
+    },
+    {
+      "old_path": "reports\\conversion_original_examples\\01_val_native_fp16.jpg",
+      "new_path": "reports\\evaluation\\center_conversion_matrix_v1\\conversion_original_examples\\01_val_native_fp16.jpg",
+      "sha256_before": "9a48bde449cfddc688ad117d3c3edf009dff21acc8ed66582205b5df6e2dac72",
+      "sha256_after": "9a48bde449cfddc688ad117d3c3edf009dff21acc8ed66582205b5df6e2dac72",
+      "content_changed_for_path_references": false
+    },
+    {
+      "old_path": "reports\\conversion_original_examples\\02_val_native_fp16.jpg",
+      "new_path": "reports\\evaluation\\center_conversion_matrix_v1\\conversion_original_examples\\02_val_native_fp16.jpg",
+      "sha256_before": "2901ec9ec3dff23ab5c48b8eab78b7f7e3f52de453621f5c058999d6111cec36",
+      "sha256_after": "2901ec9ec3dff23ab5c48b8eab78b7f7e3f52de453621f5c058999d6111cec36",
+      "content_changed_for_path_references": false
+    },
+    {
+      "old_path": "reports\\conversion_original_examples\\03_val_native_fp16.jpg",
+      "new_path": "reports\\evaluation\\center_conversion_matrix_v1\\conversion_original_examples\\03_val_native_fp16.jpg",
+      "sha256_before": "617d98065d022d9b97d7bf63f96e2422bd8f53d8f5b645137e9c9fbcbd395b70",
+      "sha256_after": "617d98065d022d9b97d7bf63f96e2422bd8f53d8f5b645137e9c9fbcbd395b70",
+      "content_changed_for_path_references": false
+    },
+    {
+      "old_path": "reports\\conversion_original_examples\\04_val_native_fp16.jpg",
+      "new_path": "reports\\evaluation\\center_conversion_matrix_v1\\conversion_original_examples\\04_val_native_fp16.jpg",
+      "sha256_before": "e22193df837c98d639d335ec7aa59997a43929368735316d13cc47f635befa78",
+      "sha256_after": "e22193df837c98d639d335ec7aa59997a43929368735316d13cc47f635befa78",
+      "content_changed_for_path_references": false
+    },
+    {
+      "old_path": "reports\\conversion_original_examples\\05_test_native_fp16.jpg",
+      "new_path": "reports\\evaluation\\center_conversion_matrix_v1\\conversion_original_examples\\05_test_native_fp16.jpg",
+      "sha256_before": "90ad052b49c90fb6afeab0dd230cc5a3048530815b63f590cf43e8327a3e4160",
+      "sha256_after": "90ad052b49c90fb6afeab0dd230cc5a3048530815b63f590cf43e8327a3e4160",
+      "content_changed_for_path_references": false
+    },
+    {
+      "old_path": "reports\\conversion_original_examples\\06_test_native_fp16.jpg",
+      "new_path": "reports\\evaluation\\center_conversion_matrix_v1\\conversion_original_examples\\06_test_native_fp16.jpg",
+      "sha256_before": "14e02bd71fd5c3bda239b623beef7e9ffd73f998db18711a53ec4e0524a2be40",
+      "sha256_after": "14e02bd71fd5c3bda239b623beef7e9ffd73f998db18711a53ec4e0524a2be40",
+      "content_changed_for_path_references": false
+    },
+    {
+      "old_path": "reports\\conversion_original_examples\\07_test_native_fp16.jpg",
+      "new_path": "reports\\evaluation\\center_conversion_matrix_v1\\conversion_original_examples\\07_test_native_fp16.jpg",
+      "sha256_before": "6c077145556ad7449b4519477663b1458f97513aa622924105fdbf34528d6bbb",
+      "sha256_after": "6c077145556ad7449b4519477663b1458f97513aa622924105fdbf34528d6bbb",
+      "content_changed_for_path_references": false
+    },
+    {
+      "old_path": "reports\\conversion_original_examples\\08_test_native_fp16.jpg",
+      "new_path": "reports\\evaluation\\center_conversion_matrix_v1\\conversion_original_examples\\08_test_native_fp16.jpg",
+      "sha256_before": "1e96fe48326e5d2bee7e22a6706592f6f6a41cc34a249bc35649030a12e723d0",
+      "sha256_after": "1e96fe48326e5d2bee7e22a6706592f6f6a41cc34a249bc35649030a12e723d0",
+      "content_changed_for_path_references": false
+    },
+    {
+      "old_path": "reports\\conversion_original_examples\\index.json",
+      "new_path": "reports\\evaluation\\center_conversion_matrix_v1\\conversion_original_examples\\index.json",
+      "sha256_before": "deb7554aa66f6b4c84046be2ce895e6d1772f2490b9d7a84d661d2503f222ace",
+      "sha256_after": "95068f7c8e89c4605498c5c5842dd7fc5197039a4ed7bcac8d5e9d6a21163a7f",
+      "content_changed_for_path_references": true
+    }
+  ],
+  "updated_reference_files": [
+    "README.md",
+    "scripts\\analyze_training.py",
+    "scripts\\compare_conversion.py",
+    "scripts\\diagnose_ball_centers.py",
+    "scripts\\diagnose_baseline.py",
+    "scripts\\evaluate_conversion_matrix.py",
+    "scripts\\inspect_additional_provenance.py",
+    "scripts\\inspect_baseline_checkpoint.py",
+    "scripts\\inspect_pairing.py",
+    "scripts\\package_trained_model.py",
+    "scripts\\prepare_additional_dataset.py",
+    "scripts\\refresh_additional_audit.py",
+    "scripts\\review_additional_data.py",
+    "scripts\\review_conversion_predictions.py",
+    "scripts\\review_conversion_regressions.py",
+    "scripts\\review_training_domains.py",
+    "scripts\\start_baseline.py",
+    "scripts\\status.py",
+    "scripts\\summarize_conversion_matrix.py",
+    "scripts\\verify_additional_dataset.py",
+    "scripts\\verify_conversion_report.py",
+    "scripts\\verify_dataset.py",
+    "docs\\conversion_evaluation_protocol.zh-CN.md",
+    "docs\\conversion_evaluation_results.zh-CN.md",
+    "docs\\training_walkthrough.zh-CN.md",
+    "models\\pingpong_yolo26n_center_v1\\model_card.json",
+    "reports\\datasets\\pingpong_additional_v1\\additional_data_review.json",
+    "reports\\datasets\\pingpong_v1\\dataset_verification.json",
+    "reports\\evaluation\\baseline_yolo26n_960\\center_selection_v1\\baseline_full_test_centers.json",
+    "reports\\evaluation\\baseline_yolo26n_960\\center_selection_v1\\baseline_full_val_centers.json",
+    "reports\\evaluation\\baseline_yolo26n_960\\center_selection_v1\\trained_model_selection.json",
+    "reports\\evaluation\\baseline_yolo26n_960\\diagnostics_epoch24\\baseline_diagnostics.json",
+    "reports\\evaluation\\baseline_yolo26n_960\\diagnostics_epoch24\\train_val_domain_review.json",
+    "reports\\evaluation\\baseline_yolo26n_960\\diagnostics_epoch24\\baseline_diagnostics\\train_subset.yaml",
+    "reports\\evaluation\\baseline_yolo26n_960\\diagnostics_epoch24\\baseline_diagnostics\\val_subset.yaml",
+    "reports\\evaluation\\center_conversion_matrix_v1\\conversion_original_examples\\index.json"
+  ],
+  "path_mapping": {
+    "reports/environment_freeze.txt": "reports/environment/windows_rtx3090/environment_freeze.txt",
+    "reports/dataset_inventory.json": "reports/datasets/pingpong_v1/dataset_inventory.json",
+    "reports/dataset_detail.json": "reports/datasets/pingpong_v1/dataset_detail.json",
+    "reports/dataset_preparation.json": "reports/datasets/pingpong_v1/dataset_preparation.json",
+    "reports/dataset_verification.json": "reports/datasets/pingpong_v1/dataset_verification.json",
+    "reports/dataset_preview.jpg": "reports/datasets/pingpong_v1/dataset_preview.jpg",
+    "reports/pairing_review.json": "reports/datasets/pingpong_v1/pairing_review.json",
+    "reports/archive_inventory.json": "reports/datasets/pingpong_v1/archive_inventory.json",
+    "reports/additional_data_audit.json": "reports/datasets/pingpong_additional_v1/additional_data_audit.json",
+    "reports/additional_data_summary.json": "reports/datasets/pingpong_additional_v1/additional_data_summary.json",
+    "reports/additional_data_review.json": "reports/datasets/pingpong_additional_v1/additional_data_review.json",
+    "reports/additional_data_provenance.json": "reports/datasets/pingpong_additional_v1/additional_data_provenance.json",
+    "reports/additional_dataset_verification.json": "reports/datasets/pingpong_additional_v1/additional_dataset_verification.json",
+    "reports/additional_data_preview.jpg": "reports/datasets/pingpong_additional_v1/additional_data_preview.jpg",
+    "reports/smoke_yolo26n_960_result.json": "reports/training/smoke_yolo26n_960/smoke_yolo26n_960_result.json",
+    "reports/baseline_process.json": "reports/training/baseline_yolo26n_960/baseline_process.json",
+    "reports/baseline_launch_history.jsonl": "reports/training/baseline_yolo26n_960/baseline_launch_history.jsonl",
+    "reports/baseline_yolo26n_960_progress.json": "reports/training/baseline_yolo26n_960/baseline_yolo26n_960_progress.json",
+    "reports/baseline_yolo26n_960_result.json": "reports/training/baseline_yolo26n_960/baseline_yolo26n_960_result.json",
+    "reports/baseline_interruption_review.json": "reports/training/baseline_yolo26n_960/baseline_interruption_review.json",
+    "reports/baseline_training_analysis.json": "reports/training/baseline_yolo26n_960/baseline_training_analysis.json",
+    "reports/baseline_learning_curves.png": "reports/training/baseline_yolo26n_960/baseline_learning_curves.png",
+    "reports/baseline_diagnostics": "reports/evaluation/baseline_yolo26n_960/diagnostics_epoch24/baseline_diagnostics",
+    "reports/baseline_diagnostics.json": "reports/evaluation/baseline_yolo26n_960/diagnostics_epoch24/baseline_diagnostics.json",
+    "reports/baseline_center_diagnostics.json": "reports/evaluation/baseline_yolo26n_960/diagnostics_epoch24/baseline_center_diagnostics.json",
+    "reports/baseline_prediction_crops.jpg": "reports/evaluation/baseline_yolo26n_960/diagnostics_epoch24/baseline_prediction_crops.jpg",
+    "reports/train_val_domain_review.json": "reports/evaluation/baseline_yolo26n_960/diagnostics_epoch24/train_val_domain_review.json",
+    "reports/train_val_domain_preview.jpg": "reports/evaluation/baseline_yolo26n_960/diagnostics_epoch24/train_val_domain_preview.jpg",
+    "reports/baseline_full_val_centers.json": "reports/evaluation/baseline_yolo26n_960/center_selection_v1/baseline_full_val_centers.json",
+    "reports/baseline_full_val_centers_best_frames.json": "reports/evaluation/baseline_yolo26n_960/center_selection_v1/baseline_full_val_centers_best_frames.json",
+    "reports/baseline_full_val_centers_last_frames.json": "reports/evaluation/baseline_yolo26n_960/center_selection_v1/baseline_full_val_centers_last_frames.json",
+    "reports/baseline_full_test_centers.json": "reports/evaluation/baseline_yolo26n_960/center_selection_v1/baseline_full_test_centers.json",
+    "reports/baseline_full_test_centers_last_frames.json": "reports/evaluation/baseline_yolo26n_960/center_selection_v1/baseline_full_test_centers_last_frames.json",
+    "reports/trained_model_selection.json": "reports/evaluation/baseline_yolo26n_960/center_selection_v1/trained_model_selection.json",
+    "reports/conversion_comparison.json": "reports/evaluation/smoke_conversion_v1/conversion_comparison.json",
+    "reports/center_conversion_matrix_v1.json": "reports/evaluation/center_conversion_matrix_v1/center_conversion_matrix_v1.json",
+    "reports/center_conversion_matrix_progress.json": "reports/evaluation/center_conversion_matrix_v1/center_conversion_matrix_progress.json",
+    "reports/center_conversion_matrix_summary.json": "reports/evaluation/center_conversion_matrix_v1/center_conversion_matrix_summary.json",
+    "reports/center_conversion_matrix_summary.csv": "reports/evaluation/center_conversion_matrix_v1/center_conversion_matrix_summary.csv",
+    "reports/center_conversion_matrix_verification.json": "reports/evaluation/center_conversion_matrix_v1/center_conversion_matrix_verification.json",
+    "reports/center_conversion_matrix_comparison.png": "reports/evaluation/center_conversion_matrix_v1/center_conversion_matrix_comparison.png",
+    "reports/center_conversion_regressions.json": "reports/evaluation/center_conversion_matrix_v1/center_conversion_regressions.json",
+    "reports/conversion_original_image_crops.jpg": "reports/evaluation/center_conversion_matrix_v1/conversion_original_image_crops.jpg",
+    "reports/conversion_original_examples": "reports/evaluation/center_conversion_matrix_v1/conversion_original_examples"
+  }
+}

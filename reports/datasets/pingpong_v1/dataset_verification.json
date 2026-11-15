@@ -1,0 +1,12 @@
+{
+  "verified_images": 8720,
+  "split_counts": {
+    "test": 830,
+    "val": 1272,
+    "train": 6618
+  },
+  "exact_image_hashes_disjoint": true,
+  "label_files_match_manifest": true,
+  "source_copy_sha256_verification": "performed during preparation",
+  "preview": "reports/datasets/pingpong_v1/dataset_preview.jpg"
+}

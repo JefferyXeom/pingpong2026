@@ -1,0 +1,103 @@
+{
+  "state": "complete",
+  "run_id": "native_v1_additional_yolo26n_1280",
+  "pid": 30456,
+  "max_epochs": 100,
+  "batches_seen_this_process": 95744,
+  "data": {
+    "train": {
+      "images": 17404,
+      "objects": 22181,
+      "list": "configs/datasets/native_resolution_suite_v1/native_v1_additional_train.txt",
+      "sha256": "d0242f85006e1d4264eb2ed119bbbd1799faf9cb0578324aa80f8996f1b9eb89"
+    },
+    "val": {
+      "images": 1272,
+      "objects": 1272,
+      "list": "configs/datasets/native_resolution_suite_v1/native_v1_additional_val.txt",
+      "sha256": "e22da33d8b9c3d322e20e689f5c8b47629615baf44aba3b78b712aff826326b5"
+    },
+    "test": {
+      "images": 830,
+      "objects": 859,
+      "list": "configs/datasets/native_resolution_suite_v1/native_v1_additional_test.txt",
+      "sha256": "e9141cc0d25aec41bb322cf6456e5d78e985f60501ddaaa3492edfa9bab33a6b"
+    },
+    "yaml": "configs/datasets/native_resolution_suite_v1/native_v1_additional.yaml"
+  },
+  "updated_utc": "2026-11-09T19:27:00.301838+00:00",
+  "epoch_in_progress": 45,
+  "training_batch_actual": 8,
+  "observed_tensor_bchw": [
+    4,
+    3,
+    1024,
+    1280
+  ],
+  "elapsed_seconds_this_process": 14916.010839939117,
+  "free_gib": 49.8646354675293,
+  "epochs_completed": 44,
+  "last_metrics": {
+    "metrics/precision(B)": 0.03541,
+    "metrics/recall(B)": 0.03616,
+    "metrics/mAP50(B)": 0.00467,
+    "metrics/mAP50-95(B)": 0.00107,
+    "metrics/center5_precision": 0.98056,
+    "metrics/center5_recall": 0.99135,
+    "metrics/center5_F1": 0.98593,
+    "metrics/center_error_p50": 1.22591,
+    "metrics/center_error_p95": 2.66825,
+    "metrics/center_error_p99": 3.38692,
+    "val/box_loss": 4.39795,
+    "val/cls_loss": 3.33814,
+    "val/l1_loss": 0.00459
+  },
+  "center_validation": {
+    "gt": 1272,
+    "predictions": 1286,
+    "center5_matches": 1261,
+    "center10_matches": 1262,
+    "center5_precision": 0.9805598755832037,
+    "center5_recall": 0.9913522012578616,
+    "center5_f1": 0.9859265050820955,
+    "matched_error_px_p50_p95_p99": [
+      1.225912868976593,
+      2.6682517409324653,
+      3.386922600269328
+    ],
+    "actual_shapes_height_width": [
+      [
+        1024,
+        1280
+      ]
+    ],
+    "conf": 0.25,
+    "precision": "FP32",
+    "missing_gt_center5": 11
+  },
+  "selected_epoch": 24,
+  "selected_val_center": {
+    "gt": 1272,
+    "predictions": 1274,
+    "center5_matches": 1258,
+    "center10_matches": 1259,
+    "center5_precision": 0.9874411302982732,
+    "center5_recall": 0.9889937106918238,
+    "center5_f1": 0.9882168106834249,
+    "matched_error_px_p50_p95_p99": [
+      1.219502568244934,
+      2.6596413135528554,
+      3.3571900033950834
+    ],
+    "actual_shapes_height_width": [
+      [
+        1024,
+        1280
+      ]
+    ],
+    "conf": 0.25,
+    "precision": "FP32",
+    "missing_gt_center5": 14
+  },
+  "completed_utc": "2026-11-09T19:27:01.582526+00:00"
+}

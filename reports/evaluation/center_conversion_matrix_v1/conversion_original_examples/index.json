@@ -1,0 +1,98 @@
+[
+  {
+    "file": "reports\\evaluation\\center_conversion_matrix_v1\\conversion_original_examples\\01_val_native_fp16.jpg",
+    "source_image": "images/val/may27_recording3__left_img_1716815150894061.png",
+    "image_sha256": "6e9c78a403c1eeca6751d2fb3f8ec4413f2894d50deddbd14a27c932f3598fcc",
+    "split": "val",
+    "size": [
+      1280,
+      1024
+    ],
+    "case": "h1024_w1280_tensorrt_fp16_b2",
+    "confidence": 0.25
+  },
+  {
+    "file": "reports\\evaluation\\center_conversion_matrix_v1\\conversion_original_examples\\02_val_native_fp16.jpg",
+    "source_image": "images/val/may27_recording3__left_img_1716815366769695.png",
+    "image_sha256": "71ffdae2bfb797bcdf67046a52681bae6bc0a13f4e46713fe6f1d5d4dab2b422",
+    "split": "val",
+    "size": [
+      1280,
+      1024
+    ],
+    "case": "h1024_w1280_tensorrt_fp16_b2",
+    "confidence": 0.25
+  },
+  {
+    "file": "reports\\evaluation\\center_conversion_matrix_v1\\conversion_original_examples\\03_val_native_fp16.jpg",
+    "source_image": "images/val/may27_recording3__left_img_1716815783339476.png",
+    "image_sha256": "41905b717653e48370e0a90cabbe025fc0cf8545d85e08cb683663a9ec769ffb",
+    "split": "val",
+    "size": [
+      1280,
+      1024
+    ],
+    "case": "h1024_w1280_tensorrt_fp16_b2",
+    "confidence": 0.25
+  },
+  {
+    "file": "reports\\evaluation\\center_conversion_matrix_v1\\conversion_original_examples\\04_val_native_fp16.jpg",
+    "source_image": "images/val/may27_recording3__left_img_1716816238017878.png",
+    "image_sha256": "b4eaee2330cac5584c6575fbe57a0ccc73522200c35f736528b9ee8037d401c8",
+    "split": "val",
+    "size": [
+      1280,
+      1024
+    ],
+    "case": "h1024_w1280_tensorrt_fp16_b2",
+    "confidence": 0.25
+  },
+  {
+    "file": "reports\\evaluation\\center_conversion_matrix_v1\\conversion_original_examples\\05_test_native_fp16.jpg",
+    "source_image": "images/test/may27_recording2__left_img_1716813895988711.png",
+    "image_sha256": "e2264bb0a56cdaa5208205b0472898da68f56268855da32b9f7a8490a16c176b",
+    "split": "test",
+    "size": [
+      1280,
+      1024
+    ],
+    "case": "h1024_w1280_tensorrt_fp16_b2",
+    "confidence": 0.25
+  },
+  {
+    "file": "reports\\evaluation\\center_conversion_matrix_v1\\conversion_original_examples\\06_test_native_fp16.jpg",
+    "source_image": "images/test/may27_recording2__left_img_1716814480495914.png",
+    "image_sha256": "7f268eb6e0555c2cd13ea9fbf53f5e4f327c0b9e6e581ec107e20f52f4ca0ed9",
+    "split": "test",
+    "size": [
+      1280,
+      1024
+    ],
+    "case": "h1024_w1280_tensorrt_fp16_b2",
+    "confidence": 0.25
+  },
+  {
+    "file": "reports\\evaluation\\center_conversion_matrix_v1\\conversion_original_examples\\07_test_native_fp16.jpg",
+    "source_image": "images/test/may27_recording2__left_img_1716814699228218.png",
+    "image_sha256": "a87f0ec206fd0253170bf58574bfa0eeddfb10a1852098d28b9b5704d7034b3b",
+    "split": "test",
+    "size": [
+      1280,
+      1024
+    ],
+    "case": "h1024_w1280_tensorrt_fp16_b2",
+    "confidence": 0.25
+  },
+  {
+    "file": "reports\\evaluation\\center_conversion_matrix_v1\\conversion_original_examples\\08_test_native_fp16.jpg",
+    "source_image": "images/test/may27_recording2__right_img_1716813894874465.png",
+    "image_sha256": "572221a0e87536cf8985a0a9e30c211bd8f97cc2a24e4eadf507b29355fe7e4e",
+    "split": "test",
+    "size": [
+      1280,
+      1024
+    ],
+    "case": "h1024_w1280_tensorrt_fp16_b2",
+    "confidence": 0.25
+  }
+]

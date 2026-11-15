@@ -1,0 +1,30 @@
+{
+  "target_gpu_user_reported": "NVIDIA GeForce RTX 2060 SUPER",
+  "target_os": "Ubuntu",
+  "actual_hardware_and_software_verified": false,
+  "stereo_pairs_per_second_required": 120,
+  "images_per_second_required": 240,
+  "stereo_pair_arrival_interval_ms": 8.333333333333334,
+  "end_to_end_latency_limit_ms": null,
+  "sustained_processing_without_growing_backlog": true,
+  "preferred_precision_first": "FP16",
+  "accuracy_priority": "Preserve ball-center localization; do not lower spatial resolution by default to meet throughput.",
+  "reference_original_shape_height_width": [1024, 1280],
+  "baseline_input_shape_height_width": [768, 960],
+  "primary_model": "YOLO26n",
+  "larger_model_comparison": "YOLO26s native-resolution combined-data training explicitly requested; compare center accuracy and throughput after completion",
+  "initial_input_shapes_height_width": [[768, 960], [1024, 1280]],
+  "lower_resolution_policy": "Conditional tradeoff only after equal-resolution engine/pipeline optimization and paired accuracy-speed evaluation.",
+  "int8_policy": "Optional after FP16 measurement; require representative calibration and full localization/false-positive validation.",
+  "batch_sizes_to_compare": [1, 2],
+  "batch_2_policy": "Two synchronized left/right images from the same capture time",
+  "provisional_engine_only_headroom_goal_images_per_second": 300,
+  "target_gpu_benchmark_completed": false,
+  "notes": [
+    "Input shape and batch changes require compatible TensorRT engines.",
+    "Rebuild engines on the Ubuntu/2060 SUPER target with a stack supporting Turing SM 7.5.",
+    "Record GPU-only and full-pipeline throughput separately, plus P50/P95/P99 latency, backlog and drops.",
+    "Validate ball center accuracy and false positives for every resolution and precision.",
+    "The 300-image-per-second headroom goal is a planning target, not a measured result."
+  ]
+}

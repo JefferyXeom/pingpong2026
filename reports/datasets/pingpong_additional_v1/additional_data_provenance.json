@@ -1,0 +1,149 @@
+{
+  "file_families": [
+    {
+      "directory": "D:\\yolov5-master\\VOCData\\images",
+      "family": "#_img_#",
+      "count": 379,
+      "examples": [
+        {
+          "image": "0_img_10.png",
+          "dimensions": [
+            1280,
+            1024
+          ],
+          "xml_filename": "0_img_10.png",
+          "xml_path": "E:\\pingpongdata----out\\0_img_10.png"
+        },
+        {
+          "image": "0_img_100.png",
+          "dimensions": [
+            1280,
+            1024
+          ],
+          "xml_filename": "0_img_100.png",
+          "xml_path": "E:\\pingpongdata----out\\0_img_100.png"
+        },
+        {
+          "image": "0_img_101.png",
+          "dimensions": [
+            1280,
+            1024
+          ],
+          "xml_filename": "0_img_101.png",
+          "xml_path": "E:\\pingpongdata----out\\0_img_101.png"
+        }
+      ]
+    },
+    {
+      "directory": "D:\\yolov5-master\\VOCData\\images",
+      "family": "indexed_img",
+      "count": 6710,
+      "examples": [
+        {
+          "image": "0_img_100_1.png",
+          "dimensions": [
+            1280,
+            1024
+          ],
+          "xml_filename": "0_img_100_1.png",
+          "xml_path": "E:\\pingpongdata----out\\0_img_100_1.png"
+        },
+        {
+          "image": "0_img_100_10.png",
+          "dimensions": [
+            1280,
+            1024
+          ],
+          "xml_filename": "0_img_100_10.png",
+          "xml_path": "E:\\pingpongdata----out\\0_img_100_10.png"
+        },
+        {
+          "image": "0_img_100_11.png",
+          "dimensions": [
+            1280,
+            1024
+          ],
+          "xml_filename": "0_img_100_11.png",
+          "xml_path": "E:\\pingpongdata----out\\0_img_100_11.png"
+        }
+      ]
+    },
+    {
+      "directory": "D:\\yolov5-master\\VOCData\\images",
+      "family": "numeric",
+      "count": 700,
+      "examples": [
+        {
+          "image": "001.png",
+          "dimensions": [
+            1280,
+            1024
+          ],
+          "xml_filename": "001.png",
+          "xml_path": "D:\\1----\\1----\\001.png"
+        },
+        {
+          "image": "002.png",
+          "dimensions": [
+            1280,
+            1024
+          ],
+          "xml_filename": "002.png",
+          "xml_path": "D:\\1----\\1----\\002.png"
+        },
+        {
+          "image": "003.png",
+          "dimensions": [
+            1280,
+            1024
+          ],
+          "xml_filename": "003.png",
+          "xml_path": "D:\\1----\\1----\\003.png"
+        }
+      ]
+    },
+    {
+      "directory": "D:\\yolov5-master\\history_VOCOdata\\VOCData_1\\images",
+      "family": "white_background",
+      "count": 2997,
+      "examples": [
+        {
+          "image": "0601_2img_-100674158_left_white.png",
+          "dimensions": [
+            1280,
+            1024
+          ]
+        },
+        {
+          "image": "0601_2img_-100752188_right_white.png",
+          "dimensions": [
+            1280,
+            1024
+          ]
+        },
+        {
+          "image": "0601_2img_-100970618_left_white.png",
+          "dimensions": [
+            1280,
+            1024
+          ]
+        }
+      ]
+    }
+  ],
+  "white_background_images": 2997,
+  "white_with_exactly_one_active_parent_and_agreeing_labels": 2997,
+  "white_parent_splits": {
+    "train": 2997
+  },
+  "white_parent_review_failures": [],
+  "archives": [
+    {
+      "path": "D:\\yolov5-master\\history_VOCOdata\\1----0k.zip",
+      "images": 700,
+      "images_matching_loose_file_sha256": 700,
+      "unmatched_images": []
+    }
+  ],
+  "note": "Filename families and XML paths are provenance clues, not proof of independent recordings."
+}

@@ -1,0 +1,22 @@
+{
+  "pid": 29160,
+  "process_created_at": 1794146510.698898,
+  "started_at_unix": 1794146510.7037847,
+  "command": [
+    "D:\\workspace\\pingpong_yolo26\\.venv\\Scripts\\python.exe",
+    "-u",
+    "D:\\workspace\\pingpong_yolo26\\scripts\\train.py",
+    "--stage",
+    "baseline",
+    "--resume"
+  ],
+  "resume": true,
+  "stdout": "D:\\workspace\\pingpong_yolo26\\logs\\baseline.stdout.log",
+  "stderr": "D:\\workspace\\pingpong_yolo26\\logs\\baseline.stderr.log",
+  "run_directory": "D:\\workspace\\pingpong_yolo26\\runs\\detect\\baseline_yolo26n_960",
+  "epochs": 100,
+  "early_stopping_patience": 25,
+  "imgsz": 960,
+  "batch": 16,
+  "nms_free": true
+}

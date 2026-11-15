@@ -1,0 +1,14 @@
+[
+  {
+    "archive": "data\\img_data.0527.zip",
+    "image_count": 2104,
+    "uncompressed_image_bytes": 3374808533,
+    "missing_annotation_stems_found": []
+  },
+  {
+    "archive": "VOCData\\images.zip",
+    "image_count": 4944,
+    "uncompressed_image_bytes": 9231901249,
+    "missing_annotation_stems_found": []
+  }
+]

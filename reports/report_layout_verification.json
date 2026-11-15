@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "relocated_files": 57,
+  "binary_files_sha256_unchanged": 17,
+  "formal_matrix_sha256_unchanged": true,
+  "json_reports_parsed": 85,
+  "local_markdown_links_checked": 294,
+  "legacy_script_doc_model_references": [],
+  "model_hashes_checked": 12,
+  "note": "Organization and metadata checks only; no training or inference repeated."
+}

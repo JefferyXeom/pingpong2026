@@ -1,0 +1,5 @@
+path: D:/workspace/pingpong_yolo26/datasets/pingpong_v1
+train: D:/workspace/pingpong_yolo26/reports/evaluation/baseline_yolo26n_960/diagnostics_epoch24/baseline_diagnostics/train_subset.txt
+val: D:/workspace/pingpong_yolo26/reports/evaluation/baseline_yolo26n_960/diagnostics_epoch24/baseline_diagnostics/train_subset.txt
+names:
+  0: ball

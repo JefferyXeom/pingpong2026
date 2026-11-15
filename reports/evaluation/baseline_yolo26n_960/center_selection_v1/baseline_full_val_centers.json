@@ -1,0 +1,141 @@
+{
+  "split": "val",
+  "images": 1272,
+  "thresholds": [
+    0.05,
+    0.25,
+    0.5
+  ],
+  "matching": "One-to-one greedy nearest centers within 5 or 10 original-image pixels; separate greedy IoU>=0.5 box matching.",
+  "limits": "All frames have annotated balls. This does not measure false positives on verified no-ball video, temporal tracking or stereo depth accuracy.",
+  "evaluations": [
+    {
+      "weights": "runs/detect/baseline_yolo26n_960/weights/best.pt",
+      "seconds": 40.35745811462402,
+      "scores": {
+        "0.05": {
+          "ground_truth_boxes": 1272,
+          "predictions": 1797,
+          "center5_precision": 0.6878130217028381,
+          "center5_recall": 0.9716981132075472,
+          "center5_f1": 0.8054740957966765,
+          "center10_precision": 0.6883695047301057,
+          "center10_recall": 0.9724842767295597,
+          "iou50_recall": 0.15487421383647798,
+          "center10_matched_error_px_median_p95": [
+            1.2524478402818344,
+            2.8926457982456375
+          ],
+          "center10_matched_pred_gt_width_ratio_median": 0.5728600543478275,
+          "center10_matched_pred_gt_height_ratio_median": 0.5111490885416666,
+          "missed_frames_center5": 36,
+          "extra_prediction_frames_center5": 444
+        },
+        "0.25": {
+          "ground_truth_boxes": 1272,
+          "predictions": 1319,
+          "center5_precision": 0.9067475360121304,
+          "center5_recall": 0.940251572327044,
+          "center5_f1": 0.9231956773446547,
+          "center10_precision": 0.9075056861258529,
+          "center10_recall": 0.9410377358490566,
+          "iou50_recall": 0.04481132075471698,
+          "center10_matched_error_px_median_p95": [
+            1.3105977445783854,
+            2.9376527213040458
+          ],
+          "center10_matched_pred_gt_width_ratio_median": 0.57191162109375,
+          "center10_matched_pred_gt_height_ratio_median": 0.5099198190789473,
+          "missed_frames_center5": 76,
+          "extra_prediction_frames_center5": 119
+        },
+        "0.5": {
+          "ground_truth_boxes": 1272,
+          "predictions": 1059,
+          "center5_precision": 0.9886685552407932,
+          "center5_recall": 0.8231132075471698,
+          "center5_f1": 0.8983268983268984,
+          "center10_precision": 0.9896128423040604,
+          "center10_recall": 0.8238993710691824,
+          "iou50_recall": 0.03459119496855346,
+          "center10_matched_error_px_median_p95": [
+            1.3071760331217126,
+            2.9267544147771365
+          ],
+          "center10_matched_pred_gt_width_ratio_median": 0.5785693000344669,
+          "center10_matched_pred_gt_height_ratio_median": 0.5108495375689338,
+          "missed_frames_center5": 225,
+          "extra_prediction_frames_center5": 12
+        }
+      },
+      "frame_review_path": "D:\\workspace\\pingpong_yolo26\\reports\\evaluation\\baseline_yolo26n_960\\center_selection_v1\\baseline_full_val_centers_best_frames.json"
+    },
+    {
+      "weights": "runs/detect/baseline_yolo26n_960/weights/last.pt",
+      "seconds": 39.522301197052,
+      "scores": {
+        "0.05": {
+          "ground_truth_boxes": 1272,
+          "predictions": 1353,
+          "center5_precision": 0.9209164818920916,
+          "center5_recall": 0.9795597484276729,
+          "center5_f1": 0.9493333333333334,
+          "center10_precision": 0.9216555801921655,
+          "center10_recall": 0.9803459119496856,
+          "iou50_recall": 0.03930817610062893,
+          "center10_matched_error_px_median_p95": [
+            1.2504739160989888,
+            2.7626199631544144
+          ],
+          "center10_matched_pred_gt_width_ratio_median": 0.5682721819196459,
+          "center10_matched_pred_gt_height_ratio_median": 0.5208206176757812,
+          "missed_frames_center5": 26,
+          "extra_prediction_frames_center5": 100
+        },
+        "0.25": {
+          "ground_truth_boxes": 1272,
+          "predictions": 1278,
+          "center5_precision": 0.9687010954616588,
+          "center5_recall": 0.9732704402515723,
+          "center5_f1": 0.9709803921568626,
+          "center10_precision": 0.9694835680751174,
+          "center10_recall": 0.9740566037735849,
+          "iou50_recall": 0.03773584905660377,
+          "center10_matched_error_px_median_p95": [
+            1.2546829641751858,
+            2.7639487233481757
+          ],
+          "center10_matched_pred_gt_width_ratio_median": 0.5685562133789063,
+          "center10_matched_pred_gt_height_ratio_median": 0.5212043313419118,
+          "missed_frames_center5": 34,
+          "extra_prediction_frames_center5": 37
+        },
+        "0.5": {
+          "ground_truth_boxes": 1272,
+          "predictions": 1214,
+          "center5_precision": 0.9925864909390445,
+          "center5_recall": 0.9473270440251572,
+          "center5_f1": 0.9694288012872084,
+          "center10_precision": 0.9934102141680395,
+          "center10_recall": 0.9481132075471698,
+          "iou50_recall": 0.036949685534591194,
+          "center10_matched_error_px_median_p95": [
+            1.256304178241623,
+            2.754942236717598
+          ],
+          "center10_matched_pred_gt_width_ratio_median": 0.568414197649276,
+          "center10_matched_pred_gt_height_ratio_median": 0.5210124745088465,
+          "missed_frames_center5": 67,
+          "extra_prediction_frames_center5": 9
+        }
+      },
+      "frame_review_path": "D:\\workspace\\pingpong_yolo26\\reports\\evaluation\\baseline_yolo26n_960\\center_selection_v1\\baseline_full_val_centers_last_frames.json"
+    }
+  ],
+  "selected_for_center_application": {
+    "weights": "runs/detect/baseline_yolo26n_960/weights/last.pt",
+    "criterion": "Highest full-validation center F1 within 5 original pixels at the fixed conf=0.25; test results not used.",
+    "conf": 0.25,
+    "center5_f1": 0.9709803921568626
+  }
+}

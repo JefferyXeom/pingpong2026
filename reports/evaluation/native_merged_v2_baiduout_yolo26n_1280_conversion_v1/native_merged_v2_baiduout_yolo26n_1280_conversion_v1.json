@@ -1,0 +1,2499 @@
+{
+  "weights_sha256": "d25c43e4a05b7e1fc72614341b572a0a22882c295409fe039508a3d3dd566e1c",
+  "source_weights": "runs\\detect\\native_merged_v2_baiduout_yolo26n_1280\\weights\\best.pt",
+  "experiment": "native_merged_v2_baiduout_yolo26n_1280_conversion_v1",
+  "gpu": "NVIDIA GeForce RTX 3090",
+  "versions": {
+    "torch": "2.11.0+cu128",
+    "cuda": "12.8",
+    "ultralytics": "8.4.207",
+    "onnxruntime": "1.31.1",
+    "tensorrt": "10.16.1.11"
+  },
+  "image_count": 2102,
+  "cases": {
+    "h768_w960_pytorch_fp32_b1": {
+      "backend": "pytorch_fp32",
+      "batch": 1,
+      "input_height_width": [
+        768,
+        960
+      ],
+      "benchmark": {
+        "ordinary": {
+          "iterations": 1000,
+          "cuda_event_batch_ms_mean": 6.004381695270538,
+          "cuda_event_batch_ms_p50_p95_p99": [
+            5.3437440395355225,
+            10.91701798439026,
+            12.236871871948242
+          ],
+          "cuda_event_images_per_second": 166.5450417297202,
+          "synchronized_loop_images_per_second": 165.64373104944056
+        },
+        "warmup_iterations": 200,
+        "scope": "Preallocated device input/output, excludes image decode, resize, normalization, H2D/D2H and postprocess. All on RTX3090; no target GPU projection.",
+        "cuda_graph": {
+          "iterations": 1000,
+          "cuda_event_batch_ms_mean": 2.9975623693466185,
+          "cuda_event_batch_ms_p50_p95_p99": [
+            2.998271942138672,
+            3.0300671458244324,
+            3.050526819229126
+          ],
+          "cuda_event_images_per_second": 333.6044014383497,
+          "synchronized_loop_images_per_second": 327.9424298546299
+        },
+        "execution_stream": "dedicated non-default CUDA stream; identical policy for PyTorch and TensorRT"
+      },
+      "offline_pipeline": {
+        "seconds": 42.39886029995978,
+        "images_per_second": 49.57680430862888,
+        "scope": "Offline PNG decode + 2 CPU resize workers + RGB/FP32 normalization + H2D + inference + D2H/filter. Includes chunk scheduling; excludes camera, network/video decode, stereo matching and final metric computation. Not optimized streaming."
+      },
+      "prediction_cache": "artifacts\\native_merged_v2_baiduout_yolo26n_1280_conversion_v1\\h768_w960\\h768_w960_pytorch_fp32_b1_predictions.npz",
+      "preprocessing": "cv2 INTER_LINEAR only at 960; native 1280 unchanged; BGR->RGB CHW FP32 /255; no padding; outputs in 1280x1024 pixels.",
+      "splits": {
+        "val": {
+          "images": 1272,
+          "thresholds": {
+            "0.05": {
+              "gt": 1272,
+              "predictions": 1383,
+              "center5_matches": 1249,
+              "center5_precision": 0.9031091829356471,
+              "center5_recall": 0.9819182389937107,
+              "center5_f1": 0.9408662900188325,
+              "center10_matches": 1250,
+              "matched_error_px_p50_p95_p99": [
+                1.3024335715777449,
+                2.893359356783241,
+                3.6439055788683494
+              ],
+              "width_ratio_median": 0.6331749325706846,
+              "height_ratio_median": 0.6009633382161459,
+              "missed_frames_center5": 23,
+              "extra_frames_center5": 117
+            },
+            "0.25": {
+              "gt": 1272,
+              "predictions": 1294,
+              "center5_matches": 1234,
+              "center5_precision": 0.9536321483771252,
+              "center5_recall": 0.970125786163522,
+              "center5_f1": 0.9618082618862042,
+              "center10_matches": 1235,
+              "matched_error_px_p50_p95_p99": [
+                1.3018947510412817,
+                2.818445226866841,
+                3.6077859729146233
+              ],
+              "width_ratio_median": 0.6332300359552557,
+              "height_ratio_median": 0.6003787392064145,
+              "missed_frames_center5": 38,
+              "extra_frames_center5": 59
+            },
+            "0.5": {
+              "gt": 1272,
+              "predictions": 1240,
+              "center5_matches": 1216,
+              "center5_precision": 0.9806451612903225,
+              "center5_recall": 0.9559748427672956,
+              "center5_f1": 0.9681528662420381,
+              "center10_matches": 1217,
+              "matched_error_px_p50_p95_p99": [
+                1.2960003727950125,
+                2.7855715507759378,
+                3.5878848809071493
+              ],
+              "width_ratio_median": 0.6332300359552557,
+              "height_ratio_median": 0.600811767578125,
+              "missed_frames_center5": 56,
+              "extra_frames_center5": 24
+            }
+          },
+          "box_mAP50": 0.03702590434725911,
+          "box_mAP50_95": 0.005494831638259135,
+          "box_AP_note": "Ultralytics AP integration, greedy descending-IoU unique matching, conf floor .001, NMS-free max300. Centers are separate supplemental metrics; original boxes unchanged."
+        },
+        "test": {
+          "images": 830,
+          "thresholds": {
+            "0.05": {
+              "gt": 859,
+              "predictions": 1116,
+              "center5_matches": 826,
+              "center5_precision": 0.7401433691756273,
+              "center5_recall": 0.9615832363213038,
+              "center5_f1": 0.8364556962025317,
+              "center10_matches": 826,
+              "matched_error_px_p50_p95_p99": [
+                1.2929281224719036,
+                2.7774738843803894,
+                3.5269491234361654
+              ],
+              "width_ratio_median": 0.6375199575272834,
+              "height_ratio_median": 0.5937944798687704,
+              "missed_frames_center5": 32,
+              "extra_frames_center5": 237
+            },
+            "0.25": {
+              "gt": 859,
+              "predictions": 900,
+              "center5_matches": 815,
+              "center5_precision": 0.9055555555555556,
+              "center5_recall": 0.9487776484284052,
+              "center5_f1": 0.9266628766344513,
+              "center10_matches": 815,
+              "matched_error_px_p50_p95_p99": [
+                1.2908499852396356,
+                2.785328238260852,
+                3.5280805037594565
+              ],
+              "width_ratio_median": 0.639478181537829,
+              "height_ratio_median": 0.5946485731336806,
+              "missed_frames_center5": 43,
+              "extra_frames_center5": 76
+            },
+            "0.5": {
+              "gt": 859,
+              "predictions": 825,
+              "center5_matches": 787,
+              "center5_precision": 0.953939393939394,
+              "center5_recall": 0.9161816065192084,
+              "center5_f1": 0.9346793349168646,
+              "center10_matches": 787,
+              "matched_error_px_p50_p95_p99": [
+                1.2908499852396356,
+                2.7919765374297913,
+                3.5374534022550543
+              ],
+              "width_ratio_median": 0.63897705078125,
+              "height_ratio_median": 0.5946485731336806,
+              "missed_frames_center5": 70,
+              "extra_frames_center5": 36
+            }
+          },
+          "box_mAP50": 0.05256006597254434,
+          "box_mAP50_95": 0.007325497616271488,
+          "box_AP_note": "Ultralytics AP integration, greedy descending-IoU unique matching, conf floor .001, NMS-free max300. Centers are separate supplemental metrics; original boxes unchanged."
+        }
+      },
+      "initial_benchmark": {
+        "ordinary": {
+          "iterations": 200,
+          "cuda_event_batch_ms_mean": 7.3152717065811155,
+          "cuda_event_batch_ms_p50_p95_p99": [
+            6.718464136123657,
+            10.275686645507811,
+            13.677291221618649
+          ],
+          "cuda_event_images_per_second": 136.7003222997663,
+          "synchronized_loop_images_per_second": 136.0109722720344
+        },
+        "warmup_iterations": 30,
+        "scope": "Preallocated device input/output, excludes image decode, resize, normalization, H2D/D2H and postprocess. All on RTX3090; no target GPU projection.",
+        "cuda_graph": {
+          "iterations": 200,
+          "cuda_event_batch_ms_mean": 3.0018969595432283,
+          "cuda_event_batch_ms_p50_p95_p99": [
+            3.0013439655303955,
+            3.033139169216156,
+            3.0515201091766357
+          ],
+          "cuda_event_images_per_second": 333.1226932426625,
+          "synchronized_loop_images_per_second": 327.7348036642437
+        }
+      },
+      "timing_repeated_after_all_builds": true
+    },
+    "h768_w960_pytorch_fp32_b2": {
+      "backend": "pytorch_fp32",
+      "batch": 2,
+      "input_height_width": [
+        768,
+        960
+      ],
+      "benchmark": {
+        "ordinary": {
+          "iterations": 1000,
+          "cuda_event_batch_ms_mean": 6.81418444108963,
+          "cuda_event_batch_ms_p50_p95_p99": [
+            6.077439785003662,
+            11.884288311004635,
+            13.070541133880615
+          ],
+          "cuda_event_images_per_second": 293.5054102645023,
+          "synchronized_loop_images_per_second": 291.62565862083886
+        },
+        "warmup_iterations": 200,
+        "scope": "Preallocated device input/output, excludes image decode, resize, normalization, H2D/D2H and postprocess. All on RTX3090; no target GPU projection.",
+        "cuda_graph": {
+          "iterations": 1000,
+          "cuda_event_batch_ms_mean": 4.6343956518173215,
+          "cuda_event_batch_ms_p50_p95_p99": [
+            4.6320641040802,
+            4.67051522731781,
+            4.743239560127258
+          ],
+          "cuda_event_images_per_second": 431.55573029586384,
+          "synchronized_loop_images_per_second": 426.46701186469545
+        },
+        "execution_stream": "dedicated non-default CUDA stream; identical policy for PyTorch and TensorRT"
+      },
+      "offline_pipeline": {
+        "seconds": 37.80828390037641,
+        "images_per_second": 55.59628163866684,
+        "scope": "Offline PNG decode + 2 CPU resize workers + RGB/FP32 normalization + H2D + inference + D2H/filter. Includes chunk scheduling; excludes camera, network/video decode, stereo matching and final metric computation. Not optimized streaming."
+      },
+      "prediction_cache": "artifacts\\native_merged_v2_baiduout_yolo26n_1280_conversion_v1\\h768_w960\\h768_w960_pytorch_fp32_b2_predictions.npz",
+      "preprocessing": "cv2 INTER_LINEAR only at 960; native 1280 unchanged; BGR->RGB CHW FP32 /255; no padding; outputs in 1280x1024 pixels.",
+      "splits": {
+        "val": {
+          "images": 1272,
+          "thresholds": {
+            "0.05": {
+              "gt": 1272,
+              "predictions": 1383,
+              "center5_matches": 1249,
+              "center5_precision": 0.9031091829356471,
+              "center5_recall": 0.9819182389937107,
+              "center5_f1": 0.9408662900188325,
+              "center10_matches": 1250,
+              "matched_error_px_p50_p95_p99": [
+                1.3024335715777449,
+                2.893359356783241,
+                3.6439055788683494
+              ],
+              "width_ratio_median": 0.6331749325706846,
+              "height_ratio_median": 0.6009633382161459,
+              "missed_frames_center5": 23,
+              "extra_frames_center5": 117
+            },
+            "0.25": {
+              "gt": 1272,
+              "predictions": 1294,
+              "center5_matches": 1234,
+              "center5_precision": 0.9536321483771252,
+              "center5_recall": 0.970125786163522,
+              "center5_f1": 0.9618082618862042,
+              "center10_matches": 1235,
+              "matched_error_px_p50_p95_p99": [
+                1.3018947510412817,
+                2.818445226866841,
+                3.6077859729146233
+              ],
+              "width_ratio_median": 0.6332300359552557,
+              "height_ratio_median": 0.6003787392064145,
+              "missed_frames_center5": 38,
+              "extra_frames_center5": 59
+            },
+            "0.5": {
+              "gt": 1272,
+              "predictions": 1240,
+              "center5_matches": 1216,
+              "center5_precision": 0.9806451612903225,
+              "center5_recall": 0.9559748427672956,
+              "center5_f1": 0.9681528662420381,
+              "center10_matches": 1217,
+              "matched_error_px_p50_p95_p99": [
+                1.2960003727950125,
+                2.7855715507759378,
+                3.5878848809071493
+              ],
+              "width_ratio_median": 0.6332300359552557,
+              "height_ratio_median": 0.600811767578125,
+              "missed_frames_center5": 56,
+              "extra_frames_center5": 24
+            }
+          },
+          "box_mAP50": 0.03702590434725911,
+          "box_mAP50_95": 0.005494831638259135,
+          "box_AP_note": "Ultralytics AP integration, greedy descending-IoU unique matching, conf floor .001, NMS-free max300. Centers are separate supplemental metrics; original boxes unchanged."
+        },
+        "test": {
+          "images": 830,
+          "thresholds": {
+            "0.05": {
+              "gt": 859,
+              "predictions": 1116,
+              "center5_matches": 826,
+              "center5_precision": 0.7401433691756273,
+              "center5_recall": 0.9615832363213038,
+              "center5_f1": 0.8364556962025317,
+              "center10_matches": 826,
+              "matched_error_px_p50_p95_p99": [
+                1.2929281224719036,
+                2.7774738843803894,
+                3.5269491234361654
+              ],
+              "width_ratio_median": 0.6375199575272834,
+              "height_ratio_median": 0.5937944798687704,
+              "missed_frames_center5": 32,
+              "extra_frames_center5": 237
+            },
+            "0.25": {
+              "gt": 859,
+              "predictions": 900,
+              "center5_matches": 815,
+              "center5_precision": 0.9055555555555556,
+              "center5_recall": 0.9487776484284052,
+              "center5_f1": 0.9266628766344513,
+              "center10_matches": 815,
+              "matched_error_px_p50_p95_p99": [
+                1.2908499852396356,
+                2.785328238260852,
+                3.5280805037594565
+              ],
+              "width_ratio_median": 0.639478181537829,
+              "height_ratio_median": 0.5946485731336806,
+              "missed_frames_center5": 43,
+              "extra_frames_center5": 76
+            },
+            "0.5": {
+              "gt": 859,
+              "predictions": 825,
+              "center5_matches": 787,
+              "center5_precision": 0.953939393939394,
+              "center5_recall": 0.9161816065192084,
+              "center5_f1": 0.9346793349168646,
+              "center10_matches": 787,
+              "matched_error_px_p50_p95_p99": [
+                1.2908499852396356,
+                2.7919765374297913,
+                3.5374534022550543
+              ],
+              "width_ratio_median": 0.63897705078125,
+              "height_ratio_median": 0.5946485731336806,
+              "missed_frames_center5": 70,
+              "extra_frames_center5": 36
+            }
+          },
+          "box_mAP50": 0.05256006597254434,
+          "box_mAP50_95": 0.007325497616271488,
+          "box_AP_note": "Ultralytics AP integration, greedy descending-IoU unique matching, conf floor .001, NMS-free max300. Centers are separate supplemental metrics; original boxes unchanged."
+        }
+      },
+      "against_pytorch": {
+        "threshold": 0.25,
+        "matching_radius_px": 10,
+        "matched_prediction_pairs": 2194,
+        "prediction_center_shift_px_p50_p95_p99_max": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "matched_score_abs_gap_p50_p95_p99_max": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "unmatched_reference_predictions": 0,
+        "unmatched_candidate_predictions": 0,
+        "new_gt_misses_at_5px": 0,
+        "recovered_gt_at_5px": 0,
+        "changed_gt_examples": []
+      },
+      "initial_benchmark": {
+        "ordinary": {
+          "iterations": 200,
+          "cuda_event_batch_ms_mean": 6.605455365180969,
+          "cuda_event_batch_ms_p50_p95_p99": [
+            6.052864074707031,
+            10.809446668624878,
+            12.846489400863643
+          ],
+          "cuda_event_images_per_second": 302.78003399167716,
+          "synchronized_loop_images_per_second": 300.8944538609674
+        },
+        "warmup_iterations": 30,
+        "scope": "Preallocated device input/output, excludes image decode, resize, normalization, H2D/D2H and postprocess. All on RTX3090; no target GPU projection.",
+        "cuda_graph": {
+          "iterations": 200,
+          "cuda_event_batch_ms_mean": 4.600791058540344,
+          "cuda_event_batch_ms_p50_p95_p99": [
+            4.597248077392578,
+            4.641894221305847,
+            4.656383929252624
+          ],
+          "cuda_event_images_per_second": 434.7078523132332,
+          "synchronized_loop_images_per_second": 429.9537607737429
+        }
+      },
+      "timing_repeated_after_all_builds": true
+    },
+    "h768_w960_onnx_cpu_fp32_b2": {
+      "backend": "onnx_cpu_fp32",
+      "batch": 2,
+      "input_height_width": [
+        768,
+        960
+      ],
+      "benchmark": {
+        "cpu_batch_ms_mean": 117.08224331960082,
+        "cpu_batch_ms_p50_p95_p99": [
+          113.33639989607036,
+          133.65531996823844,
+          144.79911386035383
+        ],
+        "iterations": 30,
+        "warmup_iterations": 3,
+        "scope": "CPU numerical reference only, two CPU threads. Not included in GPU speedup claims. ORT GPU installed for CUDA13 is incompatible with current CUDA12 stack; environment unchanged."
+      },
+      "offline_pipeline": {
+        "seconds": 155.31577289989218,
+        "images_per_second": 13.53371882812463,
+        "scope": "Offline PNG decode + 2 CPU resize workers + RGB/FP32 normalization + H2D + inference + D2H/filter. Includes chunk scheduling; excludes camera, network/video decode, stereo matching and final metric computation. Not optimized streaming."
+      },
+      "prediction_cache": "artifacts\\native_merged_v2_baiduout_yolo26n_1280_conversion_v1\\h768_w960\\h768_w960_onnx_cpu_fp32_b2_predictions.npz",
+      "preprocessing": "cv2 INTER_LINEAR only at 960; native 1280 unchanged; BGR->RGB CHW FP32 /255; no padding; outputs in 1280x1024 pixels.",
+      "splits": {
+        "val": {
+          "images": 1272,
+          "thresholds": {
+            "0.05": {
+              "gt": 1272,
+              "predictions": 1383,
+              "center5_matches": 1249,
+              "center5_precision": 0.9031091829356471,
+              "center5_recall": 0.9819182389937107,
+              "center5_f1": 0.9408662900188325,
+              "center10_matches": 1250,
+              "matched_error_px_p50_p95_p99": [
+                1.3024335715777449,
+                2.893359356783241,
+                3.6439055788683494
+              ],
+              "width_ratio_median": 0.6331749325706846,
+              "height_ratio_median": 0.6009633382161459,
+              "missed_frames_center5": 23,
+              "extra_frames_center5": 117
+            },
+            "0.25": {
+              "gt": 1272,
+              "predictions": 1294,
+              "center5_matches": 1234,
+              "center5_precision": 0.9536321483771252,
+              "center5_recall": 0.970125786163522,
+              "center5_f1": 0.9618082618862042,
+              "center10_matches": 1235,
+              "matched_error_px_p50_p95_p99": [
+                1.3018947510412817,
+                2.818445226866841,
+                3.6077859729146233
+              ],
+              "width_ratio_median": 0.6332300359552557,
+              "height_ratio_median": 0.6003787392064145,
+              "missed_frames_center5": 38,
+              "extra_frames_center5": 59
+            },
+            "0.5": {
+              "gt": 1272,
+              "predictions": 1240,
+              "center5_matches": 1216,
+              "center5_precision": 0.9806451612903225,
+              "center5_recall": 0.9559748427672956,
+              "center5_f1": 0.9681528662420381,
+              "center10_matches": 1217,
+              "matched_error_px_p50_p95_p99": [
+                1.2960003727950125,
+                2.7855715507759378,
+                3.5878848809071493
+              ],
+              "width_ratio_median": 0.6332300359552557,
+              "height_ratio_median": 0.600811767578125,
+              "missed_frames_center5": 56,
+              "extra_frames_center5": 24
+            }
+          },
+          "box_mAP50": 0.03702590434725911,
+          "box_mAP50_95": 0.005494831638259135,
+          "box_AP_note": "Ultralytics AP integration, greedy descending-IoU unique matching, conf floor .001, NMS-free max300. Centers are separate supplemental metrics; original boxes unchanged."
+        },
+        "test": {
+          "images": 830,
+          "thresholds": {
+            "0.05": {
+              "gt": 859,
+              "predictions": 1116,
+              "center5_matches": 826,
+              "center5_precision": 0.7401433691756273,
+              "center5_recall": 0.9615832363213038,
+              "center5_f1": 0.8364556962025317,
+              "center10_matches": 826,
+              "matched_error_px_p50_p95_p99": [
+                1.2929153869599248,
+                2.7774738843803894,
+                3.5269491234361654
+              ],
+              "width_ratio_median": 0.6375185043092775,
+              "height_ratio_median": 0.5937944798687704,
+              "missed_frames_center5": 32,
+              "extra_frames_center5": 237
+            },
+            "0.25": {
+              "gt": 859,
+              "predictions": 900,
+              "center5_matches": 815,
+              "center5_precision": 0.9055555555555556,
+              "center5_recall": 0.9487776484284052,
+              "center5_f1": 0.9266628766344513,
+              "center10_matches": 815,
+              "matched_error_px_p50_p95_p99": [
+                1.2908245142156782,
+                2.785328238260852,
+                3.5280805037594565
+              ],
+              "width_ratio_median": 0.639478181537829,
+              "height_ratio_median": 0.5946485731336806,
+              "missed_frames_center5": 43,
+              "extra_frames_center5": 76
+            },
+            "0.5": {
+              "gt": 859,
+              "predictions": 825,
+              "center5_matches": 787,
+              "center5_precision": 0.953939393939394,
+              "center5_recall": 0.9161816065192084,
+              "center5_f1": 0.9346793349168646,
+              "center10_matches": 787,
+              "matched_error_px_p50_p95_p99": [
+                1.2908245142156782,
+                2.7919765374297913,
+                3.5374534022550543
+              ],
+              "width_ratio_median": 0.63897705078125,
+              "height_ratio_median": 0.5946485731336806,
+              "missed_frames_center5": 70,
+              "extra_frames_center5": 36
+            }
+          },
+          "box_mAP50": 0.05256006597254434,
+          "box_mAP50_95": 0.007325497616271488,
+          "box_AP_note": "Ultralytics AP integration, greedy descending-IoU unique matching, conf floor .001, NMS-free max300. Centers are separate supplemental metrics; original boxes unchanged."
+        }
+      },
+      "against_pytorch": {
+        "threshold": 0.25,
+        "matching_radius_px": 10,
+        "matched_prediction_pairs": 2194,
+        "prediction_center_shift_px_p50_p95_p99_max": [
+          0.0,
+          3.0517578125e-05,
+          6.103515625e-05,
+          6.103515625e-05
+        ],
+        "matched_score_abs_gap_p50_p95_p99_max": [
+          1.1920928955078125e-07,
+          7.152557373046875e-07,
+          2.6711821556091748e-06,
+          2.676248550415039e-05
+        ],
+        "unmatched_reference_predictions": 0,
+        "unmatched_candidate_predictions": 0,
+        "new_gt_misses_at_5px": 0,
+        "recovered_gt_at_5px": 0,
+        "changed_gt_examples": []
+      }
+    },
+    "h768_w960_tensorrt_fp32_b2": {
+      "backend": "tensorrt_fp32",
+      "batch": 2,
+      "input_height_width": [
+        768,
+        960
+      ],
+      "benchmark": {
+        "ordinary": {
+          "iterations": 1000,
+          "cuda_event_batch_ms_mean": 4.095145982503891,
+          "cuda_event_batch_ms_p50_p95_p99": [
+            4.092927932739258,
+            4.1994750022888185,
+            4.282378420829773
+          ],
+          "cuda_event_images_per_second": 488.38307805016075,
+          "synchronized_loop_images_per_second": 482.17139910644374
+        },
+        "warmup_iterations": 200,
+        "scope": "Preallocated device input/output, excludes image decode, resize, normalization, H2D/D2H and postprocess. All on RTX3090; no target GPU projection.",
+        "cuda_graph": {
+          "iterations": 1000,
+          "cuda_event_batch_ms_mean": 3.3577062351703644,
+          "cuda_event_batch_ms_p50_p95_p99": [
+            3.3525760173797607,
+            3.3915392756462097,
+            3.4161357045173646
+          ],
+          "cuda_event_images_per_second": 595.644722891764,
+          "synchronized_loop_images_per_second": 586.5335704404765
+        },
+        "execution_stream": "dedicated non-default CUDA stream; identical policy for PyTorch and TensorRT"
+      },
+      "offline_pipeline": {
+        "seconds": 36.23143790010363,
+        "images_per_second": 58.01591440548342,
+        "scope": "Offline PNG decode + 2 CPU resize workers + RGB/FP32 normalization + H2D + inference + D2H/filter. Includes chunk scheduling; excludes camera, network/video decode, stereo matching and final metric computation. Not optimized streaming."
+      },
+      "prediction_cache": "artifacts\\native_merged_v2_baiduout_yolo26n_1280_conversion_v1\\h768_w960\\h768_w960_tensorrt_fp32_b2_predictions.npz",
+      "preprocessing": "cv2 INTER_LINEAR only at 960; native 1280 unchanged; BGR->RGB CHW FP32 /255; no padding; outputs in 1280x1024 pixels.",
+      "splits": {
+        "val": {
+          "images": 1272,
+          "thresholds": {
+            "0.05": {
+              "gt": 1272,
+              "predictions": 1383,
+              "center5_matches": 1249,
+              "center5_precision": 0.9031091829356471,
+              "center5_recall": 0.9819182389937107,
+              "center5_f1": 0.9408662900188325,
+              "center10_matches": 1250,
+              "matched_error_px_p50_p95_p99": [
+                1.3024335715777449,
+                2.893359356783241,
+                3.6439055788683494
+              ],
+              "width_ratio_median": 0.6331749325706846,
+              "height_ratio_median": 0.6009633382161459,
+              "missed_frames_center5": 23,
+              "extra_frames_center5": 117
+            },
+            "0.25": {
+              "gt": 1272,
+              "predictions": 1294,
+              "center5_matches": 1234,
+              "center5_precision": 0.9536321483771252,
+              "center5_recall": 0.970125786163522,
+              "center5_f1": 0.9618082618862042,
+              "center10_matches": 1235,
+              "matched_error_px_p50_p95_p99": [
+                1.3018947510412817,
+                2.818445226866841,
+                3.6077859729146233
+              ],
+              "width_ratio_median": 0.6332300359552557,
+              "height_ratio_median": 0.6003787392064145,
+              "missed_frames_center5": 38,
+              "extra_frames_center5": 59
+            },
+            "0.5": {
+              "gt": 1272,
+              "predictions": 1240,
+              "center5_matches": 1216,
+              "center5_precision": 0.9806451612903225,
+              "center5_recall": 0.9559748427672956,
+              "center5_f1": 0.9681528662420381,
+              "center10_matches": 1217,
+              "matched_error_px_p50_p95_p99": [
+                1.2960003727950125,
+                2.7855715507759378,
+                3.5878848809071493
+              ],
+              "width_ratio_median": 0.6332300359552557,
+              "height_ratio_median": 0.600811767578125,
+              "missed_frames_center5": 56,
+              "extra_frames_center5": 24
+            }
+          },
+          "box_mAP50": 0.03702590434725911,
+          "box_mAP50_95": 0.005494831638259135,
+          "box_AP_note": "Ultralytics AP integration, greedy descending-IoU unique matching, conf floor .001, NMS-free max300. Centers are separate supplemental metrics; original boxes unchanged."
+        },
+        "test": {
+          "images": 830,
+          "thresholds": {
+            "0.05": {
+              "gt": 859,
+              "predictions": 1116,
+              "center5_matches": 826,
+              "center5_precision": 0.7401433691756273,
+              "center5_recall": 0.9615832363213038,
+              "center5_f1": 0.8364556962025317,
+              "center10_matches": 826,
+              "matched_error_px_p50_p95_p99": [
+                1.2929281224719036,
+                2.7774738843803894,
+                3.5269491234361654
+              ],
+              "width_ratio_median": 0.6375199575272834,
+              "height_ratio_median": 0.5937944798687704,
+              "missed_frames_center5": 32,
+              "extra_frames_center5": 237
+            },
+            "0.25": {
+              "gt": 859,
+              "predictions": 900,
+              "center5_matches": 815,
+              "center5_precision": 0.9055555555555556,
+              "center5_recall": 0.9487776484284052,
+              "center5_f1": 0.9266628766344513,
+              "center10_matches": 815,
+              "matched_error_px_p50_p95_p99": [
+                1.2908499852396356,
+                2.7853291987127613,
+                3.5280805037594565
+              ],
+              "width_ratio_median": 0.639478181537829,
+              "height_ratio_median": 0.5946485731336806,
+              "missed_frames_center5": 43,
+              "extra_frames_center5": 76
+            },
+            "0.5": {
+              "gt": 859,
+              "predictions": 825,
+              "center5_matches": 787,
+              "center5_precision": 0.953939393939394,
+              "center5_recall": 0.9161816065192084,
+              "center5_f1": 0.9346793349168646,
+              "center10_matches": 787,
+              "matched_error_px_p50_p95_p99": [
+                1.2908499852396356,
+                2.7919787784842462,
+                3.5374534022550543
+              ],
+              "width_ratio_median": 0.63897705078125,
+              "height_ratio_median": 0.5946485731336806,
+              "missed_frames_center5": 70,
+              "extra_frames_center5": 36
+            }
+          },
+          "box_mAP50": 0.05256006597254434,
+          "box_mAP50_95": 0.007325497616271488,
+          "box_AP_note": "Ultralytics AP integration, greedy descending-IoU unique matching, conf floor .001, NMS-free max300. Centers are separate supplemental metrics; original boxes unchanged."
+        }
+      },
+      "against_pytorch": {
+        "threshold": 0.25,
+        "matching_radius_px": 10,
+        "matched_prediction_pairs": 2194,
+        "prediction_center_shift_px_p50_p95_p99_max": [
+          0.0,
+          0.0,
+          3.0517578125e-05,
+          0.0001220703125
+        ],
+        "matched_score_abs_gap_p50_p95_p99_max": [
+          1.1920928955078125e-07,
+          4.76837158203125e-07,
+          1.466572284698501e-06,
+          2.1219253540039062e-05
+        ],
+        "unmatched_reference_predictions": 0,
+        "unmatched_candidate_predictions": 0,
+        "new_gt_misses_at_5px": 0,
+        "recovered_gt_at_5px": 0,
+        "changed_gt_examples": []
+      },
+      "initial_benchmark": {
+        "ordinary": {
+          "iterations": 200,
+          "cuda_event_batch_ms_mean": 4.051072012186051,
+          "cuda_event_batch_ms_p50_p95_p99": [
+            4.047872066497803,
+            4.152473521232605,
+            4.209981307983398
+          ],
+          "cuda_event_images_per_second": 493.69648181611916,
+          "synchronized_loop_images_per_second": 487.4068093851918
+        },
+        "warmup_iterations": 30,
+        "scope": "Preallocated device input/output, excludes image decode, resize, normalization, H2D/D2H and postprocess. All on RTX3090; no target GPU projection.",
+        "cuda_graph": {
+          "iterations": 200,
+          "cuda_event_batch_ms_mean": 3.3284300887584686,
+          "cuda_event_batch_ms_p50_p95_p99": [
+            3.3233920335769653,
+            3.3547776341438293,
+            3.479203855991362
+          ],
+          "cuda_event_images_per_second": 600.8838841935888,
+          "synchronized_loop_images_per_second": 592.1031207919733
+        }
+      },
+      "timing_repeated_after_all_builds": true
+    },
+    "h768_w960_tensorrt_fp16_b1": {
+      "backend": "tensorrt_fp16",
+      "batch": 1,
+      "input_height_width": [
+        768,
+        960
+      ],
+      "benchmark": {
+        "ordinary": {
+          "iterations": 1000,
+          "cuda_event_batch_ms_mean": 2.0581150711774825,
+          "cuda_event_batch_ms_p50_p95_p99": [
+            1.9404799938201904,
+            2.7750911116600037,
+            2.885949478149414
+          ],
+          "cuda_event_images_per_second": 485.88148155772603,
+          "synchronized_loop_images_per_second": 477.1274408809032
+        },
+        "warmup_iterations": 200,
+        "scope": "Preallocated device input/output, excludes image decode, resize, normalization, H2D/D2H and postprocess. All on RTX3090; no target GPU projection.",
+        "cuda_graph": {
+          "iterations": 1000,
+          "cuda_event_batch_ms_mean": 1.0357555168271064,
+          "cuda_event_batch_ms_p50_p95_p99": [
+            1.035264015197754,
+            1.052672028541565,
+            1.0639667153358459
+          ],
+          "cuda_event_images_per_second": 965.478806295294,
+          "synchronized_loop_images_per_second": 934.1939748551383
+        },
+        "execution_stream": "dedicated non-default CUDA stream; identical policy for PyTorch and TensorRT"
+      },
+      "offline_pipeline": {
+        "seconds": 35.667892300058156,
+        "images_per_second": 58.93255430729706,
+        "scope": "Offline PNG decode + 2 CPU resize workers + RGB/FP32 normalization + H2D + inference + D2H/filter. Includes chunk scheduling; excludes camera, network/video decode, stereo matching and final metric computation. Not optimized streaming."
+      },
+      "prediction_cache": "artifacts\\native_merged_v2_baiduout_yolo26n_1280_conversion_v1\\h768_w960\\h768_w960_tensorrt_fp16_b1_predictions.npz",
+      "preprocessing": "cv2 INTER_LINEAR only at 960; native 1280 unchanged; BGR->RGB CHW FP32 /255; no padding; outputs in 1280x1024 pixels.",
+      "splits": {
+        "val": {
+          "images": 1272,
+          "thresholds": {
+            "0.05": {
+              "gt": 1272,
+              "predictions": 1383,
+              "center5_matches": 1249,
+              "center5_precision": 0.9031091829356471,
+              "center5_recall": 0.9819182389937107,
+              "center5_f1": 0.9408662900188325,
+              "center10_matches": 1250,
+              "matched_error_px_p50_p95_p99": [
+                1.3333129882812504,
+                2.877092738528848,
+                3.7105932638052987
+              ],
+              "width_ratio_median": 0.631578947368421,
+              "height_ratio_median": 0.6025125412713914,
+              "missed_frames_center5": 23,
+              "extra_frames_center5": 117
+            },
+            "0.25": {
+              "gt": 1272,
+              "predictions": 1294,
+              "center5_matches": 1234,
+              "center5_precision": 0.9536321483771252,
+              "center5_recall": 0.970125786163522,
+              "center5_f1": 0.9618082618862042,
+              "center10_matches": 1235,
+              "matched_error_px_p50_p95_p99": [
+                1.3043616594396874,
+                2.838211948834637,
+                3.646681022512928
+              ],
+              "width_ratio_median": 0.631578947368421,
+              "height_ratio_median": 0.6018524169921875,
+              "missed_frames_center5": 38,
+              "extra_frames_center5": 59
+            },
+            "0.5": {
+              "gt": 1272,
+              "predictions": 1238,
+              "center5_matches": 1214,
+              "center5_precision": 0.9806138933764136,
+              "center5_recall": 0.9544025157232704,
+              "center5_f1": 0.9673306772908367,
+              "center10_matches": 1215,
+              "matched_error_px_p50_p95_p99": [
+                1.3017343288630008,
+                2.8054551389026594,
+                3.572483339952232
+              ],
+              "width_ratio_median": 0.631578947368421,
+              "height_ratio_median": 0.6018524169921875,
+              "missed_frames_center5": 58,
+              "extra_frames_center5": 24
+            }
+          },
+          "box_mAP50": 0.03762142419412433,
+          "box_mAP50_95": 0.0056895830589257426,
+          "box_AP_note": "Ultralytics AP integration, greedy descending-IoU unique matching, conf floor .001, NMS-free max300. Centers are separate supplemental metrics; original boxes unchanged."
+        },
+        "test": {
+          "images": 830,
+          "thresholds": {
+            "0.05": {
+              "gt": 859,
+              "predictions": 1116,
+              "center5_matches": 826,
+              "center5_precision": 0.7401433691756273,
+              "center5_recall": 0.9615832363213038,
+              "center5_f1": 0.8364556962025317,
+              "center10_matches": 826,
+              "matched_error_px_p50_p95_p99": [
+                1.2936838461417488,
+                2.805248886138853,
+                3.4867246727764636
+              ],
+              "width_ratio_median": 0.6333323160807292,
+              "height_ratio_median": 0.5925937228732638,
+              "missed_frames_center5": 32,
+              "extra_frames_center5": 236
+            },
+            "0.25": {
+              "gt": 859,
+              "predictions": 901,
+              "center5_matches": 815,
+              "center5_precision": 0.904550499445061,
+              "center5_recall": 0.9487776484284052,
+              "center5_f1": 0.9261363636363636,
+              "center10_matches": 815,
+              "matched_error_px_p50_p95_p99": [
+                1.2936759826776474,
+                2.815213563406056,
+                3.4995346003625443
+              ],
+              "width_ratio_median": 0.6333343505859375,
+              "height_ratio_median": 0.5925937228732638,
+              "missed_frames_center5": 43,
+              "extra_frames_center5": 77
+            },
+            "0.5": {
+              "gt": 859,
+              "predictions": 825,
+              "center5_matches": 787,
+              "center5_precision": 0.953939393939394,
+              "center5_recall": 0.9161816065192084,
+              "center5_f1": 0.9346793349168646,
+              "center10_matches": 787,
+              "matched_error_px_p50_p95_p99": [
+                1.2936759826776474,
+                2.823464114604143,
+                3.527317586313788
+              ],
+              "width_ratio_median": 0.6333333333333333,
+              "height_ratio_median": 0.5925937228732638,
+              "missed_frames_center5": 70,
+              "extra_frames_center5": 36
+            }
+          },
+          "box_mAP50": 0.04737158170571,
+          "box_mAP50_95": 0.006770311100696846,
+          "box_AP_note": "Ultralytics AP integration, greedy descending-IoU unique matching, conf floor .001, NMS-free max300. Centers are separate supplemental metrics; original boxes unchanged."
+        }
+      },
+      "against_pytorch": {
+        "threshold": 0.25,
+        "matching_radius_px": 10,
+        "matched_prediction_pairs": 2194,
+        "prediction_center_shift_px_p50_p95_p99_max": [
+          0.08216049522161484,
+          0.2089775167405605,
+          0.27648865431547165,
+          0.31985682249069214
+        ],
+        "matched_score_abs_gap_p50_p95_p99_max": [
+          0.0007504820823669434,
+          0.0026001662015914914,
+          0.011681284010410346,
+          0.46381354331970215
+        ],
+        "unmatched_reference_predictions": 0,
+        "unmatched_candidate_predictions": 1,
+        "new_gt_misses_at_5px": 0,
+        "recovered_gt_at_5px": 0,
+        "changed_gt_examples": []
+      },
+      "initial_benchmark": {
+        "ordinary": {
+          "iterations": 200,
+          "cuda_event_batch_ms_mean": 2.0319948786497117,
+          "cuda_event_batch_ms_p50_p95_p99": [
+            2.0188159942626953,
+            2.1753857016563414,
+            2.7291955494880664
+          ],
+          "cuda_event_images_per_second": 492.1272245845982,
+          "synchronized_loop_images_per_second": 483.5933694356154
+        },
+        "warmup_iterations": 30,
+        "scope": "Preallocated device input/output, excludes image decode, resize, normalization, H2D/D2H and postprocess. All on RTX3090; no target GPU projection.",
+        "cuda_graph": {
+          "iterations": 200,
+          "cuda_event_batch_ms_mean": 1.032125438451767,
+          "cuda_event_batch_ms_p50_p95_p99": [
+            1.0321919918060303,
+            1.052774429321289,
+            1.0620210993289947
+          ],
+          "cuda_event_images_per_second": 968.8744824466718,
+          "synchronized_loop_images_per_second": 935.7894081388906
+        }
+      },
+      "timing_repeated_after_all_builds": true
+    },
+    "h768_w960_tensorrt_fp16_b2": {
+      "backend": "tensorrt_fp16",
+      "batch": 2,
+      "input_height_width": [
+        768,
+        960
+      ],
+      "benchmark": {
+        "ordinary": {
+          "iterations": 1000,
+          "cuda_event_batch_ms_mean": 2.3596677129268646,
+          "cuda_event_batch_ms_p50_p95_p99": [
+            2.320896029472351,
+            2.595174372196197,
+            3.2759397506713865
+          ],
+          "cuda_event_images_per_second": 847.5769656225269,
+          "synchronized_loop_images_per_second": 835.3290038466064
+        },
+        "warmup_iterations": 200,
+        "scope": "Preallocated device input/output, excludes image decode, resize, normalization, H2D/D2H and postprocess. All on RTX3090; no target GPU projection.",
+        "cuda_graph": {
+          "iterations": 1000,
+          "cuda_event_batch_ms_mean": 1.565765633702278,
+          "cuda_event_batch_ms_p50_p95_p99": [
+            1.5667200088500977,
+            1.5903231501579285,
+            1.6076799631118774
+          ],
+          "cuda_event_images_per_second": 1277.3303724076302,
+          "synchronized_loop_images_per_second": 1246.650095361128
+        },
+        "execution_stream": "dedicated non-default CUDA stream; identical policy for PyTorch and TensorRT"
+      },
+      "offline_pipeline": {
+        "seconds": 34.94209449971095,
+        "images_per_second": 60.15666862836137,
+        "scope": "Offline PNG decode + 2 CPU resize workers + RGB/FP32 normalization + H2D + inference + D2H/filter. Includes chunk scheduling; excludes camera, network/video decode, stereo matching and final metric computation. Not optimized streaming."
+      },
+      "prediction_cache": "artifacts\\native_merged_v2_baiduout_yolo26n_1280_conversion_v1\\h768_w960\\h768_w960_tensorrt_fp16_b2_predictions.npz",
+      "preprocessing": "cv2 INTER_LINEAR only at 960; native 1280 unchanged; BGR->RGB CHW FP32 /255; no padding; outputs in 1280x1024 pixels.",
+      "splits": {
+        "val": {
+          "images": 1272,
+          "thresholds": {
+            "0.05": {
+              "gt": 1272,
+              "predictions": 1383,
+              "center5_matches": 1249,
+              "center5_precision": 0.9031091829356471,
+              "center5_recall": 0.9819182389937107,
+              "center5_f1": 0.9408662900188325,
+              "center10_matches": 1250,
+              "matched_error_px_p50_p95_p99": [
+                1.33331298828125,
+                2.8754692051381157,
+                3.7105932638052987
+              ],
+              "width_ratio_median": 0.631578947368421,
+              "height_ratio_median": 0.6025125412713914,
+              "missed_frames_center5": 23,
+              "extra_frames_center5": 117
+            },
+            "0.25": {
+              "gt": 1272,
+              "predictions": 1294,
+              "center5_matches": 1234,
+              "center5_precision": 0.9536321483771252,
+              "center5_recall": 0.970125786163522,
+              "center5_f1": 0.9618082618862042,
+              "center10_matches": 1235,
+              "matched_error_px_p50_p95_p99": [
+                1.3043616594396874,
+                2.838211948834637,
+                3.646681022512928
+              ],
+              "width_ratio_median": 0.631578947368421,
+              "height_ratio_median": 0.6018524169921875,
+              "missed_frames_center5": 38,
+              "extra_frames_center5": 59
+            },
+            "0.5": {
+              "gt": 1272,
+              "predictions": 1239,
+              "center5_matches": 1215,
+              "center5_precision": 0.9806295399515739,
+              "center5_recall": 0.9551886792452831,
+              "center5_f1": 0.967741935483871,
+              "center10_matches": 1216,
+              "matched_error_px_p50_p95_p99": [
+                1.3017343091969282,
+                2.803726786127031,
+                3.572053695791586
+              ],
+              "width_ratio_median": 0.631578947368421,
+              "height_ratio_median": 0.6018524169921875,
+              "missed_frames_center5": 57,
+              "extra_frames_center5": 24
+            }
+          },
+          "box_mAP50": 0.03802996397657439,
+          "box_mAP50_95": 0.005643998898754641,
+          "box_AP_note": "Ultralytics AP integration, greedy descending-IoU unique matching, conf floor .001, NMS-free max300. Centers are separate supplemental metrics; original boxes unchanged."
+        },
+        "test": {
+          "images": 830,
+          "thresholds": {
+            "0.05": {
+              "gt": 859,
+              "predictions": 1116,
+              "center5_matches": 825,
+              "center5_precision": 0.739247311827957,
+              "center5_recall": 0.9604190919674039,
+              "center5_f1": 0.8354430379746837,
+              "center10_matches": 825,
+              "matched_error_px_p50_p95_p99": [
+                1.2747548783981961,
+                2.8255267524036656,
+                3.4881252240057377
+              ],
+              "width_ratio_median": 0.6333343505859375,
+              "height_ratio_median": 0.5925937228732638,
+              "missed_frames_center5": 33,
+              "extra_frames_center5": 237
+            },
+            "0.25": {
+              "gt": 859,
+              "predictions": 900,
+              "center5_matches": 815,
+              "center5_precision": 0.9055555555555556,
+              "center5_recall": 0.9487776484284052,
+              "center5_f1": 0.9266628766344513,
+              "center10_matches": 815,
+              "matched_error_px_p50_p95_p99": [
+                1.2747548783981961,
+                2.8307594713597095,
+                3.4996722742379354
+              ],
+              "width_ratio_median": 0.6333343505859375,
+              "height_ratio_median": 0.5925937228732638,
+              "missed_frames_center5": 43,
+              "extra_frames_center5": 76
+            },
+            "0.5": {
+              "gt": 859,
+              "predictions": 825,
+              "center5_matches": 787,
+              "center5_precision": 0.953939393939394,
+              "center5_recall": 0.9161816065192084,
+              "center5_f1": 0.9346793349168646,
+              "center10_matches": 787,
+              "matched_error_px_p50_p95_p99": [
+                1.2747548783981961,
+                2.8322360625023753,
+                3.527317586313788
+              ],
+              "width_ratio_median": 0.6333343505859375,
+              "height_ratio_median": 0.5925937228732638,
+              "missed_frames_center5": 70,
+              "extra_frames_center5": 36
+            }
+          },
+          "box_mAP50": 0.04778247435441349,
+          "box_mAP50_95": 0.0068033642848242485,
+          "box_AP_note": "Ultralytics AP integration, greedy descending-IoU unique matching, conf floor .001, NMS-free max300. Centers are separate supplemental metrics; original boxes unchanged."
+        }
+      },
+      "against_pytorch": {
+        "threshold": 0.25,
+        "matching_radius_px": 10,
+        "matched_prediction_pairs": 2193,
+        "prediction_center_shift_px_p50_p95_p99_max": [
+          0.08245804160833359,
+          0.2081213504076005,
+          0.27245261430740325,
+          0.31985682249069214
+        ],
+        "matched_score_abs_gap_p50_p95_p99_max": [
+          0.0007042884826660156,
+          0.002539706230163576,
+          0.010548876523971533,
+          0.46234869956970215
+        ],
+        "unmatched_reference_predictions": 1,
+        "unmatched_candidate_predictions": 1,
+        "new_gt_misses_at_5px": 0,
+        "recovered_gt_at_5px": 0,
+        "changed_gt_examples": []
+      },
+      "initial_benchmark": {
+        "ordinary": {
+          "iterations": 200,
+          "cuda_event_batch_ms_mean": 2.639191037416458,
+          "cuda_event_batch_ms_p50_p95_p99": [
+            2.4458240270614624,
+            3.3164799809455867,
+            3.5309465050697324
+          ],
+          "cuda_event_images_per_second": 757.8079690501786,
+          "synchronized_loop_images_per_second": 744.6203504514317
+        },
+        "warmup_iterations": 30,
+        "scope": "Preallocated device input/output, excludes image decode, resize, normalization, H2D/D2H and postprocess. All on RTX3090; no target GPU projection.",
+        "cuda_graph": {
+          "iterations": 200,
+          "cuda_event_batch_ms_mean": 1.5147571152448653,
+          "cuda_event_batch_ms_p50_p95_p99": [
+            1.5175679922103882,
+            1.533951997756958,
+            1.556500529050827
+          ],
+          "cuda_event_images_per_second": 1320.3436906627064,
+          "synchronized_loop_images_per_second": 1282.4121662016016
+        }
+      },
+      "timing_repeated_after_all_builds": true
+    },
+    "h1024_w1280_pytorch_fp32_b1": {
+      "backend": "pytorch_fp32",
+      "batch": 1,
+      "input_height_width": [
+        1024,
+        1280
+      ],
+      "benchmark": {
+        "ordinary": {
+          "iterations": 1000,
+          "cuda_event_batch_ms_mean": 6.276535296916962,
+          "cuda_event_batch_ms_p50_p95_p99": [
+            5.82144021987915,
+            9.157273197174067,
+            12.641136569976807
+          ],
+          "cuda_event_images_per_second": 159.32356828953078,
+          "synchronized_loop_images_per_second": 158.23825877260805
+        },
+        "warmup_iterations": 200,
+        "scope": "Preallocated device input/output, excludes image decode, resize, normalization, H2D/D2H and postprocess. All on RTX3090; no target GPU projection.",
+        "cuda_graph": {
+          "iterations": 1000,
+          "cuda_event_batch_ms_mean": 4.202751988887787,
+          "cuda_event_batch_ms_p50_p95_p99": [
+            4.20147180557251,
+            4.231167793273926,
+            4.282726583480835
+          ],
+          "cuda_event_images_per_second": 237.9393318102121,
+          "synchronized_loop_images_per_second": 235.2474279376614
+        },
+        "execution_stream": "dedicated non-default CUDA stream; identical policy for PyTorch and TensorRT"
+      },
+      "offline_pipeline": {
+        "seconds": 49.96151110017672,
+        "images_per_second": 42.07238639730745,
+        "scope": "Offline PNG decode + 2 CPU resize workers + RGB/FP32 normalization + H2D + inference + D2H/filter. Includes chunk scheduling; excludes camera, network/video decode, stereo matching and final metric computation. Not optimized streaming."
+      },
+      "prediction_cache": "artifacts\\native_merged_v2_baiduout_yolo26n_1280_conversion_v1\\h1024_w1280\\h1024_w1280_pytorch_fp32_b1_predictions.npz",
+      "preprocessing": "cv2 INTER_LINEAR only at 960; native 1280 unchanged; BGR->RGB CHW FP32 /255; no padding; outputs in 1280x1024 pixels.",
+      "splits": {
+        "val": {
+          "images": 1272,
+          "thresholds": {
+            "0.05": {
+              "gt": 1272,
+              "predictions": 1311,
+              "center5_matches": 1266,
+              "center5_precision": 0.965675057208238,
+              "center5_recall": 0.9952830188679245,
+              "center5_f1": 0.9802555168408826,
+              "center10_matches": 1267,
+              "matched_error_px_p50_p95_p99": [
+                1.224486588219376,
+                2.693897403719659,
+                3.3498089843098575
+              ],
+              "width_ratio_median": 0.5826568603515625,
+              "height_ratio_median": 0.5351273386101973,
+              "missed_frames_center5": 6,
+              "extra_frames_center5": 40
+            },
+            "0.25": {
+              "gt": 1272,
+              "predictions": 1280,
+              "center5_matches": 1262,
+              "center5_precision": 0.9859375,
+              "center5_recall": 0.9921383647798742,
+              "center5_f1": 0.9890282131661442,
+              "center10_matches": 1263,
+              "matched_error_px_p50_p95_p99": [
+                1.2252231015216575,
+                2.694726872290997,
+                3.3510177897794162
+              ],
+              "width_ratio_median": 0.5823813990542763,
+              "height_ratio_median": 0.5350406044407895,
+              "missed_frames_center5": 10,
+              "extra_frames_center5": 18
+            },
+            "0.5": {
+              "gt": 1272,
+              "predictions": 1261,
+              "center5_matches": 1248,
+              "center5_precision": 0.9896907216494846,
+              "center5_recall": 0.9811320754716981,
+              "center5_f1": 0.9853928148440584,
+              "center10_matches": 1249,
+              "matched_error_px_p50_p95_p99": [
+                1.2227805170405899,
+                2.6873438203248714,
+                3.3237711609321057
+              ],
+              "width_ratio_median": 0.5814437866210938,
+              "height_ratio_median": 0.5350406044407895,
+              "missed_frames_center5": 24,
+              "extra_frames_center5": 13
+            }
+          },
+          "box_mAP50": 0.006037909189636739,
+          "box_mAP50_95": 0.0007770536606653555,
+          "box_AP_note": "Ultralytics AP integration, greedy descending-IoU unique matching, conf floor .001, NMS-free max300. Centers are separate supplemental metrics; original boxes unchanged."
+        },
+        "test": {
+          "images": 830,
+          "thresholds": {
+            "0.05": {
+              "gt": 859,
+              "predictions": 930,
+              "center5_matches": 840,
+              "center5_precision": 0.9032258064516129,
+              "center5_recall": 0.9778812572759022,
+              "center5_f1": 0.9390721073225266,
+              "center10_matches": 840,
+              "matched_error_px_p50_p95_p99": [
+                1.182779558869364,
+                2.433998030045441,
+                3.1161221946305866
+              ],
+              "width_ratio_median": 0.5785222129216279,
+              "height_ratio_median": 0.5266001084271599,
+              "missed_frames_center5": 19,
+              "extra_frames_center5": 79
+            },
+            "0.25": {
+              "gt": 859,
+              "predictions": 894,
+              "center5_matches": 835,
+              "center5_precision": 0.9340044742729307,
+              "center5_recall": 0.9720605355064028,
+              "center5_f1": 0.9526525955504849,
+              "center10_matches": 835,
+              "matched_error_px_p50_p95_p99": [
+                1.1837769503322575,
+                2.4442128082965358,
+                3.117598545800769
+              ],
+              "width_ratio_median": 0.5783047146267362,
+              "height_ratio_median": 0.5261651901971727,
+              "missed_frames_center5": 24,
+              "extra_frames_center5": 55
+            },
+            "0.5": {
+              "gt": 859,
+              "predictions": 867,
+              "center5_matches": 824,
+              "center5_precision": 0.9504036908881199,
+              "center5_recall": 0.959254947613504,
+              "center5_f1": 0.9548088064889919,
+              "center10_matches": 824,
+              "matched_error_px_p50_p95_p99": [
+                1.1895969646088873,
+                2.4413235390514036,
+                3.120846518375174
+              ],
+              "width_ratio_median": 0.580010916969993,
+              "height_ratio_median": 0.5261000375899058,
+              "missed_frames_center5": 35,
+              "extra_frames_center5": 41
+            }
+          },
+          "box_mAP50": 0.012831908164891733,
+          "box_mAP50_95": 0.0017312990688163016,
+          "box_AP_note": "Ultralytics AP integration, greedy descending-IoU unique matching, conf floor .001, NMS-free max300. Centers are separate supplemental metrics; original boxes unchanged."
+        }
+      },
+      "initial_benchmark": {
+        "ordinary": {
+          "iterations": 200,
+          "cuda_event_batch_ms_mean": 6.346127359867096,
+          "cuda_event_batch_ms_p50_p95_p99": [
+            5.786112070083618,
+            10.205081844329825,
+            13.136209812164306
+          ],
+          "cuda_event_images_per_second": 157.5764152361642,
+          "synchronized_loop_images_per_second": 156.49669011607608
+        },
+        "warmup_iterations": 30,
+        "scope": "Preallocated device input/output, excludes image decode, resize, normalization, H2D/D2H and postprocess. All on RTX3090; no target GPU projection.",
+        "cuda_graph": {
+          "iterations": 200,
+          "cuda_event_batch_ms_mean": 4.138905591964722,
+          "cuda_event_batch_ms_p50_p95_p99": [
+            4.134912014007568,
+            4.178995299339294,
+            4.194990296363829
+          ],
+          "cuda_event_images_per_second": 241.60976320440884,
+          "synchronized_loop_images_per_second": 238.6037196439856
+        }
+      },
+      "timing_repeated_after_all_builds": true
+    },
+    "h1024_w1280_pytorch_fp32_b2": {
+      "backend": "pytorch_fp32",
+      "batch": 2,
+      "input_height_width": [
+        1024,
+        1280
+      ],
+      "benchmark": {
+        "ordinary": {
+          "iterations": 1000,
+          "cuda_event_batch_ms_mean": 8.706805750846863,
+          "cuda_event_batch_ms_p50_p95_p99": [
+            8.557567596435547,
+            9.775769853591918,
+            12.150517759323119
+          ],
+          "cuda_event_images_per_second": 229.70536580599276,
+          "synchronized_loop_images_per_second": 228.35320642744503
+        },
+        "warmup_iterations": 200,
+        "scope": "Preallocated device input/output, excludes image decode, resize, normalization, H2D/D2H and postprocess. All on RTX3090; no target GPU projection.",
+        "cuda_graph": {
+          "iterations": 1000,
+          "cuda_event_batch_ms_mean": 7.036766213417053,
+          "cuda_event_batch_ms_p50_p95_p99": [
+            7.032832145690918,
+            7.078962993621826,
+            7.322726602554321
+          ],
+          "cuda_event_images_per_second": 284.2214647101087,
+          "synchronized_loop_images_per_second": 281.729848880059
+        },
+        "execution_stream": "dedicated non-default CUDA stream; identical policy for PyTorch and TensorRT"
+      },
+      "offline_pipeline": {
+        "seconds": 48.166190000250936,
+        "images_per_second": 43.640570283616974,
+        "scope": "Offline PNG decode + 2 CPU resize workers + RGB/FP32 normalization + H2D + inference + D2H/filter. Includes chunk scheduling; excludes camera, network/video decode, stereo matching and final metric computation. Not optimized streaming."
+      },
+      "prediction_cache": "artifacts\\native_merged_v2_baiduout_yolo26n_1280_conversion_v1\\h1024_w1280\\h1024_w1280_pytorch_fp32_b2_predictions.npz",
+      "preprocessing": "cv2 INTER_LINEAR only at 960; native 1280 unchanged; BGR->RGB CHW FP32 /255; no padding; outputs in 1280x1024 pixels.",
+      "splits": {
+        "val": {
+          "images": 1272,
+          "thresholds": {
+            "0.05": {
+              "gt": 1272,
+              "predictions": 1311,
+              "center5_matches": 1266,
+              "center5_precision": 0.965675057208238,
+              "center5_recall": 0.9952830188679245,
+              "center5_f1": 0.9802555168408826,
+              "center10_matches": 1267,
+              "matched_error_px_p50_p95_p99": [
+                1.224486588219376,
+                2.693897403719659,
+                3.3498089843098575
+              ],
+              "width_ratio_median": 0.5826568603515625,
+              "height_ratio_median": 0.5351273386101973,
+              "missed_frames_center5": 6,
+              "extra_frames_center5": 40
+            },
+            "0.25": {
+              "gt": 1272,
+              "predictions": 1280,
+              "center5_matches": 1262,
+              "center5_precision": 0.9859375,
+              "center5_recall": 0.9921383647798742,
+              "center5_f1": 0.9890282131661442,
+              "center10_matches": 1263,
+              "matched_error_px_p50_p95_p99": [
+                1.2252231015216575,
+                2.694726872290997,
+                3.3510177897794162
+              ],
+              "width_ratio_median": 0.5823813990542763,
+              "height_ratio_median": 0.5350406044407895,
+              "missed_frames_center5": 10,
+              "extra_frames_center5": 18
+            },
+            "0.5": {
+              "gt": 1272,
+              "predictions": 1261,
+              "center5_matches": 1248,
+              "center5_precision": 0.9896907216494846,
+              "center5_recall": 0.9811320754716981,
+              "center5_f1": 0.9853928148440584,
+              "center10_matches": 1249,
+              "matched_error_px_p50_p95_p99": [
+                1.2227805170405899,
+                2.6873438203248714,
+                3.3237711609321057
+              ],
+              "width_ratio_median": 0.5814437866210938,
+              "height_ratio_median": 0.5350406044407895,
+              "missed_frames_center5": 24,
+              "extra_frames_center5": 13
+            }
+          },
+          "box_mAP50": 0.006037909189636739,
+          "box_mAP50_95": 0.0007770536606653555,
+          "box_AP_note": "Ultralytics AP integration, greedy descending-IoU unique matching, conf floor .001, NMS-free max300. Centers are separate supplemental metrics; original boxes unchanged."
+        },
+        "test": {
+          "images": 830,
+          "thresholds": {
+            "0.05": {
+              "gt": 859,
+              "predictions": 930,
+              "center5_matches": 840,
+              "center5_precision": 0.9032258064516129,
+              "center5_recall": 0.9778812572759022,
+              "center5_f1": 0.9390721073225266,
+              "center10_matches": 840,
+              "matched_error_px_p50_p95_p99": [
+                1.182779558869364,
+                2.433998030045441,
+                3.1161221946305866
+              ],
+              "width_ratio_median": 0.5785222129216279,
+              "height_ratio_median": 0.5266001084271599,
+              "missed_frames_center5": 19,
+              "extra_frames_center5": 79
+            },
+            "0.25": {
+              "gt": 859,
+              "predictions": 894,
+              "center5_matches": 835,
+              "center5_precision": 0.9340044742729307,
+              "center5_recall": 0.9720605355064028,
+              "center5_f1": 0.9526525955504849,
+              "center10_matches": 835,
+              "matched_error_px_p50_p95_p99": [
+                1.1837769503322575,
+                2.4442128082965358,
+                3.117598545800769
+              ],
+              "width_ratio_median": 0.5783047146267362,
+              "height_ratio_median": 0.5261651901971727,
+              "missed_frames_center5": 24,
+              "extra_frames_center5": 55
+            },
+            "0.5": {
+              "gt": 859,
+              "predictions": 867,
+              "center5_matches": 824,
+              "center5_precision": 0.9504036908881199,
+              "center5_recall": 0.959254947613504,
+              "center5_f1": 0.9548088064889919,
+              "center10_matches": 824,
+              "matched_error_px_p50_p95_p99": [
+                1.1895969646088873,
+                2.4413235390514036,
+                3.120846518375174
+              ],
+              "width_ratio_median": 0.580010916969993,
+              "height_ratio_median": 0.5261000375899058,
+              "missed_frames_center5": 35,
+              "extra_frames_center5": 41
+            }
+          },
+          "box_mAP50": 0.012831908164891733,
+          "box_mAP50_95": 0.0017312990688163016,
+          "box_AP_note": "Ultralytics AP integration, greedy descending-IoU unique matching, conf floor .001, NMS-free max300. Centers are separate supplemental metrics; original boxes unchanged."
+        }
+      },
+      "against_pytorch": {
+        "threshold": 0.25,
+        "matching_radius_px": 10,
+        "matched_prediction_pairs": 2174,
+        "prediction_center_shift_px_p50_p95_p99_max": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "matched_score_abs_gap_p50_p95_p99_max": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "unmatched_reference_predictions": 0,
+        "unmatched_candidate_predictions": 0,
+        "new_gt_misses_at_5px": 0,
+        "recovered_gt_at_5px": 0,
+        "changed_gt_examples": []
+      },
+      "initial_benchmark": {
+        "ordinary": {
+          "iterations": 200,
+          "cuda_event_batch_ms_mean": 8.615767078399658,
+          "cuda_event_batch_ms_p50_p95_p99": [
+            8.472576141357422,
+            8.962406396865843,
+            12.729886808395381
+          ],
+          "cuda_event_images_per_second": 232.1325520758497,
+          "synchronized_loop_images_per_second": 230.7123469146656
+        },
+        "warmup_iterations": 30,
+        "scope": "Preallocated device input/output, excludes image decode, resize, normalization, H2D/D2H and postprocess. All on RTX3090; no target GPU projection.",
+        "cuda_graph": {
+          "iterations": 200,
+          "cuda_event_batch_ms_mean": 6.948116483688355,
+          "cuda_event_batch_ms_p50_p95_p99": [
+            6.948352098464966,
+            7.003187346458435,
+            7.068815293312071
+          ],
+          "cuda_event_images_per_second": 287.8477936711728,
+          "synchronized_loop_images_per_second": 285.6356134953044
+        }
+      },
+      "timing_repeated_after_all_builds": true
+    },
+    "h1024_w1280_onnx_cpu_fp32_b2": {
+      "backend": "onnx_cpu_fp32",
+      "batch": 2,
+      "input_height_width": [
+        1024,
+        1280
+      ],
+      "benchmark": {
+        "cpu_batch_ms_mean": 239.76009002265832,
+        "cpu_batch_ms_p50_p95_p99": [
+          239.95570023544133,
+          276.9946797285229,
+          282.3083569156006
+        ],
+        "iterations": 30,
+        "warmup_iterations": 3,
+        "scope": "CPU numerical reference only, two CPU threads. Not included in GPU speedup claims. ORT GPU installed for CUDA13 is incompatible with current CUDA12 stack; environment unchanged."
+      },
+      "offline_pipeline": {
+        "seconds": 275.26496939966455,
+        "images_per_second": 7.636278617596452,
+        "scope": "Offline PNG decode + 2 CPU resize workers + RGB/FP32 normalization + H2D + inference + D2H/filter. Includes chunk scheduling; excludes camera, network/video decode, stereo matching and final metric computation. Not optimized streaming."
+      },
+      "prediction_cache": "artifacts\\native_merged_v2_baiduout_yolo26n_1280_conversion_v1\\h1024_w1280\\h1024_w1280_onnx_cpu_fp32_b2_predictions.npz",
+      "preprocessing": "cv2 INTER_LINEAR only at 960; native 1280 unchanged; BGR->RGB CHW FP32 /255; no padding; outputs in 1280x1024 pixels.",
+      "splits": {
+        "val": {
+          "images": 1272,
+          "thresholds": {
+            "0.05": {
+              "gt": 1272,
+              "predictions": 1311,
+              "center5_matches": 1266,
+              "center5_precision": 0.965675057208238,
+              "center5_recall": 0.9952830188679245,
+              "center5_f1": 0.9802555168408826,
+              "center10_matches": 1267,
+              "matched_error_px_p50_p95_p99": [
+                1.2244589974127418,
+                2.693897403719659,
+                3.3498089843098575
+              ],
+              "width_ratio_median": 0.5826568603515625,
+              "height_ratio_median": 0.5351273386101973,
+              "missed_frames_center5": 6,
+              "extra_frames_center5": 40
+            },
+            "0.25": {
+              "gt": 1272,
+              "predictions": 1280,
+              "center5_matches": 1262,
+              "center5_precision": 0.9859375,
+              "center5_recall": 0.9921383647798742,
+              "center5_f1": 0.9890282131661442,
+              "center10_matches": 1263,
+              "matched_error_px_p50_p95_p99": [
+                1.2252231015216575,
+                2.694726872290997,
+                3.3510177897794162
+              ],
+              "width_ratio_median": 0.5823813990542763,
+              "height_ratio_median": 0.5350406044407895,
+              "missed_frames_center5": 10,
+              "extra_frames_center5": 18
+            },
+            "0.5": {
+              "gt": 1272,
+              "predictions": 1261,
+              "center5_matches": 1248,
+              "center5_precision": 0.9896907216494846,
+              "center5_recall": 0.9811320754716981,
+              "center5_f1": 0.9853928148440584,
+              "center10_matches": 1249,
+              "matched_error_px_p50_p95_p99": [
+                1.2227805170405899,
+                2.6873438203248714,
+                3.3237711609321057
+              ],
+              "width_ratio_median": 0.5814437866210938,
+              "height_ratio_median": 0.5350406044407895,
+              "missed_frames_center5": 24,
+              "extra_frames_center5": 13
+            }
+          },
+          "box_mAP50": 0.006037909189636739,
+          "box_mAP50_95": 0.000777108990409349,
+          "box_AP_note": "Ultralytics AP integration, greedy descending-IoU unique matching, conf floor .001, NMS-free max300. Centers are separate supplemental metrics; original boxes unchanged."
+        },
+        "test": {
+          "images": 830,
+          "thresholds": {
+            "0.05": {
+              "gt": 859,
+              "predictions": 930,
+              "center5_matches": 840,
+              "center5_precision": 0.9032258064516129,
+              "center5_recall": 0.9778812572759022,
+              "center5_f1": 0.9390721073225266,
+              "center10_matches": 840,
+              "matched_error_px_p50_p95_p99": [
+                1.182779558869364,
+                2.433998030045441,
+                3.1161221946305866
+              ],
+              "width_ratio_median": 0.5785222129216279,
+              "height_ratio_median": 0.5266001084271599,
+              "missed_frames_center5": 19,
+              "extra_frames_center5": 79
+            },
+            "0.25": {
+              "gt": 859,
+              "predictions": 894,
+              "center5_matches": 835,
+              "center5_precision": 0.9340044742729307,
+              "center5_recall": 0.9720605355064028,
+              "center5_f1": 0.9526525955504849,
+              "center10_matches": 835,
+              "matched_error_px_p50_p95_p99": [
+                1.1837769503322575,
+                2.4442128082965358,
+                3.117598545800769
+              ],
+              "width_ratio_median": 0.5783047146267362,
+              "height_ratio_median": 0.5261651901971727,
+              "missed_frames_center5": 24,
+              "extra_frames_center5": 55
+            },
+            "0.5": {
+              "gt": 859,
+              "predictions": 867,
+              "center5_matches": 824,
+              "center5_precision": 0.9504036908881199,
+              "center5_recall": 0.959254947613504,
+              "center5_f1": 0.9548088064889919,
+              "center10_matches": 824,
+              "matched_error_px_p50_p95_p99": [
+                1.189598619802791,
+                2.4413235390514036,
+                3.120846518375174
+              ],
+              "width_ratio_median": 0.580010916969993,
+              "height_ratio_median": 0.5261000375899058,
+              "missed_frames_center5": 35,
+              "extra_frames_center5": 41
+            }
+          },
+          "box_mAP50": 0.012831908164891733,
+          "box_mAP50_95": 0.0017312990688163016,
+          "box_AP_note": "Ultralytics AP integration, greedy descending-IoU unique matching, conf floor .001, NMS-free max300. Centers are separate supplemental metrics; original boxes unchanged."
+        }
+      },
+      "against_pytorch": {
+        "threshold": 0.25,
+        "matching_radius_px": 10,
+        "matched_prediction_pairs": 2174,
+        "prediction_center_shift_px_p50_p95_p99_max": [
+          0.0,
+          0.0,
+          3.0517578125e-05,
+          0.0001220703125
+        ],
+        "matched_score_abs_gap_p50_p95_p99_max": [
+          1.1920928955078125e-07,
+          4.76837158203125e-07,
+          3.069639205932617e-06,
+          1.7583370208740234e-05
+        ],
+        "unmatched_reference_predictions": 0,
+        "unmatched_candidate_predictions": 0,
+        "new_gt_misses_at_5px": 0,
+        "recovered_gt_at_5px": 0,
+        "changed_gt_examples": []
+      }
+    },
+    "h1024_w1280_tensorrt_fp32_b2": {
+      "backend": "tensorrt_fp32",
+      "batch": 2,
+      "input_height_width": [
+        1024,
+        1280
+      ],
+      "benchmark": {
+        "ordinary": {
+          "iterations": 1000,
+          "cuda_event_batch_ms_mean": 5.630380029678345,
+          "cuda_event_batch_ms_p50_p95_p99": [
+            5.620736122131348,
+            5.732402992248535,
+            5.8892797851562495
+          ],
+          "cuda_event_images_per_second": 355.2158094938144,
+          "synchronized_loop_images_per_second": 351.90122555833585
+        },
+        "warmup_iterations": 200,
+        "scope": "Preallocated device input/output, excludes image decode, resize, normalization, H2D/D2H and postprocess. All on RTX3090; no target GPU projection.",
+        "cuda_graph": {
+          "iterations": 1000,
+          "cuda_event_batch_ms_mean": 5.01229363489151,
+          "cuda_event_batch_ms_p50_p95_p99": [
+            5.004288196563721,
+            5.0432000160217285,
+            5.228667111396789
+          ],
+          "cuda_event_images_per_second": 399.01892141306877,
+          "synchronized_loop_images_per_second": 394.3310028488633
+        },
+        "execution_stream": "dedicated non-default CUDA stream; identical policy for PyTorch and TensorRT"
+      },
+      "offline_pipeline": {
+        "seconds": 46.07685839990154,
+        "images_per_second": 45.61942964419839,
+        "scope": "Offline PNG decode + 2 CPU resize workers + RGB/FP32 normalization + H2D + inference + D2H/filter. Includes chunk scheduling; excludes camera, network/video decode, stereo matching and final metric computation. Not optimized streaming."
+      },
+      "prediction_cache": "artifacts\\native_merged_v2_baiduout_yolo26n_1280_conversion_v1\\h1024_w1280\\h1024_w1280_tensorrt_fp32_b2_predictions.npz",
+      "preprocessing": "cv2 INTER_LINEAR only at 960; native 1280 unchanged; BGR->RGB CHW FP32 /255; no padding; outputs in 1280x1024 pixels.",
+      "splits": {
+        "val": {
+          "images": 1272,
+          "thresholds": {
+            "0.05": {
+              "gt": 1272,
+              "predictions": 1311,
+              "center5_matches": 1266,
+              "center5_precision": 0.965675057208238,
+              "center5_recall": 0.9952830188679245,
+              "center5_f1": 0.9802555168408826,
+              "center10_matches": 1267,
+              "matched_error_px_p50_p95_p99": [
+                1.224486588219376,
+                2.693897403719659,
+                3.3498089843098575
+              ],
+              "width_ratio_median": 0.5826568603515625,
+              "height_ratio_median": 0.5351273386101973,
+              "missed_frames_center5": 6,
+              "extra_frames_center5": 40
+            },
+            "0.25": {
+              "gt": 1272,
+              "predictions": 1280,
+              "center5_matches": 1262,
+              "center5_precision": 0.9859375,
+              "center5_recall": 0.9921383647798742,
+              "center5_f1": 0.9890282131661442,
+              "center10_matches": 1263,
+              "matched_error_px_p50_p95_p99": [
+                1.2252231015216575,
+                2.694726872290997,
+                3.3510177897794162
+              ],
+              "width_ratio_median": 0.5823813990542763,
+              "height_ratio_median": 0.5350406044407895,
+              "missed_frames_center5": 10,
+              "extra_frames_center5": 18
+            },
+            "0.5": {
+              "gt": 1272,
+              "predictions": 1261,
+              "center5_matches": 1248,
+              "center5_precision": 0.9896907216494846,
+              "center5_recall": 0.9811320754716981,
+              "center5_f1": 0.9853928148440584,
+              "center10_matches": 1249,
+              "matched_error_px_p50_p95_p99": [
+                1.2227805170405899,
+                2.6873438203248714,
+                3.3237711609321057
+              ],
+              "width_ratio_median": 0.5814437866210938,
+              "height_ratio_median": 0.5350406044407895,
+              "missed_frames_center5": 24,
+              "extra_frames_center5": 13
+            }
+          },
+          "box_mAP50": 0.006037909189636739,
+          "box_mAP50_95": 0.000777108990409349,
+          "box_AP_note": "Ultralytics AP integration, greedy descending-IoU unique matching, conf floor .001, NMS-free max300. Centers are separate supplemental metrics; original boxes unchanged."
+        },
+        "test": {
+          "images": 830,
+          "thresholds": {
+            "0.05": {
+              "gt": 859,
+              "predictions": 930,
+              "center5_matches": 840,
+              "center5_precision": 0.9032258064516129,
+              "center5_recall": 0.9778812572759022,
+              "center5_f1": 0.9390721073225266,
+              "center10_matches": 840,
+              "matched_error_px_p50_p95_p99": [
+                1.182779558869364,
+                2.433998030045441,
+                3.1161221946305866
+              ],
+              "width_ratio_median": 0.5785222129216279,
+              "height_ratio_median": 0.5266001084271599,
+              "missed_frames_center5": 19,
+              "extra_frames_center5": 79
+            },
+            "0.25": {
+              "gt": 859,
+              "predictions": 894,
+              "center5_matches": 835,
+              "center5_precision": 0.9340044742729307,
+              "center5_recall": 0.9720605355064028,
+              "center5_f1": 0.9526525955504849,
+              "center10_matches": 835,
+              "matched_error_px_p50_p95_p99": [
+                1.1837769503322575,
+                2.4442128082965358,
+                3.117598545800769
+              ],
+              "width_ratio_median": 0.5783047146267362,
+              "height_ratio_median": 0.5261651901971727,
+              "missed_frames_center5": 24,
+              "extra_frames_center5": 55
+            },
+            "0.5": {
+              "gt": 859,
+              "predictions": 867,
+              "center5_matches": 824,
+              "center5_precision": 0.9504036908881199,
+              "center5_recall": 0.959254947613504,
+              "center5_f1": 0.9548088064889919,
+              "center10_matches": 824,
+              "matched_error_px_p50_p95_p99": [
+                1.189598619802791,
+                2.4413235390514036,
+                3.120846518375174
+              ],
+              "width_ratio_median": 0.580010916969993,
+              "height_ratio_median": 0.5261000375899058,
+              "missed_frames_center5": 35,
+              "extra_frames_center5": 41
+            }
+          },
+          "box_mAP50": 0.012831908164891733,
+          "box_mAP50_95": 0.0017312990688163016,
+          "box_AP_note": "Ultralytics AP integration, greedy descending-IoU unique matching, conf floor .001, NMS-free max300. Centers are separate supplemental metrics; original boxes unchanged."
+        }
+      },
+      "against_pytorch": {
+        "threshold": 0.25,
+        "matching_radius_px": 10,
+        "matched_prediction_pairs": 2174,
+        "prediction_center_shift_px_p50_p95_p99_max": [
+          0.0,
+          0.0,
+          3.0517578125e-05,
+          6.115424912422895e-05
+        ],
+        "matched_score_abs_gap_p50_p95_p99_max": [
+          5.960464477539063e-08,
+          3.5762786865234375e-07,
+          1.9395351409912088e-06,
+          1.3709068298339844e-05
+        ],
+        "unmatched_reference_predictions": 0,
+        "unmatched_candidate_predictions": 0,
+        "new_gt_misses_at_5px": 0,
+        "recovered_gt_at_5px": 0,
+        "changed_gt_examples": []
+      },
+      "initial_benchmark": {
+        "ordinary": {
+          "iterations": 200,
+          "cuda_event_batch_ms_mean": 5.563775999546051,
+          "cuda_event_batch_ms_p50_p95_p99": [
+            5.554687976837158,
+            5.708441662788391,
+            5.777602682113647
+          ],
+          "cuda_event_images_per_second": 359.46810226780883,
+          "synchronized_loop_images_per_second": 354.8180701412635
+        },
+        "warmup_iterations": 30,
+        "scope": "Preallocated device input/output, excludes image decode, resize, normalization, H2D/D2H and postprocess. All on RTX3090; no target GPU projection.",
+        "cuda_graph": {
+          "iterations": 200,
+          "cuda_event_batch_ms_mean": 4.946375682353973,
+          "cuda_event_batch_ms_p50_p95_p99": [
+            4.935679912567139,
+            5.0083842277526855,
+            5.019340858459471
+          ],
+          "cuda_event_images_per_second": 404.33645328132513,
+          "synchronized_loop_images_per_second": 399.37725109928715
+        }
+      },
+      "timing_repeated_after_all_builds": true
+    },
+    "h1024_w1280_tensorrt_fp16_b1": {
+      "backend": "tensorrt_fp16",
+      "batch": 1,
+      "input_height_width": [
+        1024,
+        1280
+      ],
+      "benchmark": {
+        "ordinary": {
+          "iterations": 1000,
+          "cuda_event_batch_ms_mean": 2.3070177246332166,
+          "cuda_event_batch_ms_p50_p95_p99": [
+            2.2492159605026245,
+            2.943897593021392,
+            3.223562228679657
+          ],
+          "cuda_event_images_per_second": 433.4600420805115,
+          "synchronized_loop_images_per_second": 426.72338103557297
+        },
+        "warmup_iterations": 200,
+        "scope": "Preallocated device input/output, excludes image decode, resize, normalization, H2D/D2H and postprocess. All on RTX3090; no target GPU projection.",
+        "cuda_graph": {
+          "iterations": 1000,
+          "cuda_event_batch_ms_mean": 1.473927166700363,
+          "cuda_event_batch_ms_p50_p95_p99": [
+            1.4735360145568848,
+            1.4981119632720947,
+            1.5155711770057678
+          ],
+          "cuda_event_images_per_second": 678.4595756102863,
+          "synchronized_loop_images_per_second": 659.5038829998687
+        },
+        "execution_stream": "dedicated non-default CUDA stream; identical policy for PyTorch and TensorRT"
+      },
+      "offline_pipeline": {
+        "seconds": 44.683123600203544,
+        "images_per_second": 47.042369257963536,
+        "scope": "Offline PNG decode + 2 CPU resize workers + RGB/FP32 normalization + H2D + inference + D2H/filter. Includes chunk scheduling; excludes camera, network/video decode, stereo matching and final metric computation. Not optimized streaming."
+      },
+      "prediction_cache": "artifacts\\native_merged_v2_baiduout_yolo26n_1280_conversion_v1\\h1024_w1280\\h1024_w1280_tensorrt_fp16_b1_predictions.npz",
+      "preprocessing": "cv2 INTER_LINEAR only at 960; native 1280 unchanged; BGR->RGB CHW FP32 /255; no padding; outputs in 1280x1024 pixels.",
+      "splits": {
+        "val": {
+          "images": 1272,
+          "thresholds": {
+            "0.05": {
+              "gt": 1272,
+              "predictions": 1309,
+              "center5_matches": 1266,
+              "center5_precision": 0.9671504965622613,
+              "center5_recall": 0.9952830188679245,
+              "center5_f1": 0.9810151104223169,
+              "center10_matches": 1267,
+              "matched_error_px_p50_p95_p99": [
+                1.25,
+                2.7302738672125577,
+                3.320088386677223
+              ],
+              "width_ratio_median": 0.5833333333333343,
+              "height_ratio_median": 0.5394736842105263,
+              "missed_frames_center5": 6,
+              "extra_frames_center5": 38
+            },
+            "0.25": {
+              "gt": 1272,
+              "predictions": 1281,
+              "center5_matches": 1262,
+              "center5_precision": 0.985167837626854,
+              "center5_recall": 0.9921383647798742,
+              "center5_f1": 0.9886408147277712,
+              "center10_matches": 1263,
+              "matched_error_px_p50_p95_p99": [
+                1.25,
+                2.737733972359289,
+                3.324675116039049
+              ],
+              "width_ratio_median": 0.5833333333333349,
+              "height_ratio_median": 0.5394736842105263,
+              "missed_frames_center5": 10,
+              "extra_frames_center5": 19
+            },
+            "0.5": {
+              "gt": 1272,
+              "predictions": 1263,
+              "center5_matches": 1249,
+              "center5_precision": 0.9889152810768013,
+              "center5_recall": 0.9819182389937107,
+              "center5_f1": 0.9854043392504932,
+              "center10_matches": 1250,
+              "matched_error_px_p50_p95_p99": [
+                1.25,
+                2.7246787883525,
+                3.281101170853467
+              ],
+              "width_ratio_median": 0.5833333333333334,
+              "height_ratio_median": 0.5394736842105263,
+              "missed_frames_center5": 23,
+              "extra_frames_center5": 14
+            }
+          },
+          "box_mAP50": 0.006255099636894998,
+          "box_mAP50_95": 0.0007976281919209932,
+          "box_AP_note": "Ultralytics AP integration, greedy descending-IoU unique matching, conf floor .001, NMS-free max300. Centers are separate supplemental metrics; original boxes unchanged."
+        },
+        "test": {
+          "images": 830,
+          "thresholds": {
+            "0.05": {
+              "gt": 859,
+              "predictions": 929,
+              "center5_matches": 840,
+              "center5_precision": 0.9041980624327234,
+              "center5_recall": 0.9778812572759022,
+              "center5_f1": 0.9395973154362416,
+              "center10_matches": 840,
+              "matched_error_px_p50_p95_p99": [
+                1.1719710383936743,
+                2.4623730159518766,
+                3.0594309064039535
+              ],
+              "width_ratio_median": 0.5833333333333296,
+              "height_ratio_median": 0.5277777777777778,
+              "missed_frames_center5": 19,
+              "extra_frames_center5": 78
+            },
+            "0.25": {
+              "gt": 859,
+              "predictions": 893,
+              "center5_matches": 835,
+              "center5_precision": 0.93505039193729,
+              "center5_recall": 0.9720605355064028,
+              "center5_f1": 0.9531963470319635,
+              "center10_matches": 835,
+              "matched_error_px_p50_p95_p99": [
+                1.1763456716883898,
+                2.4653853654145026,
+                3.0600695951310453
+              ],
+              "width_ratio_median": 0.5833333333333296,
+              "height_ratio_median": 0.5277777777777778,
+              "missed_frames_center5": 24,
+              "extra_frames_center5": 54
+            },
+            "0.5": {
+              "gt": 859,
+              "predictions": 867,
+              "center5_matches": 824,
+              "center5_precision": 0.9504036908881199,
+              "center5_recall": 0.959254947613504,
+              "center5_f1": 0.9548088064889919,
+              "center10_matches": 824,
+              "matched_error_px_p50_p95_p99": [
+                1.1792476415070754,
+                2.4649097312888246,
+                3.061474710330649
+              ],
+              "width_ratio_median": 0.5833333333333334,
+              "height_ratio_median": 0.5277777777777778,
+              "missed_frames_center5": 35,
+              "extra_frames_center5": 41
+            }
+          },
+          "box_mAP50": 0.013654090636453977,
+          "box_mAP50_95": 0.0017662773542013288,
+          "box_AP_note": "Ultralytics AP integration, greedy descending-IoU unique matching, conf floor .001, NMS-free max300. Centers are separate supplemental metrics; original boxes unchanged."
+        }
+      },
+      "against_pytorch": {
+        "threshold": 0.25,
+        "matching_radius_px": 10,
+        "matched_prediction_pairs": 2173,
+        "prediction_center_shift_px_p50_p95_p99_max": [
+          0.07956606149673462,
+          0.20246217250823975,
+          0.28056929230690025,
+          0.45276758074760437
+        ],
+        "matched_score_abs_gap_p50_p95_p99_max": [
+          0.0006107687950134277,
+          0.002001452445983887,
+          0.013313772678375463,
+          0.5701345801353455
+        ],
+        "unmatched_reference_predictions": 1,
+        "unmatched_candidate_predictions": 1,
+        "new_gt_misses_at_5px": 0,
+        "recovered_gt_at_5px": 0,
+        "changed_gt_examples": []
+      },
+      "initial_benchmark": {
+        "ordinary": {
+          "iterations": 200,
+          "cuda_event_batch_ms_mean": 2.3284019231796265,
+          "cuda_event_batch_ms_p50_p95_p99": [
+            2.2804479598999023,
+            2.7384832620620707,
+            3.219711956977844
+          ],
+          "cuda_event_images_per_second": 429.47911614607193,
+          "synchronized_loop_images_per_second": 422.97221317691634
+        },
+        "warmup_iterations": 30,
+        "scope": "Preallocated device input/output, excludes image decode, resize, normalization, H2D/D2H and postprocess. All on RTX3090; no target GPU projection.",
+        "cuda_graph": {
+          "iterations": 200,
+          "cuda_event_batch_ms_mean": 1.4370918363332748,
+          "cuda_event_batch_ms_p50_p95_p99": [
+            1.4387199878692627,
+            1.4561280012130737,
+            1.4643199443817139
+          ],
+          "cuda_event_images_per_second": 695.8497534517278,
+          "synchronized_loop_images_per_second": 678.403960001219
+        }
+      },
+      "timing_repeated_after_all_builds": true
+    },
+    "h1024_w1280_tensorrt_fp16_b2": {
+      "backend": "tensorrt_fp16",
+      "batch": 2,
+      "input_height_width": [
+        1024,
+        1280
+      ],
+      "benchmark": {
+        "ordinary": {
+          "iterations": 1000,
+          "cuda_event_batch_ms_mean": 3.1989278740882874,
+          "cuda_event_batch_ms_p50_p95_p99": [
+            3.1723520755767822,
+            3.5000831484794617,
+            3.630120944976807
+          ],
+          "cuda_event_images_per_second": 625.2094697727473,
+          "synchronized_loop_images_per_second": 616.536267214906
+        },
+        "warmup_iterations": 200,
+        "scope": "Preallocated device input/output, excludes image decode, resize, normalization, H2D/D2H and postprocess. All on RTX3090; no target GPU projection.",
+        "cuda_graph": {
+          "iterations": 1000,
+          "cuda_event_batch_ms_mean": 2.4072417209148407,
+          "cuda_event_batch_ms_p50_p95_p99": [
+            2.4053759574890137,
+            2.4340479373931885,
+            2.460682141780853
+          ],
+          "cuda_event_images_per_second": 830.8264112504357,
+          "synchronized_loop_images_per_second": 813.9858728054353
+        },
+        "execution_stream": "dedicated non-default CUDA stream; identical policy for PyTorch and TensorRT"
+      },
+      "offline_pipeline": {
+        "seconds": 43.660080700181425,
+        "images_per_second": 48.144665934876876,
+        "scope": "Offline PNG decode + 2 CPU resize workers + RGB/FP32 normalization + H2D + inference + D2H/filter. Includes chunk scheduling; excludes camera, network/video decode, stereo matching and final metric computation. Not optimized streaming."
+      },
+      "prediction_cache": "artifacts\\native_merged_v2_baiduout_yolo26n_1280_conversion_v1\\h1024_w1280\\h1024_w1280_tensorrt_fp16_b2_predictions.npz",
+      "preprocessing": "cv2 INTER_LINEAR only at 960; native 1280 unchanged; BGR->RGB CHW FP32 /255; no padding; outputs in 1280x1024 pixels.",
+      "splits": {
+        "val": {
+          "images": 1272,
+          "thresholds": {
+            "0.05": {
+              "gt": 1272,
+              "predictions": 1309,
+              "center5_matches": 1266,
+              "center5_precision": 0.9671504965622613,
+              "center5_recall": 0.9952830188679245,
+              "center5_f1": 0.9810151104223169,
+              "center10_matches": 1267,
+              "matched_error_px_p50_p95_p99": [
+                1.25,
+                2.7302738672125577,
+                3.320088386677223
+              ],
+              "width_ratio_median": 0.5833333333333349,
+              "height_ratio_median": 0.5394736842105263,
+              "missed_frames_center5": 6,
+              "extra_frames_center5": 38
+            },
+            "0.25": {
+              "gt": 1272,
+              "predictions": 1279,
+              "center5_matches": 1262,
+              "center5_precision": 0.9867083659108679,
+              "center5_recall": 0.9921383647798742,
+              "center5_f1": 0.9894159153273226,
+              "center10_matches": 1263,
+              "matched_error_px_p50_p95_p99": [
+                1.25,
+                2.737733972359289,
+                3.324675116039049
+              ],
+              "width_ratio_median": 0.5833333333333349,
+              "height_ratio_median": 0.5394736842105263,
+              "missed_frames_center5": 10,
+              "extra_frames_center5": 17
+            },
+            "0.5": {
+              "gt": 1272,
+              "predictions": 1263,
+              "center5_matches": 1249,
+              "center5_precision": 0.9889152810768013,
+              "center5_recall": 0.9819182389937107,
+              "center5_f1": 0.9854043392504932,
+              "center10_matches": 1250,
+              "matched_error_px_p50_p95_p99": [
+                1.25,
+                2.7246787883525,
+                3.281101170853467
+              ],
+              "width_ratio_median": 0.5833333333333338,
+              "height_ratio_median": 0.5394736842105263,
+              "missed_frames_center5": 23,
+              "extra_frames_center5": 14
+            }
+          },
+          "box_mAP50": 0.00628248811308535,
+          "box_mAP50_95": 0.0008022941954777716,
+          "box_AP_note": "Ultralytics AP integration, greedy descending-IoU unique matching, conf floor .001, NMS-free max300. Centers are separate supplemental metrics; original boxes unchanged."
+        },
+        "test": {
+          "images": 830,
+          "thresholds": {
+            "0.05": {
+              "gt": 859,
+              "predictions": 929,
+              "center5_matches": 840,
+              "center5_precision": 0.9041980624327234,
+              "center5_recall": 0.9778812572759022,
+              "center5_f1": 0.9395973154362416,
+              "center10_matches": 840,
+              "matched_error_px_p50_p95_p99": [
+                1.1719710383936743,
+                2.4623730159518766,
+                3.0594309064039535
+              ],
+              "width_ratio_median": 0.5833333333333296,
+              "height_ratio_median": 0.5277777777777778,
+              "missed_frames_center5": 19,
+              "extra_frames_center5": 78
+            },
+            "0.25": {
+              "gt": 859,
+              "predictions": 895,
+              "center5_matches": 835,
+              "center5_precision": 0.9329608938547486,
+              "center5_recall": 0.9720605355064028,
+              "center5_f1": 0.9521094640820981,
+              "center10_matches": 835,
+              "matched_error_px_p50_p95_p99": [
+                1.1763456716883898,
+                2.4653853654145026,
+                3.0600695951310453
+              ],
+              "width_ratio_median": 0.5833333333333296,
+              "height_ratio_median": 0.5277777777777778,
+              "missed_frames_center5": 24,
+              "extra_frames_center5": 56
+            },
+            "0.5": {
+              "gt": 859,
+              "predictions": 867,
+              "center5_matches": 824,
+              "center5_precision": 0.9504036908881199,
+              "center5_recall": 0.959254947613504,
+              "center5_f1": 0.9548088064889919,
+              "center10_matches": 824,
+              "matched_error_px_p50_p95_p99": [
+                1.1792476197983173,
+                2.4649097312888246,
+                3.061474710330649
+              ],
+              "width_ratio_median": 0.5833333333333315,
+              "height_ratio_median": 0.5277777777777778,
+              "missed_frames_center5": 35,
+              "extra_frames_center5": 41
+            }
+          },
+          "box_mAP50": 0.013182883383101009,
+          "box_mAP50_95": 0.001690630387267395,
+          "box_AP_note": "Ultralytics AP integration, greedy descending-IoU unique matching, conf floor .001, NMS-free max300. Centers are separate supplemental metrics; original boxes unchanged."
+        }
+      },
+      "against_pytorch": {
+        "threshold": 0.25,
+        "matching_radius_px": 10,
+        "matched_prediction_pairs": 2173,
+        "prediction_center_shift_px_p50_p95_p99_max": [
+          0.08019694685935974,
+          0.19921442270278933,
+          0.28056929230690025,
+          0.45276758074760437
+        ],
+        "matched_score_abs_gap_p50_p95_p99_max": [
+          0.0006224513053894043,
+          0.0020590782165527347,
+          0.012731341123581015,
+          0.374536395072937
+        ],
+        "unmatched_reference_predictions": 1,
+        "unmatched_candidate_predictions": 1,
+        "new_gt_misses_at_5px": 0,
+        "recovered_gt_at_5px": 0,
+        "changed_gt_examples": []
+      },
+      "initial_benchmark": {
+        "ordinary": {
+          "iterations": 200,
+          "cuda_event_batch_ms_mean": 3.1430911946296693,
+          "cuda_event_batch_ms_p50_p95_p99": [
+            3.1063040494918823,
+            3.371161520481109,
+            3.5545598864555354
+          ],
+          "cuda_event_images_per_second": 636.3162492444472,
+          "synchronized_loop_images_per_second": 627.8074763387299
+        },
+        "warmup_iterations": 30,
+        "scope": "Preallocated device input/output, excludes image decode, resize, normalization, H2D/D2H and postprocess. All on RTX3090; no target GPU projection.",
+        "cuda_graph": {
+          "iterations": 200,
+          "cuda_event_batch_ms_mean": 2.3769855904579162,
+          "cuda_event_batch_ms_p50_p95_p99": [
+            2.372607946395874,
+            2.4187392592430115,
+            2.4312421560287474
+          ],
+          "cuda_event_images_per_second": 841.4018191901232,
+          "synchronized_loop_images_per_second": 824.4665393326788
+        }
+      },
+      "timing_repeated_after_all_builds": true
+    }
+  },
+  "limits": [
+    "RTX3090 Windows only; no 2060 SUPER throughput guarantee.",
+    "Val/test fixed; no training, threshold tuning or model selection in this matrix.",
+    "Batch2 groups offline images; no proof of camera synchronization, stereo depth or actual stream throughput.",
+    "Input preprocessing is fixed per case; source training resolution is recorded in the training experiment.",
+    "No verified no-ball evaluation data. Matched-error quantiles exclude unmatched balls; counts reported separately."
+  ],
+  "expected_cases": 12,
+  "state": "complete"
+}

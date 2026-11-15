@@ -1,0 +1,39 @@
+{
+  "new_examples": [
+    {
+      "new_image": "E:\\BaiduNetdiskDownload\\pingpongdata----out\\pingpongdata----out\\0_img_447_19.png",
+      "filename_parent_candidate": null,
+      "relation": "Filename candidate only; not proof of augmentation; inspect visual context."
+    },
+    {
+      "new_image": "E:\\BaiduNetdiskDownload\\pingpongdata----out\\pingpongdata----out\\1_img_137_12.png",
+      "filename_parent_candidate": null,
+      "relation": "Filename candidate only; not proof of augmentation; inspect visual context."
+    },
+    {
+      "new_image": "E:\\BaiduNetdiskDownload\\pingpongdata----out\\pingpongdata----out\\1_img_224_6.png",
+      "filename_parent_candidate": null,
+      "relation": "Filename candidate only; not proof of augmentation; inspect visual context."
+    },
+    {
+      "new_image": "E:\\BaiduNetdiskDownload\\pingpongdata----out\\pingpongdata----out\\1_img_319_11.png",
+      "filename_parent_candidate": null,
+      "relation": "Filename candidate only; not proof of augmentation; inspect visual context."
+    },
+    {
+      "new_image": "E:\\BaiduNetdiskDownload\\pingpongdata----out\\pingpongdata----out\\1_img_41_12.png",
+      "filename_parent_candidate": null,
+      "relation": "Filename candidate only; not proof of augmentation; inspect visual context."
+    },
+    {
+      "new_image": "E:\\BaiduNetdiskDownload\\pingpongdata----out\\pingpongdata----out\\1_img_58_9.png",
+      "filename_parent_candidate": null,
+      "relation": "Filename candidate only; not proof of augmentation; inspect visual context."
+    }
+  ],
+  "new_prefix_counts": {
+    "0": 1965,
+    "1": 9032
+  },
+  "note": "Original image with label box at left; first-ball80px crop enlarged at right. No label edits."
+}

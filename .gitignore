@@ -1,0 +1,84 @@
+# Local environments, portable utilities, caches and editor settings
+/.venv/
+/.tools/
+/.cache/
+/.ultralytics/
+/.vscode/
+/.idea/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.DS_Store
+Thumbs.db
+
+# Local secrets (a documented example can be tracked)
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Original/derived datasets and machine-generated absolute dataset lists
+/datasets/
+/configs/datasets/
+/runs/
+/artifacts/
+/logs/
+/transfers/
+/recordings/
+
+# Only model metadata belongs in Git; model binaries travel separately
+/models/*
+!/models/*/
+/models/*/*
+!/models/*/README*.md
+!/models/*/model_card.json
+!/models/README.md
+
+# Binary weights, engines, arrays, archives, images and video anywhere
+*.pt
+*.pth
+*.onnx
+*.engine
+*.plan
+*.safetensors
+*.npz
+*.npy
+*.cache
+*.bin
+*.dll
+*.pyd
+*.so
+*.zip
+*.7z
+*.tar
+*.gz
+*.png
+*.jpg
+*.jpeg
+*.bmp
+*.tif
+*.tiff
+*.webp
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.h264
+*.h265
+*.bag
+*.db
+*.log
+*.partial
+
+# Detailed bulk audit/caches are local artifacts; summaries stay tracked
+*.jsonl
+!/reports/training/**/epoch_metrics.jsonl
+/reports/datasets/pingpong_additional_v1/additional_data_audit.json
+/reports/datasets/pingpong_baidu_out_v1/label_quality_gallery.html
+
+# Local repository/bootstrap receipts (generated, machine-specific)
+/repository_setup.local.json

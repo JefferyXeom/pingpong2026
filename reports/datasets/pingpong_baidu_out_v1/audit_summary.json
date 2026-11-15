@@ -1,0 +1,29 @@
+{
+  "source_root": "E:\\BaiduNetdiskDownload\\pingpongdata----out",
+  "files": 36172,
+  "extensions": {
+    ".png": 18086,
+    ".xml": 18086
+  },
+  "bytes": 26752934276,
+  "images": 18086,
+  "source_files_modified": false,
+  "decisions": {
+    "new_train_candidate": 10997,
+    "already_present_bytes": 7089
+  },
+  "existing_overlap_by_dataset_split": {
+    "pingpong_additional_v1/train": 7089
+  },
+  "existing_duplicate_label_disagreements": 0,
+  "new_images": 10997,
+  "new_objects": 13912,
+  "new_image_bytes": 16323221677,
+  "new_with_filename_parent": 0,
+  "free_disk_gib": 49.31315231323242,
+  "limits": [
+    "Byte hashes and decoded RGB hashes checked against all prior dataset images.",
+    "Filename ancestry is a conservative candidate relationship, not proof of independent capture.",
+    "No verified new negative images; unknown historical recording independence is not established."
+  ]
+}

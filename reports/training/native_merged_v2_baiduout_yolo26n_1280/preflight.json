@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "run": "native_merged_v2_baiduout_yolo26n_1280",
+  "sample_train_tensor": [
+    2,
+    3,
+    1024,
+    1280
+  ],
+  "val_shapes": [
+    [
+      1024,
+      1280
+    ]
+  ],
+  "full_train_images": 28401,
+  "val_images": 1272
+}
