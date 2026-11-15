@@ -15,7 +15,7 @@
 
 每端各自使用Codex会话，开始先读`AGENTS.md`和`docs/status.md`。远端Git仓库建立后，两端clone同一仓库；每次修改前拉取最新提交，完成后提交并在用户授权下推送。避免两边同时改同一状态段落，交接以模型ID、哈希、代码提交及数据版本为依据。
 
-本地首次提交已完成；用户现已指定远端`https://github.com/JefferyXeom/pingpong2026`。训练端使用仓库专用SSH Deploy Key，origin为`git@github.com:JefferyXeom/pingpong2026.git`；GitHub登记公钥并授予写入后再验证和推送。首次提交作者配置仅作用于当前仓库，不改系统全局身份。
+本地首次提交已完成；用户现已指定远端`https://github.com/JefferyXeom/pingpong2026`。训练端使用仓库专用SSH Deploy Key，origin为`git@github.com:JefferyXeom/pingpong2026.git`；GitHub公钥已登记并授予写入，SSH访问、实际推送及远端提交一致性均已验证。首次提交作者配置仅作用于当前仓库，不改系统全局身份。
 
 Deploy Key是授权给单个仓库的SSH公私钥，不是个人账号Token。训练端私钥留在`.tools/ssh/`并限制当前Windows用户访问，不设口令以支持自动Git操作；GitHub只登记公钥。它不是真正的硬件绑定，复制私钥也会复制权限，因此每台机器使用不同密钥，GitHub可单独撤销。仓库级core.sshCommand指定该密钥，GitHub主机公钥从HTTPS官方api.github.com/meta获取，受限时改用GitHub官方指纹文档；两者都不可用则保持严格校验并待后续补齐主机公钥，不跳过校验。不改用户全局SSH配置。部署端另建只读密钥。
 
@@ -41,3 +41,14 @@ Deploy Key是授权给单个仓库的SSH公私钥，不是个人账号Token。�
 Git clone不包含权重与数据，完整训练、转换和本地历史验证需要另外接收对应产物。第一批至少交接选中best.pt、必要ONNX、模型SHA256和一套固定核验图片/标注/训练端预测；不默认传输全部训练数据。TensorRT engine在目标Ubuntu/2060 Super按兼容版本重建。
 
 原报告中指向本地权重、图片、生成列表及缓存的链接继续保留历史身份，克隆后这些链接可能缺失；它们是独立产物引用，不表示文件已经上传。原`verify_report_layout.py`需要完整训练端产物；在只有Git克隆的机器上使用独立的`audit_git_content.py`检查仓库内容。迁移时不要把Windows历史绝对路径当部署路径。
+
+## 当前同步入口
+
+训练端main已上传到上述GitHub仓库。部署端接手时在本机配置独立只读Deploy Key，再执行：
+
+```bash
+git clone git@github.com:JefferyXeom/pingpong2026.git
+cd pingpong2026
+```
+
+随后阅读AGENTS.md和docs/status.md，按部署端待办继续；权重与核验图片另行接收。当前训练机可使用仓库专用密钥拉取/推送，无需个人账号网页登录。

@@ -42,4 +42,4 @@
 
 ## Git与产物交接
 
-见[仓库管理与大文件规则](repository_workflow.zh-CN.md)。用户已指定GitHub仓库`https://github.com/JefferyXeom/pingpong2026`，训练端准备仓库专用SSH Deploy Key，origin使用`git@github.com:JefferyXeom/pingpong2026.git`。公钥需用户在该仓库Settings→Deploy keys添加并允许写入；当前尚未上传，远端读写授权及推送结果待验证。私钥及主机配置均留在被忽略的`.tools/ssh/`，不随Git交接，部署机使用独立密钥。首次版本作者为用户提供的JefferyXeom，仓库级配置邮箱jefferyxeom@gmail.com。代码提交号用Git记录查询，勿将尚未存在的提交号写成已完成。
+见[仓库管理与大文件规则](repository_workflow.zh-CN.md)。用户已指定GitHub仓库`https://github.com/JefferyXeom/pingpong2026`，训练端准备仓库专用SSH Deploy Key，origin使用`git@github.com:JefferyXeom/pingpong2026.git`。用户已在该仓库添加可写Deploy Key，SSH访问及实际推送已验证。首次检查远端为空；已将本地main首次上传并核对提交`e21480a`，后续交接更新同样通过main同步。当前同步状态以`git status -sb`及`git ls-remote origin refs/heads/main`为准。私钥及主机配置均留在被忽略的`.tools/ssh/`，不随Git交接，部署机使用独立密钥。首次版本作者为用户提供的JefferyXeom，仓库级配置邮箱jefferyxeom@gmail.com。代码提交号用Git记录查询，勿将尚未存在的提交号写成已完成。
