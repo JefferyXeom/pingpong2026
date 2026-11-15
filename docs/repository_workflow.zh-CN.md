@@ -15,7 +15,9 @@
 
 每端各自使用Codex会话，开始先读`AGENTS.md`和`docs/status.md`。远端Git仓库建立后，两端clone同一仓库；每次修改前拉取最新提交，完成后提交并在用户授权下推送。避免两边同时改同一状态段落，交接以模型ID、哈希、代码提交及数据版本为依据。
 
-本次只初始化本地仓库。后续用户指定远端地址和上传范围，再配置remote/push；没有指定时不自动公开或上传。首次提交作者配置仅作用于当前仓库，不改系统全局身份。
+本地首次提交已完成；用户现已指定远端`https://github.com/JefferyXeom/pingpong2026`。训练端使用仓库专用SSH Deploy Key，origin为`git@github.com:JefferyXeom/pingpong2026.git`；GitHub登记公钥并授予写入后再验证和推送。首次提交作者配置仅作用于当前仓库，不改系统全局身份。
+
+Deploy Key是授权给单个仓库的SSH公私钥，不是个人账号Token。训练端私钥留在`.tools/ssh/`并限制当前Windows用户访问，不设口令以支持自动Git操作；GitHub只登记公钥。它不是真正的硬件绑定，复制私钥也会复制权限，因此每台机器使用不同密钥，GitHub可单独撤销。仓库级core.sshCommand指定该密钥，GitHub主机公钥从HTTPS官方api.github.com/meta获取，受限时改用GitHub官方指纹文档；两者都不可用则保持严格校验并待后续补齐主机公钥，不跳过校验。不改用户全局SSH配置。部署端另建只读密钥。
 
 ## Windows使用方式
 
