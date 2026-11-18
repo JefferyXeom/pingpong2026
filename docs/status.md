@@ -1,6 +1,8 @@
 # 项目交接状态
 
-状态记录日期：2026-11-15（America/New_York）。本页为两台机器的共同入口，详细历史见实验报告。
+状态记录日期：2026-11-19（Asia/Shanghai）。本页为两台机器的共同入口，详细历史见实验报告。
+
+部署包`deployment_handoff_20261118_v1`已于11月19日经SSH/SFTP传输至用户指定的Ubuntu接收目录`/home/pingpong/pingpong-transfer/incoming/deployment_handoff_20261118_v1`，状态`complete_verified`。两个ZIP的远端SHA256一致，部署端逐成员校验通过：模型包4287文件、图片包2104文件；传输回执也已上传核验。内容为4组候选PT＋原图ONNX、24份参考预测、完整val/test2102原图与标注、128图快速清单。模型包约158MiB，图片包约3.13GiB，均在Git忽略的transfers目录，未提交大文件。[部署接手步骤](deployment_transfer_20261119.zh-CN.md)、[部署包说明](deployment_package_20261118.zh-CN.md)、[带SHA256的清单](../configs/deployment_handoff_20261118_v1.json)。本次完成文件交接；解压、本机TRT构建、目标机精度/性能及相机验证由部署端继续。
 
 ## 机器职责与当前目标
 

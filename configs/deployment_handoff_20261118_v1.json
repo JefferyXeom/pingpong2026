@@ -1,0 +1,82 @@
+{
+  "package_id": "deployment_handoff_20261118_v1",
+  "created_date_beijing": "2026-11-18",
+  "state": "complete_verified",
+  "network_transfer_state": "complete_verified",
+  "local_directory": "transfers/deployment_handoff_20261118_v1",
+  "source_commit": "37ea111f214fd9c5f026a91ab3e19dc16f75cf81",
+  "models": [
+    "B_n_merged_v1",
+    "C_s_merged_v1",
+    "D_n_merged_v2",
+    "E_s_merged_v2"
+  ],
+  "selected_epochs": [
+    24,
+    30,
+    12,
+    22
+  ],
+  "primary_target_candidate": "B_n_merged_v1",
+  "input_bchw": [
+    "B",
+    3,
+    1024,
+    1280
+  ],
+  "output_shape": [
+    "B",
+    300,
+    6
+  ],
+  "input_output_dtype": "float32, including mixed FP16 engine",
+  "val_images": 1272,
+  "test_images": 830,
+  "quick_images": 128,
+  "cached_native_cases": 24,
+  "archives": [
+    {
+      "archive": "models_and_references.zip",
+      "bytes": 165633073,
+      "sha256": "3fcb682aa29a4663490bff92cd5d2fa188c5e7a53c8df65230b95eb8f858943f"
+    },
+    {
+      "archive": "holdout_images.zip",
+      "bytes": 3358043139,
+      "sha256": "63b59b9e8a08d835deb5f4b2fe277af719394cb1b2b60ec888cb95c1ce6b4028"
+    }
+  ],
+  "all_archive_member_hashes_verified": true,
+  "all_native_reference_metrics_reproduced": true,
+  "images_verified_against_source_hashes_and_decoded": true,
+  "includes_training_images": false,
+  "includes_windows_engines": false,
+  "includes_credentials": false,
+  "target_gpu_inference_tested": false,
+  "stereo_pairs_verified": false,
+  "receiver_setup": "docs/deployment_receiver_setup.zh-CN.md",
+  "transfer_completed_utc": "2026-11-18T16:22:25.096948+00:00",
+  "remote_directory": "/home/pingpong/pingpong-transfer/incoming/deployment_handoff_20261118_v1",
+  "remote_archive_verification": {
+    "archive_members_verified": true,
+    "results": [
+      {
+        "passed": true,
+        "package_id": "deployment_handoff_20261118_v1",
+        "part": "models_and_references",
+        "files": 4287,
+        "bytes": 163797953
+      },
+      {
+        "passed": true,
+        "package_id": "deployment_handoff_20261118_v1",
+        "part": "holdout_images",
+        "files": 2104,
+        "bytes": 3357172110
+      }
+    ]
+  },
+  "transfer_receipt": "transfers/deployment_handoff_20261118_v1/transfer_receipt.json",
+  "transfer_receipt_remote_uploaded_and_sha256_verified": true,
+  "deployment_instructions": "docs/deployment_transfer_20261119.zh-CN.md"
+}
